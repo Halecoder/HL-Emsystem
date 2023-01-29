@@ -1,0 +1,813 @@
+[00:02:43:007] [INFO] - com.zaxxer.hikari.HikariDataSource.close(HikariDataSource.java:350) - emsystem_datasource - Shutdown initiated...
+[00:02:43:020] [INFO] - com.zaxxer.hikari.HikariDataSource.close(HikariDataSource.java:352) - emsystem_datasource - Shutdown completed.
+[12:09:00:877] [INFO] - org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:55) - Starting EmsystemApplication using Java 1.8.0_221 on HL with PID 14632 (D:\Web\APP\HL\emsystem\target\classes started by hl184 in D:\Web\APP\HL)
+[12:09:00:890] [INFO] - org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:631) - No active profile set, falling back to 1 default profile: "default"
+[12:09:03:507] [INFO] - org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:108) - Tomcat initialized with port(s): 8081 (http)
+[12:09:03:555] [INFO] - org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) - Initializing ProtocolHandler ["http-nio-8081"]
+[12:09:03:556] [INFO] - org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) - Starting service [Tomcat]
+[12:09:03:556] [INFO] - org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) - Starting Servlet engine: [Apache Tomcat/9.0.69]
+[12:09:03:957] [INFO] - org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) - Initializing Spring embedded WebApplicationContext
+[12:09:03:958] [INFO] - org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:292) - Root WebApplicationContext: initialization completed in 3006 ms
+[12:09:04:562] [WARN] - com.baomidou.mybatisplus.core.metadata.TableInfoHelper.initTableFields(TableInfoHelper.java:342) - Can not find table primary key in Class: "com.hl.emsystem.model.pojo.Department".
+[12:09:04:571] [WARN] - com.baomidou.mybatisplus.core.injector.DefaultSqlInjector.getMethodList(DefaultSqlInjector.java:56) - class com.hl.emsystem.model.pojo.Department ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+[12:09:04:577] [WARN] - com.baomidou.mybatisplus.core.injector.AbstractMethod.addMappedStatement(AbstractMethod.java:414) - [com.hl.emsystem.model.dao.DepartmentMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+[12:09:04:643] [WARN] - com.baomidou.mybatisplus.core.metadata.TableInfoHelper.initTableFields(TableInfoHelper.java:342) - Can not find table primary key in Class: "com.hl.emsystem.model.pojo.Node".
+[12:09:04:644] [WARN] - com.baomidou.mybatisplus.core.injector.DefaultSqlInjector.getMethodList(DefaultSqlInjector.java:56) - class com.hl.emsystem.model.pojo.Node ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+[12:09:04:647] [WARN] - com.baomidou.mybatisplus.core.injector.AbstractMethod.addMappedStatement(AbstractMethod.java:414) - [com.hl.emsystem.model.dao.NodeMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+[12:09:04:684] [WARN] - com.baomidou.mybatisplus.core.metadata.TableInfoHelper.initTableFields(TableInfoHelper.java:342) - Can not find table primary key in Class: "com.hl.emsystem.model.pojo.People".
+[12:09:04:684] [WARN] - com.baomidou.mybatisplus.core.injector.DefaultSqlInjector.getMethodList(DefaultSqlInjector.java:56) - class com.hl.emsystem.model.pojo.People ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+[12:09:04:686] [WARN] - com.baomidou.mybatisplus.core.injector.AbstractMethod.addMappedStatement(AbstractMethod.java:414) - [com.hl.emsystem.model.dao.PeopleMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+[12:09:04:763] [WARN] - com.baomidou.mybatisplus.core.metadata.TableInfoHelper.initTableFields(TableInfoHelper.java:342) - Can not find table primary key in Class: "com.hl.emsystem.model.pojo.SysRoleNode".
+[12:09:04:764] [WARN] - com.baomidou.mybatisplus.core.injector.DefaultSqlInjector.getMethodList(DefaultSqlInjector.java:56) - class com.hl.emsystem.model.pojo.SysRoleNode ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+[12:09:04:766] [WARN] - com.baomidou.mybatisplus.core.injector.AbstractMethod.addMappedStatement(AbstractMethod.java:414) - [com.hl.emsystem.model.dao.SysRoleNodeMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+[12:09:04:802] [WARN] - com.baomidou.mybatisplus.core.metadata.TableInfoHelper.initTableFields(TableInfoHelper.java:342) - Can not find table primary key in Class: "com.hl.emsystem.model.pojo.SysRoleUser".
+[12:09:04:803] [WARN] - com.baomidou.mybatisplus.core.injector.DefaultSqlInjector.getMethodList(DefaultSqlInjector.java:56) - class com.hl.emsystem.model.pojo.SysRoleUser ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+[12:09:04:805] [WARN] - com.baomidou.mybatisplus.core.injector.AbstractMethod.addMappedStatement(AbstractMethod.java:414) - [com.hl.emsystem.model.dao.SysRoleUserMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+[12:09:04:845] [WARN] - com.baomidou.mybatisplus.core.metadata.TableInfoHelper.initTableFields(TableInfoHelper.java:342) - Can not find table primary key in Class: "com.hl.emsystem.model.pojo.User".
+[12:09:04:846] [WARN] - com.baomidou.mybatisplus.core.injector.DefaultSqlInjector.getMethodList(DefaultSqlInjector.java:56) - class com.hl.emsystem.model.pojo.User ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+[12:09:04:848] [WARN] - com.baomidou.mybatisplus.core.injector.AbstractMethod.addMappedStatement(AbstractMethod.java:414) - [com.hl.emsystem.model.dao.UserMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+[12:09:07:058] [INFO] - org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping.<init>(WelcomePageHandlerMapping.java:53) - Adding welcome page: class path resource [static/index.html]
+[12:09:09:383] [INFO] - org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) - Starting ProtocolHandler ["http-nio-8081"]
+[12:09:09:468] [INFO] - org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:220) - Tomcat started on port(s): 8081 (http) with context path ''
+[12:09:09:510] [INFO] - org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:61) - Started EmsystemApplication in 9.284 seconds (JVM running for 12.553)
+[12:10:17:461] [INFO] - org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) - A cookie header was received [Hm_lvt_ecc8b50a3122e6d5e09be7a9e5383e07=1669818660,1669866854] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+[12:10:17:470] [INFO] - org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[12:10:17:470] [INFO] - org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525) - Initializing Servlet 'dispatcherServlet'
+[12:10:17:472] [INFO] - org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:547) - Completed initialization in 2 ms
+[12:10:17:507] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:44) - URL :http://localhost:8081/api/verify_code
+[12:10:17:508] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:45) - HTTP_METHOD :GET
+[12:10:17:508] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:46) - IP :127.0.0.1
+[12:10:17:510] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:48) - CLASS_METHODcom.hl.emsystem.controller.KaptchaController.createVerifyCode
+[12:10:17:510] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:50) - ARGS :[org.apache.catalina.connector.RequestFacade@2b195afe, org.apache.catalina.connector.ResponseFacade@38179aaf]
+[12:10:17:835] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doAfterReturning(WebLogAspect.java:61) - RESPONSE :{"code":10000,"msg":"SUCCESS","data":"验证码生成：BufferedImage@1d80fdae: type = 1 DirectColorModel: rmask=ff0000 gmask=ff00 bmask=ff amask=0 IntegerInterleavedRaster: width = 120 height = 60 #Bands = 3 xOff = 0 yOff = 0 dataOffset[0] 0"}
+[12:10:17:867] [WARN] - org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.doResolveHandlerMethodException(ExceptionHandlerExceptionResolver.java:434) - Failure in @ExceptionHandler com.hl.emsystem.exception.GlobalExceptionHandler#handleException(Exception)
+org.springframework.http.converter.HttpMessageNotWritableException: No converter for [class com.hl.emsystem.common.ApiRestResponse] with preset Content-Type 'image/png'
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor.writeWithMessageConverters(AbstractMessageConverterMethodProcessor.java:312) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.handleReturnValue(RequestResponseBodyMethodProcessor.java:183) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite.handleReturnValue(HandlerMethodReturnValueHandlerComposite.java:78) ~[spring-web-5.3.24.jar:5.3.24]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:135) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.doResolveHandlerMethodException(ExceptionHandlerExceptionResolver.java:428) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodExceptionResolver.doResolveException(AbstractHandlerMethodExceptionResolver.java:75) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.resolveException(AbstractHandlerExceptionResolver.java:142) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at org.springframework.web.servlet.handler.HandlerExceptionResolverComposite.resolveException(HandlerExceptionResolverComposite.java:80) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at org.springframework.web.servlet.DispatcherServlet.processHandlerException(DispatcherServlet.java:1331) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1142) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1088) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:670) ~[tomcat-embed-core-9.0.69.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:779) ~[tomcat-embed-core-9.0.69.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.24.jar:5.3.24]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.24.jar:5.3.24]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.24.jar:5.3.24]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.24.jar:5.3.24]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.24.jar:5.3.24]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.24.jar:5.3.24]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:891) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1784) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at java.lang.Thread.run(Thread.java:748) ~[?:1.8.0_221]
+[12:10:17:874] [WARN] - org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver.doResolveException(DefaultHandlerExceptionResolver.java:234) - Failure while trying to resolve exception [org.springframework.http.converter.HttpMessageNotWritableException]
+java.lang.IllegalStateException: Cannot call sendError() after the response has been committed
+	at org.apache.catalina.connector.ResponseFacade.sendError(ResponseFacade.java:472) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver.sendServerError(DefaultHandlerExceptionResolver.java:552) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver.handleHttpMessageNotWritable(DefaultHandlerExceptionResolver.java:442) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver.doResolveException(DefaultHandlerExceptionResolver.java:209) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.resolveException(AbstractHandlerExceptionResolver.java:142) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at org.springframework.web.servlet.handler.HandlerExceptionResolverComposite.resolveException(HandlerExceptionResolverComposite.java:80) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at org.springframework.web.servlet.DispatcherServlet.processHandlerException(DispatcherServlet.java:1331) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1142) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1088) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:670) ~[tomcat-embed-core-9.0.69.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:779) ~[tomcat-embed-core-9.0.69.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.24.jar:5.3.24]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.24.jar:5.3.24]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.24.jar:5.3.24]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.24.jar:5.3.24]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.24.jar:5.3.24]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.24.jar:5.3.24]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:891) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1784) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at java.lang.Thread.run(Thread.java:748) ~[?:1.8.0_221]
+[12:10:17:898] [WARN] - org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.doResolveHandlerMethodException(ExceptionHandlerExceptionResolver.java:434) - Failure in @ExceptionHandler com.hl.emsystem.exception.GlobalExceptionHandler#handleException(Exception)
+org.springframework.http.converter.HttpMessageNotWritableException: No converter for [class com.hl.emsystem.common.ApiRestResponse] with preset Content-Type 'image/png'
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor.writeWithMessageConverters(AbstractMessageConverterMethodProcessor.java:312) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.handleReturnValue(RequestResponseBodyMethodProcessor.java:183) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite.handleReturnValue(HandlerMethodReturnValueHandlerComposite.java:78) ~[spring-web-5.3.24.jar:5.3.24]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:135) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.doResolveHandlerMethodException(ExceptionHandlerExceptionResolver.java:428) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodExceptionResolver.doResolveException(AbstractHandlerMethodExceptionResolver.java:75) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.resolveException(AbstractHandlerExceptionResolver.java:142) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at org.springframework.web.servlet.handler.HandlerExceptionResolverComposite.resolveException(HandlerExceptionResolverComposite.java:80) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at org.springframework.web.servlet.DispatcherServlet.processHandlerException(DispatcherServlet.java:1331) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1142) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1088) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:670) ~[tomcat-embed-core-9.0.69.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:779) ~[tomcat-embed-core-9.0.69.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.24.jar:5.3.24]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.24.jar:5.3.24]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:102) ~[spring-web-5.3.24.jar:5.3.24]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:102) ~[spring-web-5.3.24.jar:5.3.24]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:711) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.ApplicationDispatcher.doInclude(ApplicationDispatcher.java:578) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.ApplicationDispatcher.include(ApplicationDispatcher.java:517) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:384) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:249) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.StandardHostValve.throwable(StandardHostValve.java:344) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:169) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:891) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1784) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at java.lang.Thread.run(Thread.java:748) ~[?:1.8.0_221]
+[12:10:17:900] [WARN] - org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.logException(AbstractHandlerExceptionResolver.java:208) - Resolved [org.springframework.http.converter.HttpMessageNotWritableException: No converter for [class java.util.LinkedHashMap] with preset Content-Type 'image/png']
+[12:11:10:534] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:44) - URL :http://localhost:8081/api/user/login
+[12:11:10:534] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:45) - HTTP_METHOD :POST
+[12:11:10:535] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:46) - IP :127.0.0.1
+[12:11:10:535] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:48) - CLASS_METHODcom.hl.emsystem.controller.UserController.login
+[12:11:10:535] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:50) - ARGS :[{username=admin, password=12345678, verificationCode=nmx5}, org.apache.catalina.connector.RequestFacade@2b195afe]
+[12:11:10:598] [INFO] - com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:110) - emsystem_datasource - Starting...
+[12:11:10:810] [INFO] - com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:123) - emsystem_datasource - Start completed.
+[12:11:11:598] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doAfterReturning(WebLogAspect.java:61) - RESPONSE :{"code":10000,"msg":"SUCCESS","data":{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwZW9wbGVJZCI6MiwibmFtZSI6IuadsOWwkSIsImV4cCI6MTc2MTM2NTQ3MCwidXNlcklkIjoxLCJ1c2VybmFtZSI6ImFkbWluIn0.lt9moCtrrDDOHIaksfFUy9oqKCjGbpNpHAWD7loN5Ng"}}
+[12:11:11:949] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:44) - URL :http://localhost:8081/api/user/user_info
+[12:11:11:949] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:45) - HTTP_METHOD :GET
+[12:11:11:949] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:46) - IP :127.0.0.1
+[12:11:11:949] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:48) - CLASS_METHODcom.hl.emsystem.controller.UserController.userInfo
+[12:11:11:949] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:50) - ARGS :[eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwZW9wbGVJZCI6MiwibmFtZSI6IuadsOWwkSIsImV4cCI6MTc2MTM2NTQ3MCwidXNlcklkIjoxLCJ1c2VybmFtZSI6ImFkbWluIn0.lt9moCtrrDDOHIaksfFUy9oqKCjGbpNpHAWD7loN5Ng]
+[12:11:11:984] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doAfterReturning(WebLogAspect.java:61) - RESPONSE :{"code":10000,"msg":"SUCCESS","data":{"people":{"peopleId":2,"name":"杰少","departmentId":2,"title":"就业管理部","level":1},"department":{"departmentId":2,"departmentName":"就业办"},"username":"admin"}}
+[12:11:12:180] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:44) - URL :http://localhost:8081/api/user/user_info
+[12:11:12:180] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:45) - HTTP_METHOD :GET
+[12:11:12:180] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:46) - IP :127.0.0.1
+[12:11:12:180] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:48) - CLASS_METHODcom.hl.emsystem.controller.UserController.userInfo
+[12:11:12:181] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:50) - ARGS :[eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwZW9wbGVJZCI6MiwibmFtZSI6IuadsOWwkSIsImV4cCI6MTc2MTM2NTQ3MCwidXNlcklkIjoxLCJ1c2VybmFtZSI6ImFkbWluIn0.lt9moCtrrDDOHIaksfFUy9oqKCjGbpNpHAWD7loN5Ng]
+[12:11:12:196] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doAfterReturning(WebLogAspect.java:61) - RESPONSE :{"code":10000,"msg":"SUCCESS","data":{"people":{"peopleId":2,"name":"杰少","departmentId":2,"title":"就业管理部","level":1},"department":{"departmentId":2,"departmentName":"就业办"},"username":"admin"}}
+[12:11:12:212] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:44) - URL :http://localhost:8081/api/user/user_router
+[12:11:12:212] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:45) - HTTP_METHOD :GET
+[12:11:12:212] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:46) - IP :127.0.0.1
+[12:11:12:212] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:48) - CLASS_METHODcom.hl.emsystem.controller.UserController.getSidebar
+[12:11:12:212] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:50) - ARGS :[eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwZW9wbGVJZCI6MiwibmFtZSI6IuadsOWwkSIsImV4cCI6MTc2MTM2NTQ3MCwidXNlcklkIjoxLCJ1c2VybmFtZSI6ImFkbWluIn0.lt9moCtrrDDOHIaksfFUy9oqKCjGbpNpHAWD7loN5Ng]
+[12:11:12:234] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doAfterReturning(WebLogAspect.java:61) - RESPONSE :{"code":10000,"msg":"SUCCESS","data":[{"nodeId":1,"nodeType":1,"nodeName":"新闻公告管理","url":"","nodeCode":100,"parentId":0,"icon":"example","status":1},{"nodeId":2,"nodeType":2,"nodeName":"招聘公告","url":"notice","nodeCode":101,"parentId":1,"icon":"table","status":1},{"nodeId":3,"nodeType":2,"nodeName":"发布公告","url":"form","nodeCode":102,"parentId":1,"icon":"form","status":1},{"nodeId":4,"nodeType":2,"nodeName":"简历管理","url":"","nodeCode":200,"parentId":0,"icon":"example","status":1},{"nodeId":5,"nodeType":2,"nodeName":"上传简历","url":"upresume","nodeCode":201,"parentId":4,"icon":"form","status":1},{"nodeId":6,"nodeType":2,"nodeName":"查看简历","url":"lookresume","nodeCode":202,"parentId":4,"icon":"table","status":1},{"nodeId":7,"nodeType":1,"nodeName":"系统管理","url":"","nodeCode":300,"parentId":0,"icon":"example","status":1},{"nodeId":8,"nodeType":2,"nodeName":"角色权限","url":"role","nodeCode":301,"parentId":7,"icon":"user","status":1},{"nodeId":10,"nodeType":2,"nodeName":"菜单信息","url":"demo/tree","nodeCode":302,"parentId":7,"icon":"tree","status":1},{"nodeId":54,"nodeType":2,"nodeName":"用户管理","url":"user","nodeCode":303,"parentId":7,"icon":"peoples","status":1},{"nodeId":79,"nodeType":1,"nodeName":"工具管理","url":"","nodeCode":600,"parentId":0,"icon":"tool","status":1},{"nodeId":80,"nodeType":2,"nodeName":"表单构建","url":"tool/tabletool","nodeCode":601,"parentId":79,"icon":"table","status":1},{"nodeId":9,"nodeType":1,"nodeName":"友情链接","url":"https://www.hut.edu.cn","nodeCode":1000,"parentId":0,"icon":"link","status":1}]}
+[12:12:01:824] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:44) - URL :http://localhost:8081/api/user/user_info
+[12:12:01:824] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:45) - HTTP_METHOD :GET
+[12:12:01:825] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:46) - IP :127.0.0.1
+[12:12:01:825] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:48) - CLASS_METHODcom.hl.emsystem.controller.UserController.userInfo
+[12:12:01:825] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:50) - ARGS :[eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwZW9wbGVJZCI6MiwibmFtZSI6IuadsOWwkSIsImV4cCI6MTc2MTM2NTQ3MCwidXNlcklkIjoxLCJ1c2VybmFtZSI6ImFkbWluIn0.lt9moCtrrDDOHIaksfFUy9oqKCjGbpNpHAWD7loN5Ng]
+[12:12:01:840] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doAfterReturning(WebLogAspect.java:61) - RESPONSE :{"code":10000,"msg":"SUCCESS","data":{"people":{"peopleId":2,"name":"杰少","departmentId":2,"title":"就业管理部","level":1},"department":{"departmentId":2,"departmentName":"就业办"},"username":"admin"}}
+[12:12:01:871] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:44) - URL :http://localhost:8081/api/user/user_router
+[12:12:01:872] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:45) - HTTP_METHOD :GET
+[12:12:01:872] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:46) - IP :127.0.0.1
+[12:12:01:872] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:48) - CLASS_METHODcom.hl.emsystem.controller.UserController.getSidebar
+[12:12:01:872] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:50) - ARGS :[eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwZW9wbGVJZCI6MiwibmFtZSI6IuadsOWwkSIsImV4cCI6MTc2MTM2NTQ3MCwidXNlcklkIjoxLCJ1c2VybmFtZSI6ImFkbWluIn0.lt9moCtrrDDOHIaksfFUy9oqKCjGbpNpHAWD7loN5Ng]
+[12:12:01:885] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doAfterReturning(WebLogAspect.java:61) - RESPONSE :{"code":10000,"msg":"SUCCESS","data":[{"nodeId":1,"nodeType":1,"nodeName":"新闻公告管理","url":"","nodeCode":100,"parentId":0,"icon":"example","status":1},{"nodeId":2,"nodeType":2,"nodeName":"招聘公告","url":"notice","nodeCode":101,"parentId":1,"icon":"table","status":1},{"nodeId":3,"nodeType":2,"nodeName":"发布公告","url":"form","nodeCode":102,"parentId":1,"icon":"form","status":1},{"nodeId":4,"nodeType":2,"nodeName":"简历管理","url":"","nodeCode":200,"parentId":0,"icon":"example","status":1},{"nodeId":5,"nodeType":2,"nodeName":"上传简历","url":"upresume","nodeCode":201,"parentId":4,"icon":"form","status":1},{"nodeId":6,"nodeType":2,"nodeName":"查看简历","url":"lookresume","nodeCode":202,"parentId":4,"icon":"table","status":1},{"nodeId":7,"nodeType":1,"nodeName":"系统管理","url":"","nodeCode":300,"parentId":0,"icon":"example","status":1},{"nodeId":8,"nodeType":2,"nodeName":"角色权限","url":"role","nodeCode":301,"parentId":7,"icon":"user","status":1},{"nodeId":10,"nodeType":2,"nodeName":"菜单信息","url":"demo/tree","nodeCode":302,"parentId":7,"icon":"tree","status":1},{"nodeId":54,"nodeType":2,"nodeName":"用户管理","url":"user","nodeCode":303,"parentId":7,"icon":"peoples","status":1},{"nodeId":79,"nodeType":1,"nodeName":"工具管理","url":"","nodeCode":600,"parentId":0,"icon":"tool","status":1},{"nodeId":80,"nodeType":2,"nodeName":"表单构建","url":"tool/tabletool","nodeCode":601,"parentId":79,"icon":"table","status":1},{"nodeId":9,"nodeType":1,"nodeName":"友情链接","url":"https://www.hut.edu.cn","nodeCode":1000,"parentId":0,"icon":"link","status":1}]}
+[12:12:04:295] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:44) - URL :http://localhost:8081/api/user/user_info
+[12:12:04:296] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:45) - HTTP_METHOD :GET
+[12:12:04:296] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:46) - IP :127.0.0.1
+[12:12:04:296] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:48) - CLASS_METHODcom.hl.emsystem.controller.UserController.userInfo
+[12:12:04:296] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:50) - ARGS :[eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwZW9wbGVJZCI6MiwibmFtZSI6IuadsOWwkSIsImV4cCI6MTc2MTM2NTQ3MCwidXNlcklkIjoxLCJ1c2VybmFtZSI6ImFkbWluIn0.lt9moCtrrDDOHIaksfFUy9oqKCjGbpNpHAWD7loN5Ng]
+[12:12:04:308] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doAfterReturning(WebLogAspect.java:61) - RESPONSE :{"code":10000,"msg":"SUCCESS","data":{"people":{"peopleId":2,"name":"杰少","departmentId":2,"title":"就业管理部","level":1},"department":{"departmentId":2,"departmentName":"就业办"},"username":"admin"}}
+[12:12:04:341] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:44) - URL :http://localhost:8081/api/user/user_router
+[12:12:04:341] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:45) - HTTP_METHOD :GET
+[12:12:04:341] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:46) - IP :127.0.0.1
+[12:12:04:341] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:48) - CLASS_METHODcom.hl.emsystem.controller.UserController.getSidebar
+[12:12:04:342] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:50) - ARGS :[eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwZW9wbGVJZCI6MiwibmFtZSI6IuadsOWwkSIsImV4cCI6MTc2MTM2NTQ3MCwidXNlcklkIjoxLCJ1c2VybmFtZSI6ImFkbWluIn0.lt9moCtrrDDOHIaksfFUy9oqKCjGbpNpHAWD7loN5Ng]
+[12:12:04:349] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doAfterReturning(WebLogAspect.java:61) - RESPONSE :{"code":10000,"msg":"SUCCESS","data":[{"nodeId":1,"nodeType":1,"nodeName":"新闻公告管理","url":"","nodeCode":100,"parentId":0,"icon":"example","status":1},{"nodeId":2,"nodeType":2,"nodeName":"招聘公告","url":"notice","nodeCode":101,"parentId":1,"icon":"table","status":1},{"nodeId":3,"nodeType":2,"nodeName":"发布公告","url":"form","nodeCode":102,"parentId":1,"icon":"form","status":1},{"nodeId":4,"nodeType":2,"nodeName":"简历管理","url":"","nodeCode":200,"parentId":0,"icon":"example","status":1},{"nodeId":5,"nodeType":2,"nodeName":"上传简历","url":"upresume","nodeCode":201,"parentId":4,"icon":"form","status":1},{"nodeId":6,"nodeType":2,"nodeName":"查看简历","url":"lookresume","nodeCode":202,"parentId":4,"icon":"table","status":1},{"nodeId":7,"nodeType":1,"nodeName":"系统管理","url":"","nodeCode":300,"parentId":0,"icon":"example","status":1},{"nodeId":8,"nodeType":2,"nodeName":"角色权限","url":"role","nodeCode":301,"parentId":7,"icon":"user","status":1},{"nodeId":10,"nodeType":2,"nodeName":"菜单信息","url":"demo/tree","nodeCode":302,"parentId":7,"icon":"tree","status":1},{"nodeId":54,"nodeType":2,"nodeName":"用户管理","url":"user","nodeCode":303,"parentId":7,"icon":"peoples","status":1},{"nodeId":79,"nodeType":1,"nodeName":"工具管理","url":"","nodeCode":600,"parentId":0,"icon":"tool","status":1},{"nodeId":80,"nodeType":2,"nodeName":"表单构建","url":"tool/tabletool","nodeCode":601,"parentId":79,"icon":"table","status":1},{"nodeId":9,"nodeType":1,"nodeName":"友情链接","url":"https://www.hut.edu.cn","nodeCode":1000,"parentId":0,"icon":"link","status":1}]}
+[12:12:06:600] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:44) - URL :http://localhost:8081/api/user/user_info
+[12:12:06:600] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:45) - HTTP_METHOD :GET
+[12:12:06:600] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:46) - IP :127.0.0.1
+[12:12:06:600] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:48) - CLASS_METHODcom.hl.emsystem.controller.UserController.userInfo
+[12:12:06:600] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:50) - ARGS :[eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwZW9wbGVJZCI6MiwibmFtZSI6IuadsOWwkSIsImV4cCI6MTc2MTM2NTQ3MCwidXNlcklkIjoxLCJ1c2VybmFtZSI6ImFkbWluIn0.lt9moCtrrDDOHIaksfFUy9oqKCjGbpNpHAWD7loN5Ng]
+[12:12:06:613] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doAfterReturning(WebLogAspect.java:61) - RESPONSE :{"code":10000,"msg":"SUCCESS","data":{"people":{"peopleId":2,"name":"杰少","departmentId":2,"title":"就业管理部","level":1},"department":{"departmentId":2,"departmentName":"就业办"},"username":"admin"}}
+[12:12:06:642] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:44) - URL :http://localhost:8081/api/user/user_router
+[12:12:06:643] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:45) - HTTP_METHOD :GET
+[12:12:06:643] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:46) - IP :127.0.0.1
+[12:12:06:643] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:48) - CLASS_METHODcom.hl.emsystem.controller.UserController.getSidebar
+[12:12:06:643] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:50) - ARGS :[eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwZW9wbGVJZCI6MiwibmFtZSI6IuadsOWwkSIsImV4cCI6MTc2MTM2NTQ3MCwidXNlcklkIjoxLCJ1c2VybmFtZSI6ImFkbWluIn0.lt9moCtrrDDOHIaksfFUy9oqKCjGbpNpHAWD7loN5Ng]
+[12:12:06:651] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doAfterReturning(WebLogAspect.java:61) - RESPONSE :{"code":10000,"msg":"SUCCESS","data":[{"nodeId":1,"nodeType":1,"nodeName":"新闻公告管理","url":"","nodeCode":100,"parentId":0,"icon":"example","status":1},{"nodeId":2,"nodeType":2,"nodeName":"招聘公告","url":"notice","nodeCode":101,"parentId":1,"icon":"table","status":1},{"nodeId":3,"nodeType":2,"nodeName":"发布公告","url":"form","nodeCode":102,"parentId":1,"icon":"form","status":1},{"nodeId":4,"nodeType":2,"nodeName":"简历管理","url":"","nodeCode":200,"parentId":0,"icon":"example","status":1},{"nodeId":5,"nodeType":2,"nodeName":"上传简历","url":"upresume","nodeCode":201,"parentId":4,"icon":"form","status":1},{"nodeId":6,"nodeType":2,"nodeName":"查看简历","url":"lookresume","nodeCode":202,"parentId":4,"icon":"table","status":1},{"nodeId":7,"nodeType":1,"nodeName":"系统管理","url":"","nodeCode":300,"parentId":0,"icon":"example","status":1},{"nodeId":8,"nodeType":2,"nodeName":"角色权限","url":"role","nodeCode":301,"parentId":7,"icon":"user","status":1},{"nodeId":10,"nodeType":2,"nodeName":"菜单信息","url":"demo/tree","nodeCode":302,"parentId":7,"icon":"tree","status":1},{"nodeId":54,"nodeType":2,"nodeName":"用户管理","url":"user","nodeCode":303,"parentId":7,"icon":"peoples","status":1},{"nodeId":79,"nodeType":1,"nodeName":"工具管理","url":"","nodeCode":600,"parentId":0,"icon":"tool","status":1},{"nodeId":80,"nodeType":2,"nodeName":"表单构建","url":"tool/tabletool","nodeCode":601,"parentId":79,"icon":"table","status":1},{"nodeId":9,"nodeType":1,"nodeName":"友情链接","url":"https://www.hut.edu.cn","nodeCode":1000,"parentId":0,"icon":"link","status":1}]}
+[12:12:12:615] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:44) - URL :http://localhost:8081/api/user/logout
+[12:12:12:615] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:45) - HTTP_METHOD :POST
+[12:12:12:615] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:46) - IP :127.0.0.1
+[12:12:12:615] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:48) - CLASS_METHODcom.hl.emsystem.controller.UserController.logout
+[12:12:12:615] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:50) - ARGS :[]
+[12:12:12:617] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doAfterReturning(WebLogAspect.java:61) - RESPONSE :{"code":10000,"msg":"SUCCESS","data":null}
+[12:12:12:871] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:44) - URL :http://localhost:8081/api/verify_code
+[12:12:12:871] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:45) - HTTP_METHOD :GET
+[12:12:12:872] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:46) - IP :127.0.0.1
+[12:12:12:872] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:48) - CLASS_METHODcom.hl.emsystem.controller.KaptchaController.createVerifyCode
+[12:12:12:872] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:50) - ARGS :[org.apache.catalina.connector.RequestFacade@2b195afe, org.apache.catalina.connector.ResponseFacade@38179aaf]
+[12:12:13:027] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doAfterReturning(WebLogAspect.java:61) - RESPONSE :{"code":10000,"msg":"SUCCESS","data":"验证码生成：BufferedImage@3bb7f0a2: type = 1 DirectColorModel: rmask=ff0000 gmask=ff00 bmask=ff amask=0 IntegerInterleavedRaster: width = 120 height = 60 #Bands = 3 xOff = 0 yOff = 0 dataOffset[0] 0"}
+[12:12:13:029] [WARN] - org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.doResolveHandlerMethodException(ExceptionHandlerExceptionResolver.java:434) - Failure in @ExceptionHandler com.hl.emsystem.exception.GlobalExceptionHandler#handleException(Exception)
+org.springframework.http.converter.HttpMessageNotWritableException: No converter for [class com.hl.emsystem.common.ApiRestResponse] with preset Content-Type 'image/png'
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor.writeWithMessageConverters(AbstractMessageConverterMethodProcessor.java:312) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.handleReturnValue(RequestResponseBodyMethodProcessor.java:183) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite.handleReturnValue(HandlerMethodReturnValueHandlerComposite.java:78) ~[spring-web-5.3.24.jar:5.3.24]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:135) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.doResolveHandlerMethodException(ExceptionHandlerExceptionResolver.java:428) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodExceptionResolver.doResolveException(AbstractHandlerMethodExceptionResolver.java:75) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.resolveException(AbstractHandlerExceptionResolver.java:142) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at org.springframework.web.servlet.handler.HandlerExceptionResolverComposite.resolveException(HandlerExceptionResolverComposite.java:80) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at org.springframework.web.servlet.DispatcherServlet.processHandlerException(DispatcherServlet.java:1331) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1142) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1088) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:670) ~[tomcat-embed-core-9.0.69.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:779) ~[tomcat-embed-core-9.0.69.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.24.jar:5.3.24]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.24.jar:5.3.24]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.24.jar:5.3.24]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.24.jar:5.3.24]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.24.jar:5.3.24]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.24.jar:5.3.24]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:891) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1784) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at java.lang.Thread.run(Thread.java:748) ~[?:1.8.0_221]
+[12:12:13:030] [WARN] - org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver.doResolveException(DefaultHandlerExceptionResolver.java:234) - Failure while trying to resolve exception [org.springframework.http.converter.HttpMessageNotWritableException]
+java.lang.IllegalStateException: Cannot call sendError() after the response has been committed
+	at org.apache.catalina.connector.ResponseFacade.sendError(ResponseFacade.java:472) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver.sendServerError(DefaultHandlerExceptionResolver.java:552) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver.handleHttpMessageNotWritable(DefaultHandlerExceptionResolver.java:442) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver.doResolveException(DefaultHandlerExceptionResolver.java:209) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.resolveException(AbstractHandlerExceptionResolver.java:142) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at org.springframework.web.servlet.handler.HandlerExceptionResolverComposite.resolveException(HandlerExceptionResolverComposite.java:80) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at org.springframework.web.servlet.DispatcherServlet.processHandlerException(DispatcherServlet.java:1331) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1142) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1088) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:670) ~[tomcat-embed-core-9.0.69.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:779) ~[tomcat-embed-core-9.0.69.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.24.jar:5.3.24]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.24.jar:5.3.24]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.24.jar:5.3.24]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.24.jar:5.3.24]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.24.jar:5.3.24]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.24.jar:5.3.24]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:891) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1784) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at java.lang.Thread.run(Thread.java:748) ~[?:1.8.0_221]
+[12:12:13:034] [WARN] - org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.doResolveHandlerMethodException(ExceptionHandlerExceptionResolver.java:434) - Failure in @ExceptionHandler com.hl.emsystem.exception.GlobalExceptionHandler#handleException(Exception)
+org.springframework.http.converter.HttpMessageNotWritableException: No converter for [class com.hl.emsystem.common.ApiRestResponse] with preset Content-Type 'image/png'
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor.writeWithMessageConverters(AbstractMessageConverterMethodProcessor.java:312) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.handleReturnValue(RequestResponseBodyMethodProcessor.java:183) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite.handleReturnValue(HandlerMethodReturnValueHandlerComposite.java:78) ~[spring-web-5.3.24.jar:5.3.24]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:135) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.doResolveHandlerMethodException(ExceptionHandlerExceptionResolver.java:428) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodExceptionResolver.doResolveException(AbstractHandlerMethodExceptionResolver.java:75) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.resolveException(AbstractHandlerExceptionResolver.java:142) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at org.springframework.web.servlet.handler.HandlerExceptionResolverComposite.resolveException(HandlerExceptionResolverComposite.java:80) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at org.springframework.web.servlet.DispatcherServlet.processHandlerException(DispatcherServlet.java:1331) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1142) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1088) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:670) ~[tomcat-embed-core-9.0.69.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:779) ~[tomcat-embed-core-9.0.69.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.24.jar:5.3.24]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.24.jar:5.3.24]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:102) ~[spring-web-5.3.24.jar:5.3.24]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:102) ~[spring-web-5.3.24.jar:5.3.24]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:711) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.ApplicationDispatcher.doInclude(ApplicationDispatcher.java:578) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.ApplicationDispatcher.include(ApplicationDispatcher.java:517) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:384) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:249) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.StandardHostValve.throwable(StandardHostValve.java:344) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:169) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:891) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1784) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at java.lang.Thread.run(Thread.java:748) ~[?:1.8.0_221]
+[12:12:13:034] [WARN] - org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.logException(AbstractHandlerExceptionResolver.java:208) - Resolved [org.springframework.http.converter.HttpMessageNotWritableException: No converter for [class java.util.LinkedHashMap] with preset Content-Type 'image/png']
+[12:12:27:367] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:44) - URL :http://localhost:8081/api/user/login
+[12:12:27:367] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:45) - HTTP_METHOD :POST
+[12:12:27:367] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:46) - IP :127.0.0.1
+[12:12:27:367] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:48) - CLASS_METHODcom.hl.emsystem.controller.UserController.login
+[12:12:27:367] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:50) - ARGS :[{username=20408000506, password=20020829, verificationCode=cefb}, org.apache.catalina.connector.RequestFacade@2b195afe]
+[12:12:27:375] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doAfterReturning(WebLogAspect.java:61) - RESPONSE :{"code":10000,"msg":"SUCCESS","data":{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwZW9wbGVJZCI6MTE2LCJuYW1lIjoi6Z-pNiIsImV4cCI6MTc2MTM2NTU0NywidXNlcklkIjoxMTYsInVzZXJuYW1lIjoiMjA0MDgwMDA1MDYifQ.O_RPofLvE9oi9EvH-qVQpBR-j53SZrIR9rJoCMHZOIA"}}
+[12:12:27:402] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:44) - URL :http://localhost:8081/api/user/user_info
+[12:12:27:402] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:45) - HTTP_METHOD :GET
+[12:12:27:402] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:46) - IP :127.0.0.1
+[12:12:27:402] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:48) - CLASS_METHODcom.hl.emsystem.controller.UserController.userInfo
+[12:12:27:402] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:50) - ARGS :[eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwZW9wbGVJZCI6MTE2LCJuYW1lIjoi6Z-pNiIsImV4cCI6MTc2MTM2NTU0NywidXNlcklkIjoxMTYsInVzZXJuYW1lIjoiMjA0MDgwMDA1MDYifQ.O_RPofLvE9oi9EvH-qVQpBR-j53SZrIR9rJoCMHZOIA]
+[12:12:27:412] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doAfterReturning(WebLogAspect.java:61) - RESPONSE :{"code":10000,"msg":"SUCCESS","data":{"people":{"peopleId":116,"name":"韩6","departmentId":122,"title":null,"level":null},"department":{"departmentId":122,"departmentName":"学生1"},"username":"20408000506"}}
+[12:12:27:712] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:44) - URL :http://localhost:8081/api/user/user_router
+[12:12:27:713] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:45) - HTTP_METHOD :GET
+[12:12:27:713] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:46) - IP :127.0.0.1
+[12:12:27:713] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:48) - CLASS_METHODcom.hl.emsystem.controller.UserController.getSidebar
+[12:12:27:713] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:50) - ARGS :[eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwZW9wbGVJZCI6MTE2LCJuYW1lIjoi6Z-pNiIsImV4cCI6MTc2MTM2NTU0NywidXNlcklkIjoxMTYsInVzZXJuYW1lIjoiMjA0MDgwMDA1MDYifQ.O_RPofLvE9oi9EvH-qVQpBR-j53SZrIR9rJoCMHZOIA]
+[12:12:27:722] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doAfterReturning(WebLogAspect.java:61) - RESPONSE :{"code":10000,"msg":"SUCCESS","data":[{"nodeId":1,"nodeType":1,"nodeName":"新闻公告管理","url":"","nodeCode":100,"parentId":0,"icon":"example","status":1},{"nodeId":3,"nodeType":2,"nodeName":"发布公告","url":"form","nodeCode":102,"parentId":1,"icon":"form","status":1},{"nodeId":4,"nodeType":2,"nodeName":"简历管理","url":"","nodeCode":200,"parentId":0,"icon":"example","status":1},{"nodeId":5,"nodeType":2,"nodeName":"上传简历","url":"upresume","nodeCode":201,"parentId":4,"icon":"form","status":1},{"nodeId":6,"nodeType":2,"nodeName":"查看简历","url":"lookresume","nodeCode":202,"parentId":4,"icon":"table","status":1},{"nodeId":9,"nodeType":1,"nodeName":"友情链接","url":"https://www.hut.edu.cn","nodeCode":1000,"parentId":0,"icon":"link","status":1}]}
+[12:12:27:929] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:44) - URL :http://localhost:8081/api/user/user_info
+[12:12:27:929] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:45) - HTTP_METHOD :GET
+[12:12:27:929] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:46) - IP :127.0.0.1
+[12:12:27:929] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:48) - CLASS_METHODcom.hl.emsystem.controller.UserController.userInfo
+[12:12:27:930] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:50) - ARGS :[eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwZW9wbGVJZCI6MTE2LCJuYW1lIjoi6Z-pNiIsImV4cCI6MTc2MTM2NTU0NywidXNlcklkIjoxMTYsInVzZXJuYW1lIjoiMjA0MDgwMDA1MDYifQ.O_RPofLvE9oi9EvH-qVQpBR-j53SZrIR9rJoCMHZOIA]
+[12:12:27:944] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doAfterReturning(WebLogAspect.java:61) - RESPONSE :{"code":10000,"msg":"SUCCESS","data":{"people":{"peopleId":116,"name":"韩6","departmentId":122,"title":null,"level":null},"department":{"departmentId":122,"departmentName":"学生1"},"username":"20408000506"}}
+[12:12:28:035] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:44) - URL :http://localhost:8081/api/user/user_router
+[12:12:28:035] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:45) - HTTP_METHOD :GET
+[12:12:28:035] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:46) - IP :127.0.0.1
+[12:12:28:035] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:48) - CLASS_METHODcom.hl.emsystem.controller.UserController.getSidebar
+[12:12:28:035] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:50) - ARGS :[eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwZW9wbGVJZCI6MTE2LCJuYW1lIjoi6Z-pNiIsImV4cCI6MTc2MTM2NTU0NywidXNlcklkIjoxMTYsInVzZXJuYW1lIjoiMjA0MDgwMDA1MDYifQ.O_RPofLvE9oi9EvH-qVQpBR-j53SZrIR9rJoCMHZOIA]
+[12:12:28:042] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doAfterReturning(WebLogAspect.java:61) - RESPONSE :{"code":10000,"msg":"SUCCESS","data":[{"nodeId":1,"nodeType":1,"nodeName":"新闻公告管理","url":"","nodeCode":100,"parentId":0,"icon":"example","status":1},{"nodeId":3,"nodeType":2,"nodeName":"发布公告","url":"form","nodeCode":102,"parentId":1,"icon":"form","status":1},{"nodeId":4,"nodeType":2,"nodeName":"简历管理","url":"","nodeCode":200,"parentId":0,"icon":"example","status":1},{"nodeId":5,"nodeType":2,"nodeName":"上传简历","url":"upresume","nodeCode":201,"parentId":4,"icon":"form","status":1},{"nodeId":6,"nodeType":2,"nodeName":"查看简历","url":"lookresume","nodeCode":202,"parentId":4,"icon":"table","status":1},{"nodeId":9,"nodeType":1,"nodeName":"友情链接","url":"https://www.hut.edu.cn","nodeCode":1000,"parentId":0,"icon":"link","status":1}]}
+[12:12:38:895] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:44) - URL :http://localhost:8081/api/user/user_info
+[12:12:38:895] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:45) - HTTP_METHOD :GET
+[12:12:38:895] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:46) - IP :127.0.0.1
+[12:12:38:895] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:48) - CLASS_METHODcom.hl.emsystem.controller.UserController.userInfo
+[12:12:38:895] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:50) - ARGS :[eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwZW9wbGVJZCI6MTE2LCJuYW1lIjoi6Z-pNiIsImV4cCI6MTc2MTM2NTU0NywidXNlcklkIjoxMTYsInVzZXJuYW1lIjoiMjA0MDgwMDA1MDYifQ.O_RPofLvE9oi9EvH-qVQpBR-j53SZrIR9rJoCMHZOIA]
+[12:12:38:906] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doAfterReturning(WebLogAspect.java:61) - RESPONSE :{"code":10000,"msg":"SUCCESS","data":{"people":{"peopleId":116,"name":"韩6","departmentId":122,"title":null,"level":null},"department":{"departmentId":122,"departmentName":"学生1"},"username":"20408000506"}}
+[12:12:38:940] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:44) - URL :http://localhost:8081/api/user/user_router
+[12:12:38:940] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:45) - HTTP_METHOD :GET
+[12:12:38:940] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:46) - IP :127.0.0.1
+[12:12:38:940] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:48) - CLASS_METHODcom.hl.emsystem.controller.UserController.getSidebar
+[12:12:38:940] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:50) - ARGS :[eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwZW9wbGVJZCI6MTE2LCJuYW1lIjoi6Z-pNiIsImV4cCI6MTc2MTM2NTU0NywidXNlcklkIjoxMTYsInVzZXJuYW1lIjoiMjA0MDgwMDA1MDYifQ.O_RPofLvE9oi9EvH-qVQpBR-j53SZrIR9rJoCMHZOIA]
+[12:12:38:947] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doAfterReturning(WebLogAspect.java:61) - RESPONSE :{"code":10000,"msg":"SUCCESS","data":[{"nodeId":1,"nodeType":1,"nodeName":"新闻公告管理","url":"","nodeCode":100,"parentId":0,"icon":"example","status":1},{"nodeId":3,"nodeType":2,"nodeName":"发布公告","url":"form","nodeCode":102,"parentId":1,"icon":"form","status":1},{"nodeId":4,"nodeType":2,"nodeName":"简历管理","url":"","nodeCode":200,"parentId":0,"icon":"example","status":1},{"nodeId":5,"nodeType":2,"nodeName":"上传简历","url":"upresume","nodeCode":201,"parentId":4,"icon":"form","status":1},{"nodeId":6,"nodeType":2,"nodeName":"查看简历","url":"lookresume","nodeCode":202,"parentId":4,"icon":"table","status":1},{"nodeId":9,"nodeType":1,"nodeName":"友情链接","url":"https://www.hut.edu.cn","nodeCode":1000,"parentId":0,"icon":"link","status":1}]}
+[12:12:48:117] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:44) - URL :http://localhost:8081/api/user/user_info
+[12:12:48:117] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:45) - HTTP_METHOD :GET
+[12:12:48:117] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:46) - IP :127.0.0.1
+[12:12:48:117] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:48) - CLASS_METHODcom.hl.emsystem.controller.UserController.userInfo
+[12:12:48:118] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:50) - ARGS :[eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwZW9wbGVJZCI6MTE2LCJuYW1lIjoi6Z-pNiIsImV4cCI6MTc2MTM2NTU0NywidXNlcklkIjoxMTYsInVzZXJuYW1lIjoiMjA0MDgwMDA1MDYifQ.O_RPofLvE9oi9EvH-qVQpBR-j53SZrIR9rJoCMHZOIA]
+[12:12:48:129] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doAfterReturning(WebLogAspect.java:61) - RESPONSE :{"code":10000,"msg":"SUCCESS","data":{"people":{"peopleId":116,"name":"韩6","departmentId":122,"title":null,"level":null},"department":{"departmentId":122,"departmentName":"学生1"},"username":"20408000506"}}
+[12:12:48:162] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:44) - URL :http://localhost:8081/api/user/user_router
+[12:12:48:162] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:45) - HTTP_METHOD :GET
+[12:12:48:162] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:46) - IP :127.0.0.1
+[12:12:48:162] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:48) - CLASS_METHODcom.hl.emsystem.controller.UserController.getSidebar
+[12:12:48:162] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:50) - ARGS :[eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwZW9wbGVJZCI6MTE2LCJuYW1lIjoi6Z-pNiIsImV4cCI6MTc2MTM2NTU0NywidXNlcklkIjoxMTYsInVzZXJuYW1lIjoiMjA0MDgwMDA1MDYifQ.O_RPofLvE9oi9EvH-qVQpBR-j53SZrIR9rJoCMHZOIA]
+[12:12:48:169] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doAfterReturning(WebLogAspect.java:61) - RESPONSE :{"code":10000,"msg":"SUCCESS","data":[{"nodeId":1,"nodeType":1,"nodeName":"新闻公告管理","url":"","nodeCode":100,"parentId":0,"icon":"example","status":1},{"nodeId":3,"nodeType":2,"nodeName":"发布公告","url":"form","nodeCode":102,"parentId":1,"icon":"form","status":1},{"nodeId":4,"nodeType":2,"nodeName":"简历管理","url":"","nodeCode":200,"parentId":0,"icon":"example","status":1},{"nodeId":5,"nodeType":2,"nodeName":"上传简历","url":"upresume","nodeCode":201,"parentId":4,"icon":"form","status":1},{"nodeId":6,"nodeType":2,"nodeName":"查看简历","url":"lookresume","nodeCode":202,"parentId":4,"icon":"table","status":1},{"nodeId":9,"nodeType":1,"nodeName":"友情链接","url":"https://www.hut.edu.cn","nodeCode":1000,"parentId":0,"icon":"link","status":1}]}
+[12:13:41:390] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:44) - URL :http://localhost:8081/api/user/user_info
+[12:13:41:390] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:45) - HTTP_METHOD :GET
+[12:13:41:390] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:46) - IP :127.0.0.1
+[12:13:41:391] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:48) - CLASS_METHODcom.hl.emsystem.controller.UserController.userInfo
+[12:13:41:391] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:50) - ARGS :[eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwZW9wbGVJZCI6MTE2LCJuYW1lIjoi6Z-pNiIsImV4cCI6MTc2MTM2NTU0NywidXNlcklkIjoxMTYsInVzZXJuYW1lIjoiMjA0MDgwMDA1MDYifQ.O_RPofLvE9oi9EvH-qVQpBR-j53SZrIR9rJoCMHZOIA]
+[12:13:41:403] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doAfterReturning(WebLogAspect.java:61) - RESPONSE :{"code":10000,"msg":"SUCCESS","data":{"people":{"peopleId":116,"name":"韩6","departmentId":122,"title":null,"level":null},"department":{"departmentId":122,"departmentName":"学生1"},"username":"20408000506"}}
+[12:13:41:487] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:44) - URL :http://localhost:8081/api/user/user_router
+[12:13:41:488] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:45) - HTTP_METHOD :GET
+[12:13:41:488] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:46) - IP :127.0.0.1
+[12:13:41:488] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:48) - CLASS_METHODcom.hl.emsystem.controller.UserController.getSidebar
+[12:13:41:488] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:50) - ARGS :[eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwZW9wbGVJZCI6MTE2LCJuYW1lIjoi6Z-pNiIsImV4cCI6MTc2MTM2NTU0NywidXNlcklkIjoxMTYsInVzZXJuYW1lIjoiMjA0MDgwMDA1MDYifQ.O_RPofLvE9oi9EvH-qVQpBR-j53SZrIR9rJoCMHZOIA]
+[12:13:41:494] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doAfterReturning(WebLogAspect.java:61) - RESPONSE :{"code":10000,"msg":"SUCCESS","data":[{"nodeId":1,"nodeType":1,"nodeName":"新闻公告管理","url":"","nodeCode":100,"parentId":0,"icon":"example","status":1},{"nodeId":3,"nodeType":2,"nodeName":"发布公告","url":"form","nodeCode":102,"parentId":1,"icon":"form","status":1},{"nodeId":4,"nodeType":2,"nodeName":"简历管理","url":"","nodeCode":200,"parentId":0,"icon":"example","status":1},{"nodeId":5,"nodeType":2,"nodeName":"上传简历","url":"upresume","nodeCode":201,"parentId":4,"icon":"form","status":1},{"nodeId":6,"nodeType":2,"nodeName":"查看简历","url":"lookresume","nodeCode":202,"parentId":4,"icon":"table","status":1},{"nodeId":9,"nodeType":1,"nodeName":"友情链接","url":"https://www.hut.edu.cn","nodeCode":1000,"parentId":0,"icon":"link","status":1}]}
+[12:13:44:423] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:44) - URL :http://localhost:8081/api/user/user_info
+[12:13:44:423] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:45) - HTTP_METHOD :GET
+[12:13:44:424] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:46) - IP :127.0.0.1
+[12:13:44:424] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:48) - CLASS_METHODcom.hl.emsystem.controller.UserController.userInfo
+[12:13:44:424] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:50) - ARGS :[eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwZW9wbGVJZCI6MTE2LCJuYW1lIjoi6Z-pNiIsImV4cCI6MTc2MTM2NTU0NywidXNlcklkIjoxMTYsInVzZXJuYW1lIjoiMjA0MDgwMDA1MDYifQ.O_RPofLvE9oi9EvH-qVQpBR-j53SZrIR9rJoCMHZOIA]
+[12:13:44:436] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doAfterReturning(WebLogAspect.java:61) - RESPONSE :{"code":10000,"msg":"SUCCESS","data":{"people":{"peopleId":116,"name":"韩6","departmentId":122,"title":null,"level":null},"department":{"departmentId":122,"departmentName":"学生1"},"username":"20408000506"}}
+[12:13:44:468] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:44) - URL :http://localhost:8081/api/user/user_router
+[12:13:44:468] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:45) - HTTP_METHOD :GET
+[12:13:44:468] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:46) - IP :127.0.0.1
+[12:13:44:468] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:48) - CLASS_METHODcom.hl.emsystem.controller.UserController.getSidebar
+[12:13:44:468] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:50) - ARGS :[eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwZW9wbGVJZCI6MTE2LCJuYW1lIjoi6Z-pNiIsImV4cCI6MTc2MTM2NTU0NywidXNlcklkIjoxMTYsInVzZXJuYW1lIjoiMjA0MDgwMDA1MDYifQ.O_RPofLvE9oi9EvH-qVQpBR-j53SZrIR9rJoCMHZOIA]
+[12:13:44:474] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doAfterReturning(WebLogAspect.java:61) - RESPONSE :{"code":10000,"msg":"SUCCESS","data":[{"nodeId":1,"nodeType":1,"nodeName":"新闻公告管理","url":"","nodeCode":100,"parentId":0,"icon":"example","status":1},{"nodeId":3,"nodeType":2,"nodeName":"发布公告","url":"form","nodeCode":102,"parentId":1,"icon":"form","status":1},{"nodeId":4,"nodeType":2,"nodeName":"简历管理","url":"","nodeCode":200,"parentId":0,"icon":"example","status":1},{"nodeId":5,"nodeType":2,"nodeName":"上传简历","url":"upresume","nodeCode":201,"parentId":4,"icon":"form","status":1},{"nodeId":6,"nodeType":2,"nodeName":"查看简历","url":"lookresume","nodeCode":202,"parentId":4,"icon":"table","status":1},{"nodeId":9,"nodeType":1,"nodeName":"友情链接","url":"https://www.hut.edu.cn","nodeCode":1000,"parentId":0,"icon":"link","status":1}]}
+[12:13:46:928] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:44) - URL :http://localhost:8081/api/user/user_info
+[12:13:46:928] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:45) - HTTP_METHOD :GET
+[12:13:46:928] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:46) - IP :127.0.0.1
+[12:13:46:928] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:48) - CLASS_METHODcom.hl.emsystem.controller.UserController.userInfo
+[12:13:46:928] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:50) - ARGS :[eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwZW9wbGVJZCI6MTE2LCJuYW1lIjoi6Z-pNiIsImV4cCI6MTc2MTM2NTU0NywidXNlcklkIjoxMTYsInVzZXJuYW1lIjoiMjA0MDgwMDA1MDYifQ.O_RPofLvE9oi9EvH-qVQpBR-j53SZrIR9rJoCMHZOIA]
+[12:13:46:939] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doAfterReturning(WebLogAspect.java:61) - RESPONSE :{"code":10000,"msg":"SUCCESS","data":{"people":{"peopleId":116,"name":"韩6","departmentId":122,"title":null,"level":null},"department":{"departmentId":122,"departmentName":"学生1"},"username":"20408000506"}}
+[12:13:46:950] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:44) - URL :http://localhost:8081/api/user/user_router
+[12:13:46:950] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:45) - HTTP_METHOD :GET
+[12:13:46:950] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:46) - IP :127.0.0.1
+[12:13:46:950] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:48) - CLASS_METHODcom.hl.emsystem.controller.UserController.getSidebar
+[12:13:46:951] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:50) - ARGS :[eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwZW9wbGVJZCI6MTE2LCJuYW1lIjoi6Z-pNiIsImV4cCI6MTc2MTM2NTU0NywidXNlcklkIjoxMTYsInVzZXJuYW1lIjoiMjA0MDgwMDA1MDYifQ.O_RPofLvE9oi9EvH-qVQpBR-j53SZrIR9rJoCMHZOIA]
+[12:13:46:958] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doAfterReturning(WebLogAspect.java:61) - RESPONSE :{"code":10000,"msg":"SUCCESS","data":[{"nodeId":1,"nodeType":1,"nodeName":"新闻公告管理","url":"","nodeCode":100,"parentId":0,"icon":"example","status":1},{"nodeId":3,"nodeType":2,"nodeName":"发布公告","url":"form","nodeCode":102,"parentId":1,"icon":"form","status":1},{"nodeId":4,"nodeType":2,"nodeName":"简历管理","url":"","nodeCode":200,"parentId":0,"icon":"example","status":1},{"nodeId":5,"nodeType":2,"nodeName":"上传简历","url":"upresume","nodeCode":201,"parentId":4,"icon":"form","status":1},{"nodeId":6,"nodeType":2,"nodeName":"查看简历","url":"lookresume","nodeCode":202,"parentId":4,"icon":"table","status":1},{"nodeId":9,"nodeType":1,"nodeName":"友情链接","url":"https://www.hut.edu.cn","nodeCode":1000,"parentId":0,"icon":"link","status":1}]}
+[12:13:58:934] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:44) - URL :http://localhost:8081/api/user/user_info
+[12:13:58:934] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:45) - HTTP_METHOD :GET
+[12:13:58:934] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:46) - IP :127.0.0.1
+[12:13:58:934] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:48) - CLASS_METHODcom.hl.emsystem.controller.UserController.userInfo
+[12:13:58:935] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:50) - ARGS :[eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwZW9wbGVJZCI6MTE2LCJuYW1lIjoi6Z-pNiIsImV4cCI6MTc2MTM2NTU0NywidXNlcklkIjoxMTYsInVzZXJuYW1lIjoiMjA0MDgwMDA1MDYifQ.O_RPofLvE9oi9EvH-qVQpBR-j53SZrIR9rJoCMHZOIA]
+[12:13:58:945] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doAfterReturning(WebLogAspect.java:61) - RESPONSE :{"code":10000,"msg":"SUCCESS","data":{"people":{"peopleId":116,"name":"韩6","departmentId":122,"title":null,"level":null},"department":{"departmentId":122,"departmentName":"学生1"},"username":"20408000506"}}
+[12:13:58:961] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:44) - URL :http://localhost:8081/api/user/user_router
+[12:13:58:961] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:45) - HTTP_METHOD :GET
+[12:13:58:961] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:46) - IP :127.0.0.1
+[12:13:58:961] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:48) - CLASS_METHODcom.hl.emsystem.controller.UserController.getSidebar
+[12:13:58:962] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:50) - ARGS :[eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwZW9wbGVJZCI6MTE2LCJuYW1lIjoi6Z-pNiIsImV4cCI6MTc2MTM2NTU0NywidXNlcklkIjoxMTYsInVzZXJuYW1lIjoiMjA0MDgwMDA1MDYifQ.O_RPofLvE9oi9EvH-qVQpBR-j53SZrIR9rJoCMHZOIA]
+[12:13:58:969] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doAfterReturning(WebLogAspect.java:61) - RESPONSE :{"code":10000,"msg":"SUCCESS","data":[{"nodeId":1,"nodeType":1,"nodeName":"新闻公告管理","url":"","nodeCode":100,"parentId":0,"icon":"example","status":1},{"nodeId":3,"nodeType":2,"nodeName":"发布公告","url":"form","nodeCode":102,"parentId":1,"icon":"form","status":1},{"nodeId":4,"nodeType":2,"nodeName":"简历管理","url":"","nodeCode":200,"parentId":0,"icon":"example","status":1},{"nodeId":5,"nodeType":2,"nodeName":"上传简历","url":"upresume","nodeCode":201,"parentId":4,"icon":"form","status":1},{"nodeId":6,"nodeType":2,"nodeName":"查看简历","url":"lookresume","nodeCode":202,"parentId":4,"icon":"table","status":1},{"nodeId":9,"nodeType":1,"nodeName":"友情链接","url":"https://www.hut.edu.cn","nodeCode":1000,"parentId":0,"icon":"link","status":1}]}
+[12:14:06:086] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:44) - URL :http://localhost:8081/api/user/user_info
+[12:14:06:087] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:45) - HTTP_METHOD :GET
+[12:14:06:087] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:46) - IP :127.0.0.1
+[12:14:06:087] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:48) - CLASS_METHODcom.hl.emsystem.controller.UserController.userInfo
+[12:14:06:087] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:50) - ARGS :[eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwZW9wbGVJZCI6MTE2LCJuYW1lIjoi6Z-pNiIsImV4cCI6MTc2MTM2NTU0NywidXNlcklkIjoxMTYsInVzZXJuYW1lIjoiMjA0MDgwMDA1MDYifQ.O_RPofLvE9oi9EvH-qVQpBR-j53SZrIR9rJoCMHZOIA]
+[12:14:06:097] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doAfterReturning(WebLogAspect.java:61) - RESPONSE :{"code":10000,"msg":"SUCCESS","data":{"people":{"peopleId":116,"name":"韩6","departmentId":122,"title":null,"level":null},"department":{"departmentId":122,"departmentName":"学生1"},"username":"20408000506"}}
+[12:14:06:112] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:44) - URL :http://localhost:8081/api/user/user_router
+[12:14:06:112] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:45) - HTTP_METHOD :GET
+[12:14:06:113] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:46) - IP :127.0.0.1
+[12:14:06:113] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:48) - CLASS_METHODcom.hl.emsystem.controller.UserController.getSidebar
+[12:14:06:113] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:50) - ARGS :[eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwZW9wbGVJZCI6MTE2LCJuYW1lIjoi6Z-pNiIsImV4cCI6MTc2MTM2NTU0NywidXNlcklkIjoxMTYsInVzZXJuYW1lIjoiMjA0MDgwMDA1MDYifQ.O_RPofLvE9oi9EvH-qVQpBR-j53SZrIR9rJoCMHZOIA]
+[12:14:06:120] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doAfterReturning(WebLogAspect.java:61) - RESPONSE :{"code":10000,"msg":"SUCCESS","data":[{"nodeId":1,"nodeType":1,"nodeName":"新闻公告管理","url":"","nodeCode":100,"parentId":0,"icon":"example","status":1},{"nodeId":3,"nodeType":2,"nodeName":"发布公告","url":"form","nodeCode":102,"parentId":1,"icon":"form","status":1},{"nodeId":4,"nodeType":2,"nodeName":"简历管理","url":"","nodeCode":200,"parentId":0,"icon":"example","status":1},{"nodeId":5,"nodeType":2,"nodeName":"上传简历","url":"upresume","nodeCode":201,"parentId":4,"icon":"form","status":1},{"nodeId":6,"nodeType":2,"nodeName":"查看简历","url":"lookresume","nodeCode":202,"parentId":4,"icon":"table","status":1},{"nodeId":9,"nodeType":1,"nodeName":"友情链接","url":"https://www.hut.edu.cn","nodeCode":1000,"parentId":0,"icon":"link","status":1}]}
+[12:17:39:931] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:44) - URL :http://localhost:8081/api/user/user_info
+[12:17:39:931] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:45) - HTTP_METHOD :GET
+[12:17:39:932] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:46) - IP :127.0.0.1
+[12:17:39:932] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:48) - CLASS_METHODcom.hl.emsystem.controller.UserController.userInfo
+[12:17:39:932] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:50) - ARGS :[eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwZW9wbGVJZCI6MTE2LCJuYW1lIjoi6Z-pNiIsImV4cCI6MTc2MTM2NTU0NywidXNlcklkIjoxMTYsInVzZXJuYW1lIjoiMjA0MDgwMDA1MDYifQ.O_RPofLvE9oi9EvH-qVQpBR-j53SZrIR9rJoCMHZOIA]
+[12:17:39:940] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doAfterReturning(WebLogAspect.java:61) - RESPONSE :{"code":10000,"msg":"SUCCESS","data":{"people":{"peopleId":116,"name":"韩6","departmentId":122,"title":null,"level":null},"department":{"departmentId":122,"departmentName":"学生1"},"username":"20408000506"}}
+[12:17:39:951] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:44) - URL :http://localhost:8081/api/user/user_router
+[12:17:39:951] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:45) - HTTP_METHOD :GET
+[12:17:39:951] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:46) - IP :127.0.0.1
+[12:17:39:952] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:48) - CLASS_METHODcom.hl.emsystem.controller.UserController.getSidebar
+[12:17:39:952] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:50) - ARGS :[eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwZW9wbGVJZCI6MTE2LCJuYW1lIjoi6Z-pNiIsImV4cCI6MTc2MTM2NTU0NywidXNlcklkIjoxMTYsInVzZXJuYW1lIjoiMjA0MDgwMDA1MDYifQ.O_RPofLvE9oi9EvH-qVQpBR-j53SZrIR9rJoCMHZOIA]
+[12:17:39:958] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doAfterReturning(WebLogAspect.java:61) - RESPONSE :{"code":10000,"msg":"SUCCESS","data":[{"nodeId":1,"nodeType":1,"nodeName":"新闻公告管理","url":"","nodeCode":100,"parentId":0,"icon":"example","status":1},{"nodeId":3,"nodeType":2,"nodeName":"发布公告","url":"form","nodeCode":102,"parentId":1,"icon":"form","status":1},{"nodeId":4,"nodeType":2,"nodeName":"简历管理","url":"","nodeCode":200,"parentId":0,"icon":"example","status":1},{"nodeId":5,"nodeType":2,"nodeName":"上传简历","url":"upresume","nodeCode":201,"parentId":4,"icon":"form","status":1},{"nodeId":6,"nodeType":2,"nodeName":"查看简历","url":"lookresume","nodeCode":202,"parentId":4,"icon":"table","status":1},{"nodeId":9,"nodeType":1,"nodeName":"友情链接","url":"https://www.hut.edu.cn","nodeCode":1000,"parentId":0,"icon":"link","status":1}]}
+[12:18:59:144] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:44) - URL :http://localhost:8081/api/user/user_info
+[12:18:59:144] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:45) - HTTP_METHOD :GET
+[12:18:59:144] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:46) - IP :127.0.0.1
+[12:18:59:145] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:48) - CLASS_METHODcom.hl.emsystem.controller.UserController.userInfo
+[12:18:59:145] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:50) - ARGS :[eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwZW9wbGVJZCI6MTE2LCJuYW1lIjoi6Z-pNiIsImV4cCI6MTc2MTM2NTU0NywidXNlcklkIjoxMTYsInVzZXJuYW1lIjoiMjA0MDgwMDA1MDYifQ.O_RPofLvE9oi9EvH-qVQpBR-j53SZrIR9rJoCMHZOIA]
+[12:18:59:157] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doAfterReturning(WebLogAspect.java:61) - RESPONSE :{"code":10000,"msg":"SUCCESS","data":{"people":{"peopleId":116,"name":"韩6","departmentId":122,"title":null,"level":null},"department":{"departmentId":122,"departmentName":"学生1"},"username":"20408000506"}}
+[12:18:59:472] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:44) - URL :http://localhost:8081/api/user/user_router
+[12:18:59:472] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:45) - HTTP_METHOD :GET
+[12:18:59:472] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:46) - IP :127.0.0.1
+[12:18:59:472] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:48) - CLASS_METHODcom.hl.emsystem.controller.UserController.getSidebar
+[12:18:59:472] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:50) - ARGS :[eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwZW9wbGVJZCI6MTE2LCJuYW1lIjoi6Z-pNiIsImV4cCI6MTc2MTM2NTU0NywidXNlcklkIjoxMTYsInVzZXJuYW1lIjoiMjA0MDgwMDA1MDYifQ.O_RPofLvE9oi9EvH-qVQpBR-j53SZrIR9rJoCMHZOIA]
+[12:18:59:478] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doAfterReturning(WebLogAspect.java:61) - RESPONSE :{"code":10000,"msg":"SUCCESS","data":[{"nodeId":1,"nodeType":1,"nodeName":"新闻公告管理","url":"","nodeCode":100,"parentId":0,"icon":"example","status":1},{"nodeId":3,"nodeType":2,"nodeName":"发布公告","url":"form","nodeCode":102,"parentId":1,"icon":"form","status":1},{"nodeId":4,"nodeType":2,"nodeName":"简历管理","url":"","nodeCode":200,"parentId":0,"icon":"example","status":1},{"nodeId":5,"nodeType":2,"nodeName":"上传简历","url":"upresume","nodeCode":201,"parentId":4,"icon":"form","status":1},{"nodeId":6,"nodeType":2,"nodeName":"查看简历","url":"lookresume","nodeCode":202,"parentId":4,"icon":"table","status":1},{"nodeId":9,"nodeType":1,"nodeName":"友情链接","url":"https://www.hut.edu.cn","nodeCode":1000,"parentId":0,"icon":"link","status":1}]}
+[13:04:27:650] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:44) - URL :http://localhost:8081/api/user/user_info
+[13:04:27:650] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:45) - HTTP_METHOD :GET
+[13:04:27:651] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:46) - IP :127.0.0.1
+[13:04:27:651] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:48) - CLASS_METHODcom.hl.emsystem.controller.UserController.userInfo
+[13:04:27:651] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:50) - ARGS :[eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwZW9wbGVJZCI6MTE2LCJuYW1lIjoi6Z-pNiIsImV4cCI6MTc2MTM2NTU0NywidXNlcklkIjoxMTYsInVzZXJuYW1lIjoiMjA0MDgwMDA1MDYifQ.O_RPofLvE9oi9EvH-qVQpBR-j53SZrIR9rJoCMHZOIA]
+[13:04:27:662] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doAfterReturning(WebLogAspect.java:61) - RESPONSE :{"code":10000,"msg":"SUCCESS","data":{"people":{"peopleId":116,"name":"韩6","departmentId":122,"title":null,"level":null},"department":{"departmentId":122,"departmentName":"学生1"},"username":"20408000506"}}
+[13:04:27:702] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:44) - URL :http://localhost:8081/api/user/user_router
+[13:04:27:703] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:45) - HTTP_METHOD :GET
+[13:04:27:703] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:46) - IP :127.0.0.1
+[13:04:27:703] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:48) - CLASS_METHODcom.hl.emsystem.controller.UserController.getSidebar
+[13:04:27:703] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:50) - ARGS :[eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwZW9wbGVJZCI6MTE2LCJuYW1lIjoi6Z-pNiIsImV4cCI6MTc2MTM2NTU0NywidXNlcklkIjoxMTYsInVzZXJuYW1lIjoiMjA0MDgwMDA1MDYifQ.O_RPofLvE9oi9EvH-qVQpBR-j53SZrIR9rJoCMHZOIA]
+[13:04:27:710] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doAfterReturning(WebLogAspect.java:61) - RESPONSE :{"code":10000,"msg":"SUCCESS","data":[{"nodeId":1,"nodeType":1,"nodeName":"新闻公告管理","url":"","nodeCode":100,"parentId":0,"icon":"example","status":1},{"nodeId":3,"nodeType":2,"nodeName":"发布公告","url":"form","nodeCode":102,"parentId":1,"icon":"form","status":1},{"nodeId":4,"nodeType":2,"nodeName":"简历管理","url":"","nodeCode":200,"parentId":0,"icon":"example","status":1},{"nodeId":5,"nodeType":2,"nodeName":"上传简历","url":"upresume","nodeCode":201,"parentId":4,"icon":"form","status":1},{"nodeId":6,"nodeType":2,"nodeName":"查看简历","url":"lookresume","nodeCode":202,"parentId":4,"icon":"table","status":1},{"nodeId":9,"nodeType":1,"nodeName":"友情链接","url":"https://www.hut.edu.cn","nodeCode":1000,"parentId":0,"icon":"link","status":1}]}
+[13:09:05:552] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:44) - URL :http://localhost:8081/api/user/user_info
+[13:09:05:552] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:45) - HTTP_METHOD :GET
+[13:09:05:552] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:46) - IP :127.0.0.1
+[13:09:05:553] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:48) - CLASS_METHODcom.hl.emsystem.controller.UserController.userInfo
+[13:09:05:553] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:50) - ARGS :[eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwZW9wbGVJZCI6MTE2LCJuYW1lIjoi6Z-pNiIsImV4cCI6MTc2MTM2NTU0NywidXNlcklkIjoxMTYsInVzZXJuYW1lIjoiMjA0MDgwMDA1MDYifQ.O_RPofLvE9oi9EvH-qVQpBR-j53SZrIR9rJoCMHZOIA]
+[13:09:05:561] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doAfterReturning(WebLogAspect.java:61) - RESPONSE :{"code":10000,"msg":"SUCCESS","data":{"people":{"peopleId":116,"name":"韩6","departmentId":122,"title":null,"level":null},"department":{"departmentId":122,"departmentName":"学生1"},"username":"20408000506"}}
+[13:09:05:576] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:44) - URL :http://localhost:8081/api/user/user_router
+[13:09:05:576] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:45) - HTTP_METHOD :GET
+[13:09:05:576] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:46) - IP :127.0.0.1
+[13:09:05:576] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:48) - CLASS_METHODcom.hl.emsystem.controller.UserController.getSidebar
+[13:09:05:576] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:50) - ARGS :[eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwZW9wbGVJZCI6MTE2LCJuYW1lIjoi6Z-pNiIsImV4cCI6MTc2MTM2NTU0NywidXNlcklkIjoxMTYsInVzZXJuYW1lIjoiMjA0MDgwMDA1MDYifQ.O_RPofLvE9oi9EvH-qVQpBR-j53SZrIR9rJoCMHZOIA]
+[13:09:05:582] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doAfterReturning(WebLogAspect.java:61) - RESPONSE :{"code":10000,"msg":"SUCCESS","data":[{"nodeId":1,"nodeType":1,"nodeName":"新闻公告管理","url":"","nodeCode":100,"parentId":0,"icon":"example","status":1},{"nodeId":3,"nodeType":2,"nodeName":"发布公告","url":"form","nodeCode":102,"parentId":1,"icon":"form","status":1},{"nodeId":4,"nodeType":2,"nodeName":"简历管理","url":"","nodeCode":200,"parentId":0,"icon":"example","status":1},{"nodeId":5,"nodeType":2,"nodeName":"上传简历","url":"upresume","nodeCode":201,"parentId":4,"icon":"form","status":1},{"nodeId":6,"nodeType":2,"nodeName":"查看简历","url":"lookresume","nodeCode":202,"parentId":4,"icon":"table","status":1},{"nodeId":9,"nodeType":1,"nodeName":"友情链接","url":"https://www.hut.edu.cn","nodeCode":1000,"parentId":0,"icon":"link","status":1}]}
+[13:09:15:557] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:44) - URL :http://localhost:8081/api/user/user_info
+[13:09:15:557] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:45) - HTTP_METHOD :GET
+[13:09:15:557] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:46) - IP :127.0.0.1
+[13:09:15:557] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:48) - CLASS_METHODcom.hl.emsystem.controller.UserController.userInfo
+[13:09:15:557] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:50) - ARGS :[eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwZW9wbGVJZCI6MTE2LCJuYW1lIjoi6Z-pNiIsImV4cCI6MTc2MTM2NTU0NywidXNlcklkIjoxMTYsInVzZXJuYW1lIjoiMjA0MDgwMDA1MDYifQ.O_RPofLvE9oi9EvH-qVQpBR-j53SZrIR9rJoCMHZOIA]
+[13:09:15:567] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doAfterReturning(WebLogAspect.java:61) - RESPONSE :{"code":10000,"msg":"SUCCESS","data":{"people":{"peopleId":116,"name":"韩6","departmentId":122,"title":null,"level":null},"department":{"departmentId":122,"departmentName":"学生1"},"username":"20408000506"}}
+[13:09:15:578] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:44) - URL :http://localhost:8081/api/user/user_router
+[13:09:15:578] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:45) - HTTP_METHOD :GET
+[13:09:15:578] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:46) - IP :127.0.0.1
+[13:09:15:579] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:48) - CLASS_METHODcom.hl.emsystem.controller.UserController.getSidebar
+[13:09:15:579] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:50) - ARGS :[eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwZW9wbGVJZCI6MTE2LCJuYW1lIjoi6Z-pNiIsImV4cCI6MTc2MTM2NTU0NywidXNlcklkIjoxMTYsInVzZXJuYW1lIjoiMjA0MDgwMDA1MDYifQ.O_RPofLvE9oi9EvH-qVQpBR-j53SZrIR9rJoCMHZOIA]
+[13:09:15:585] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doAfterReturning(WebLogAspect.java:61) - RESPONSE :{"code":10000,"msg":"SUCCESS","data":[{"nodeId":1,"nodeType":1,"nodeName":"新闻公告管理","url":"","nodeCode":100,"parentId":0,"icon":"example","status":1},{"nodeId":3,"nodeType":2,"nodeName":"发布公告","url":"form","nodeCode":102,"parentId":1,"icon":"form","status":1},{"nodeId":4,"nodeType":2,"nodeName":"简历管理","url":"","nodeCode":200,"parentId":0,"icon":"example","status":1},{"nodeId":5,"nodeType":2,"nodeName":"上传简历","url":"upresume","nodeCode":201,"parentId":4,"icon":"form","status":1},{"nodeId":6,"nodeType":2,"nodeName":"查看简历","url":"lookresume","nodeCode":202,"parentId":4,"icon":"table","status":1},{"nodeId":9,"nodeType":1,"nodeName":"友情链接","url":"https://www.hut.edu.cn","nodeCode":1000,"parentId":0,"icon":"link","status":1}]}
+[13:09:36:302] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:44) - URL :http://localhost:8081/api/user/user_info
+[13:09:36:302] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:45) - HTTP_METHOD :GET
+[13:09:36:302] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:46) - IP :127.0.0.1
+[13:09:36:303] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:48) - CLASS_METHODcom.hl.emsystem.controller.UserController.userInfo
+[13:09:36:303] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:50) - ARGS :[eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwZW9wbGVJZCI6MTE2LCJuYW1lIjoi6Z-pNiIsImV4cCI6MTc2MTM2NTU0NywidXNlcklkIjoxMTYsInVzZXJuYW1lIjoiMjA0MDgwMDA1MDYifQ.O_RPofLvE9oi9EvH-qVQpBR-j53SZrIR9rJoCMHZOIA]
+[13:09:36:315] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doAfterReturning(WebLogAspect.java:61) - RESPONSE :{"code":10000,"msg":"SUCCESS","data":{"people":{"peopleId":116,"name":"韩6","departmentId":122,"title":null,"level":null},"department":{"departmentId":122,"departmentName":"学生1"},"username":"20408000506"}}
+[13:09:36:347] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:44) - URL :http://localhost:8081/api/user/user_router
+[13:09:36:347] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:45) - HTTP_METHOD :GET
+[13:09:36:347] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:46) - IP :127.0.0.1
+[13:09:36:347] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:48) - CLASS_METHODcom.hl.emsystem.controller.UserController.getSidebar
+[13:09:36:348] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:50) - ARGS :[eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwZW9wbGVJZCI6MTE2LCJuYW1lIjoi6Z-pNiIsImV4cCI6MTc2MTM2NTU0NywidXNlcklkIjoxMTYsInVzZXJuYW1lIjoiMjA0MDgwMDA1MDYifQ.O_RPofLvE9oi9EvH-qVQpBR-j53SZrIR9rJoCMHZOIA]
+[13:09:36:354] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doAfterReturning(WebLogAspect.java:61) - RESPONSE :{"code":10000,"msg":"SUCCESS","data":[{"nodeId":1,"nodeType":1,"nodeName":"新闻公告管理","url":"","nodeCode":100,"parentId":0,"icon":"example","status":1},{"nodeId":3,"nodeType":2,"nodeName":"发布公告","url":"form","nodeCode":102,"parentId":1,"icon":"form","status":1},{"nodeId":4,"nodeType":2,"nodeName":"简历管理","url":"","nodeCode":200,"parentId":0,"icon":"example","status":1},{"nodeId":5,"nodeType":2,"nodeName":"上传简历","url":"upresume","nodeCode":201,"parentId":4,"icon":"form","status":1},{"nodeId":6,"nodeType":2,"nodeName":"查看简历","url":"lookresume","nodeCode":202,"parentId":4,"icon":"table","status":1},{"nodeId":9,"nodeType":1,"nodeName":"友情链接","url":"https://www.hut.edu.cn","nodeCode":1000,"parentId":0,"icon":"link","status":1}]}
+[13:09:40:179] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:44) - URL :http://localhost:8081/api/user/user_info
+[13:09:40:179] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:45) - HTTP_METHOD :GET
+[13:09:40:179] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:46) - IP :127.0.0.1
+[13:09:40:179] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:48) - CLASS_METHODcom.hl.emsystem.controller.UserController.userInfo
+[13:09:40:179] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:50) - ARGS :[eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwZW9wbGVJZCI6MTE2LCJuYW1lIjoi6Z-pNiIsImV4cCI6MTc2MTM2NTU0NywidXNlcklkIjoxMTYsInVzZXJuYW1lIjoiMjA0MDgwMDA1MDYifQ.O_RPofLvE9oi9EvH-qVQpBR-j53SZrIR9rJoCMHZOIA]
+[13:09:40:189] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doAfterReturning(WebLogAspect.java:61) - RESPONSE :{"code":10000,"msg":"SUCCESS","data":{"people":{"peopleId":116,"name":"韩6","departmentId":122,"title":null,"level":null},"department":{"departmentId":122,"departmentName":"学生1"},"username":"20408000506"}}
+[13:09:40:202] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:44) - URL :http://localhost:8081/api/user/user_router
+[13:09:40:202] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:45) - HTTP_METHOD :GET
+[13:09:40:202] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:46) - IP :127.0.0.1
+[13:09:40:202] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:48) - CLASS_METHODcom.hl.emsystem.controller.UserController.getSidebar
+[13:09:40:202] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:50) - ARGS :[eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwZW9wbGVJZCI6MTE2LCJuYW1lIjoi6Z-pNiIsImV4cCI6MTc2MTM2NTU0NywidXNlcklkIjoxMTYsInVzZXJuYW1lIjoiMjA0MDgwMDA1MDYifQ.O_RPofLvE9oi9EvH-qVQpBR-j53SZrIR9rJoCMHZOIA]
+[13:09:40:209] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doAfterReturning(WebLogAspect.java:61) - RESPONSE :{"code":10000,"msg":"SUCCESS","data":[{"nodeId":1,"nodeType":1,"nodeName":"新闻公告管理","url":"","nodeCode":100,"parentId":0,"icon":"example","status":1},{"nodeId":3,"nodeType":2,"nodeName":"发布公告","url":"form","nodeCode":102,"parentId":1,"icon":"form","status":1},{"nodeId":4,"nodeType":2,"nodeName":"简历管理","url":"","nodeCode":200,"parentId":0,"icon":"example","status":1},{"nodeId":5,"nodeType":2,"nodeName":"上传简历","url":"upresume","nodeCode":201,"parentId":4,"icon":"form","status":1},{"nodeId":6,"nodeType":2,"nodeName":"查看简历","url":"lookresume","nodeCode":202,"parentId":4,"icon":"table","status":1},{"nodeId":9,"nodeType":1,"nodeName":"友情链接","url":"https://www.hut.edu.cn","nodeCode":1000,"parentId":0,"icon":"link","status":1}]}
+[13:10:09:826] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:44) - URL :http://localhost:8081/api/user/user_info
+[13:10:09:826] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:45) - HTTP_METHOD :GET
+[13:10:09:826] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:46) - IP :127.0.0.1
+[13:10:09:826] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:48) - CLASS_METHODcom.hl.emsystem.controller.UserController.userInfo
+[13:10:09:826] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:50) - ARGS :[eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwZW9wbGVJZCI6MTE2LCJuYW1lIjoi6Z-pNiIsImV4cCI6MTc2MTM2NTU0NywidXNlcklkIjoxMTYsInVzZXJuYW1lIjoiMjA0MDgwMDA1MDYifQ.O_RPofLvE9oi9EvH-qVQpBR-j53SZrIR9rJoCMHZOIA]
+[13:10:09:835] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doAfterReturning(WebLogAspect.java:61) - RESPONSE :{"code":10000,"msg":"SUCCESS","data":{"people":{"peopleId":116,"name":"韩6","departmentId":122,"title":null,"level":null},"department":{"departmentId":122,"departmentName":"学生1"},"username":"20408000506"}}
+[13:10:09:903] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:44) - URL :http://localhost:8081/api/user/user_router
+[13:10:09:903] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:45) - HTTP_METHOD :GET
+[13:10:09:903] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:46) - IP :127.0.0.1
+[13:10:09:903] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:48) - CLASS_METHODcom.hl.emsystem.controller.UserController.getSidebar
+[13:10:09:904] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:50) - ARGS :[eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwZW9wbGVJZCI6MTE2LCJuYW1lIjoi6Z-pNiIsImV4cCI6MTc2MTM2NTU0NywidXNlcklkIjoxMTYsInVzZXJuYW1lIjoiMjA0MDgwMDA1MDYifQ.O_RPofLvE9oi9EvH-qVQpBR-j53SZrIR9rJoCMHZOIA]
+[13:10:09:913] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doAfterReturning(WebLogAspect.java:61) - RESPONSE :{"code":10000,"msg":"SUCCESS","data":[{"nodeId":1,"nodeType":1,"nodeName":"新闻公告管理","url":"","nodeCode":100,"parentId":0,"icon":"example","status":1},{"nodeId":3,"nodeType":2,"nodeName":"发布公告","url":"form","nodeCode":102,"parentId":1,"icon":"form","status":1},{"nodeId":4,"nodeType":2,"nodeName":"简历管理","url":"","nodeCode":200,"parentId":0,"icon":"example","status":1},{"nodeId":5,"nodeType":2,"nodeName":"上传简历","url":"upresume","nodeCode":201,"parentId":4,"icon":"form","status":1},{"nodeId":6,"nodeType":2,"nodeName":"查看简历","url":"lookresume","nodeCode":202,"parentId":4,"icon":"table","status":1},{"nodeId":9,"nodeType":1,"nodeName":"友情链接","url":"https://www.hut.edu.cn","nodeCode":1000,"parentId":0,"icon":"link","status":1}]}
+[13:11:16:590] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:44) - URL :http://localhost:8081/api/user/user_info
+[13:11:16:591] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:45) - HTTP_METHOD :GET
+[13:11:16:591] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:46) - IP :127.0.0.1
+[13:11:16:591] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:48) - CLASS_METHODcom.hl.emsystem.controller.UserController.userInfo
+[13:11:16:591] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:50) - ARGS :[eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwZW9wbGVJZCI6MTE2LCJuYW1lIjoi6Z-pNiIsImV4cCI6MTc2MTM2NTU0NywidXNlcklkIjoxMTYsInVzZXJuYW1lIjoiMjA0MDgwMDA1MDYifQ.O_RPofLvE9oi9EvH-qVQpBR-j53SZrIR9rJoCMHZOIA]
+[13:11:16:602] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doAfterReturning(WebLogAspect.java:61) - RESPONSE :{"code":10000,"msg":"SUCCESS","data":{"people":{"peopleId":116,"name":"韩6","departmentId":122,"title":null,"level":null},"department":{"departmentId":122,"departmentName":"学生1"},"username":"20408000506"}}
+[13:11:16:683] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:44) - URL :http://localhost:8081/api/user/user_router
+[13:11:16:684] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:45) - HTTP_METHOD :GET
+[13:11:16:684] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:46) - IP :127.0.0.1
+[13:11:16:684] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:48) - CLASS_METHODcom.hl.emsystem.controller.UserController.getSidebar
+[13:11:16:685] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:50) - ARGS :[eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwZW9wbGVJZCI6MTE2LCJuYW1lIjoi6Z-pNiIsImV4cCI6MTc2MTM2NTU0NywidXNlcklkIjoxMTYsInVzZXJuYW1lIjoiMjA0MDgwMDA1MDYifQ.O_RPofLvE9oi9EvH-qVQpBR-j53SZrIR9rJoCMHZOIA]
+[13:11:16:695] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doAfterReturning(WebLogAspect.java:61) - RESPONSE :{"code":10000,"msg":"SUCCESS","data":[{"nodeId":1,"nodeType":1,"nodeName":"新闻公告管理","url":"","nodeCode":100,"parentId":0,"icon":"example","status":1},{"nodeId":3,"nodeType":2,"nodeName":"发布公告","url":"form","nodeCode":102,"parentId":1,"icon":"form","status":1},{"nodeId":4,"nodeType":2,"nodeName":"简历管理","url":"","nodeCode":200,"parentId":0,"icon":"example","status":1},{"nodeId":5,"nodeType":2,"nodeName":"上传简历","url":"upresume","nodeCode":201,"parentId":4,"icon":"form","status":1},{"nodeId":6,"nodeType":2,"nodeName":"查看简历","url":"lookresume","nodeCode":202,"parentId":4,"icon":"table","status":1},{"nodeId":9,"nodeType":1,"nodeName":"友情链接","url":"https://www.hut.edu.cn","nodeCode":1000,"parentId":0,"icon":"link","status":1}]}
+[13:11:36:979] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:44) - URL :http://localhost:8081/api/user/user_info
+[13:11:36:979] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:45) - HTTP_METHOD :GET
+[13:11:36:979] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:46) - IP :127.0.0.1
+[13:11:36:980] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:48) - CLASS_METHODcom.hl.emsystem.controller.UserController.userInfo
+[13:11:36:980] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:50) - ARGS :[eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwZW9wbGVJZCI6MTE2LCJuYW1lIjoi6Z-pNiIsImV4cCI6MTc2MTM2NTU0NywidXNlcklkIjoxMTYsInVzZXJuYW1lIjoiMjA0MDgwMDA1MDYifQ.O_RPofLvE9oi9EvH-qVQpBR-j53SZrIR9rJoCMHZOIA]
+[13:11:36:989] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doAfterReturning(WebLogAspect.java:61) - RESPONSE :{"code":10000,"msg":"SUCCESS","data":{"people":{"peopleId":116,"name":"韩6","departmentId":122,"title":null,"level":null},"department":{"departmentId":122,"departmentName":"学生1"},"username":"20408000506"}}
+[13:11:37:060] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:44) - URL :http://localhost:8081/api/user/user_router
+[13:11:37:060] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:45) - HTTP_METHOD :GET
+[13:11:37:060] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:46) - IP :127.0.0.1
+[13:11:37:060] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:48) - CLASS_METHODcom.hl.emsystem.controller.UserController.getSidebar
+[13:11:37:060] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:50) - ARGS :[eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwZW9wbGVJZCI6MTE2LCJuYW1lIjoi6Z-pNiIsImV4cCI6MTc2MTM2NTU0NywidXNlcklkIjoxMTYsInVzZXJuYW1lIjoiMjA0MDgwMDA1MDYifQ.O_RPofLvE9oi9EvH-qVQpBR-j53SZrIR9rJoCMHZOIA]
+[13:11:37:068] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doAfterReturning(WebLogAspect.java:61) - RESPONSE :{"code":10000,"msg":"SUCCESS","data":[{"nodeId":1,"nodeType":1,"nodeName":"新闻公告管理","url":"","nodeCode":100,"parentId":0,"icon":"example","status":1},{"nodeId":3,"nodeType":2,"nodeName":"发布公告","url":"form","nodeCode":102,"parentId":1,"icon":"form","status":1},{"nodeId":4,"nodeType":2,"nodeName":"简历管理","url":"","nodeCode":200,"parentId":0,"icon":"example","status":1},{"nodeId":5,"nodeType":2,"nodeName":"上传简历","url":"upresume","nodeCode":201,"parentId":4,"icon":"form","status":1},{"nodeId":6,"nodeType":2,"nodeName":"查看简历","url":"lookresume","nodeCode":202,"parentId":4,"icon":"table","status":1},{"nodeId":9,"nodeType":1,"nodeName":"友情链接","url":"https://www.hut.edu.cn","nodeCode":1000,"parentId":0,"icon":"link","status":1}]}
+[13:13:18:911] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:44) - URL :http://localhost:8081/api/user/user_info
+[13:13:18:911] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:45) - HTTP_METHOD :GET
+[13:13:18:911] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:46) - IP :127.0.0.1
+[13:13:18:911] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:48) - CLASS_METHODcom.hl.emsystem.controller.UserController.userInfo
+[13:13:18:911] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:50) - ARGS :[eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwZW9wbGVJZCI6MTE2LCJuYW1lIjoi6Z-pNiIsImV4cCI6MTc2MTM2NTU0NywidXNlcklkIjoxMTYsInVzZXJuYW1lIjoiMjA0MDgwMDA1MDYifQ.O_RPofLvE9oi9EvH-qVQpBR-j53SZrIR9rJoCMHZOIA]
+[13:13:18:919] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doAfterReturning(WebLogAspect.java:61) - RESPONSE :{"code":10000,"msg":"SUCCESS","data":{"people":{"peopleId":116,"name":"韩6","departmentId":122,"title":null,"level":null},"department":{"departmentId":122,"departmentName":"学生1"},"username":"20408000506"}}
+[13:13:18:989] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:44) - URL :http://localhost:8081/api/user/user_router
+[13:13:18:990] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:45) - HTTP_METHOD :GET
+[13:13:18:990] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:46) - IP :127.0.0.1
+[13:13:18:990] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:48) - CLASS_METHODcom.hl.emsystem.controller.UserController.getSidebar
+[13:13:18:991] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:50) - ARGS :[eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwZW9wbGVJZCI6MTE2LCJuYW1lIjoi6Z-pNiIsImV4cCI6MTc2MTM2NTU0NywidXNlcklkIjoxMTYsInVzZXJuYW1lIjoiMjA0MDgwMDA1MDYifQ.O_RPofLvE9oi9EvH-qVQpBR-j53SZrIR9rJoCMHZOIA]
+[13:13:18:998] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doAfterReturning(WebLogAspect.java:61) - RESPONSE :{"code":10000,"msg":"SUCCESS","data":[{"nodeId":1,"nodeType":1,"nodeName":"新闻公告管理","url":"","nodeCode":100,"parentId":0,"icon":"example","status":1},{"nodeId":3,"nodeType":2,"nodeName":"发布公告","url":"form","nodeCode":102,"parentId":1,"icon":"form","status":1},{"nodeId":4,"nodeType":2,"nodeName":"简历管理","url":"","nodeCode":200,"parentId":0,"icon":"example","status":1},{"nodeId":5,"nodeType":2,"nodeName":"上传简历","url":"upresume","nodeCode":201,"parentId":4,"icon":"form","status":1},{"nodeId":6,"nodeType":2,"nodeName":"查看简历","url":"lookresume","nodeCode":202,"parentId":4,"icon":"table","status":1},{"nodeId":9,"nodeType":1,"nodeName":"友情链接","url":"https://www.hut.edu.cn","nodeCode":1000,"parentId":0,"icon":"link","status":1}]}
+[13:14:39:954] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:44) - URL :http://localhost:8081/api/user/user_info
+[13:14:39:954] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:45) - HTTP_METHOD :GET
+[13:14:39:954] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:46) - IP :127.0.0.1
+[13:14:39:954] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:48) - CLASS_METHODcom.hl.emsystem.controller.UserController.userInfo
+[13:14:39:955] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:50) - ARGS :[eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwZW9wbGVJZCI6MTE2LCJuYW1lIjoi6Z-pNiIsImV4cCI6MTc2MTM2NTU0NywidXNlcklkIjoxMTYsInVzZXJuYW1lIjoiMjA0MDgwMDA1MDYifQ.O_RPofLvE9oi9EvH-qVQpBR-j53SZrIR9rJoCMHZOIA]
+[13:14:39:965] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doAfterReturning(WebLogAspect.java:61) - RESPONSE :{"code":10000,"msg":"SUCCESS","data":{"people":{"peopleId":116,"name":"韩6","departmentId":122,"title":null,"level":null},"department":{"departmentId":122,"departmentName":"学生1"},"username":"20408000506"}}
+[13:14:39:979] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:44) - URL :http://localhost:8081/api/user/user_router
+[13:14:39:979] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:45) - HTTP_METHOD :GET
+[13:14:39:979] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:46) - IP :127.0.0.1
+[13:14:39:980] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:48) - CLASS_METHODcom.hl.emsystem.controller.UserController.getSidebar
+[13:14:39:980] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:50) - ARGS :[eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwZW9wbGVJZCI6MTE2LCJuYW1lIjoi6Z-pNiIsImV4cCI6MTc2MTM2NTU0NywidXNlcklkIjoxMTYsInVzZXJuYW1lIjoiMjA0MDgwMDA1MDYifQ.O_RPofLvE9oi9EvH-qVQpBR-j53SZrIR9rJoCMHZOIA]
+[13:14:39:986] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doAfterReturning(WebLogAspect.java:61) - RESPONSE :{"code":10000,"msg":"SUCCESS","data":[{"nodeId":1,"nodeType":1,"nodeName":"新闻公告管理","url":"","nodeCode":100,"parentId":0,"icon":"example","status":1},{"nodeId":3,"nodeType":2,"nodeName":"发布公告","url":"form","nodeCode":102,"parentId":1,"icon":"form","status":1},{"nodeId":4,"nodeType":2,"nodeName":"简历管理","url":"","nodeCode":200,"parentId":0,"icon":"example","status":1},{"nodeId":5,"nodeType":2,"nodeName":"上传简历","url":"upresume","nodeCode":201,"parentId":4,"icon":"form","status":1},{"nodeId":6,"nodeType":2,"nodeName":"查看简历","url":"lookresume","nodeCode":202,"parentId":4,"icon":"table","status":1},{"nodeId":9,"nodeType":1,"nodeName":"友情链接","url":"https://www.hut.edu.cn","nodeCode":1000,"parentId":0,"icon":"link","status":1}]}
+[13:14:41:741] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:44) - URL :http://localhost:8081/api/user/user_info
+[13:14:41:741] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:45) - HTTP_METHOD :GET
+[13:14:41:741] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:46) - IP :127.0.0.1
+[13:14:41:742] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:48) - CLASS_METHODcom.hl.emsystem.controller.UserController.userInfo
+[13:14:41:742] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:50) - ARGS :[eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwZW9wbGVJZCI6MTE2LCJuYW1lIjoi6Z-pNiIsImV4cCI6MTc2MTM2NTU0NywidXNlcklkIjoxMTYsInVzZXJuYW1lIjoiMjA0MDgwMDA1MDYifQ.O_RPofLvE9oi9EvH-qVQpBR-j53SZrIR9rJoCMHZOIA]
+[13:14:41:750] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doAfterReturning(WebLogAspect.java:61) - RESPONSE :{"code":10000,"msg":"SUCCESS","data":{"people":{"peopleId":116,"name":"韩6","departmentId":122,"title":null,"level":null},"department":{"departmentId":122,"departmentName":"学生1"},"username":"20408000506"}}
+[13:14:41:829] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:44) - URL :http://localhost:8081/api/user/user_router
+[13:14:41:829] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:45) - HTTP_METHOD :GET
+[13:14:41:829] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:46) - IP :127.0.0.1
+[13:14:41:829] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:48) - CLASS_METHODcom.hl.emsystem.controller.UserController.getSidebar
+[13:14:41:829] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:50) - ARGS :[eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwZW9wbGVJZCI6MTE2LCJuYW1lIjoi6Z-pNiIsImV4cCI6MTc2MTM2NTU0NywidXNlcklkIjoxMTYsInVzZXJuYW1lIjoiMjA0MDgwMDA1MDYifQ.O_RPofLvE9oi9EvH-qVQpBR-j53SZrIR9rJoCMHZOIA]
+[13:14:41:834] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doAfterReturning(WebLogAspect.java:61) - RESPONSE :{"code":10000,"msg":"SUCCESS","data":[{"nodeId":1,"nodeType":1,"nodeName":"新闻公告管理","url":"","nodeCode":100,"parentId":0,"icon":"example","status":1},{"nodeId":3,"nodeType":2,"nodeName":"发布公告","url":"form","nodeCode":102,"parentId":1,"icon":"form","status":1},{"nodeId":4,"nodeType":2,"nodeName":"简历管理","url":"","nodeCode":200,"parentId":0,"icon":"example","status":1},{"nodeId":5,"nodeType":2,"nodeName":"上传简历","url":"upresume","nodeCode":201,"parentId":4,"icon":"form","status":1},{"nodeId":6,"nodeType":2,"nodeName":"查看简历","url":"lookresume","nodeCode":202,"parentId":4,"icon":"table","status":1},{"nodeId":9,"nodeType":1,"nodeName":"友情链接","url":"https://www.hut.edu.cn","nodeCode":1000,"parentId":0,"icon":"link","status":1}]}
+[13:14:58:241] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:44) - URL :http://localhost:8081/api/user/user_info
+[13:14:58:241] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:45) - HTTP_METHOD :GET
+[13:14:58:241] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:46) - IP :127.0.0.1
+[13:14:58:241] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:48) - CLASS_METHODcom.hl.emsystem.controller.UserController.userInfo
+[13:14:58:242] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:50) - ARGS :[eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwZW9wbGVJZCI6MTE2LCJuYW1lIjoi6Z-pNiIsImV4cCI6MTc2MTM2NTU0NywidXNlcklkIjoxMTYsInVzZXJuYW1lIjoiMjA0MDgwMDA1MDYifQ.O_RPofLvE9oi9EvH-qVQpBR-j53SZrIR9rJoCMHZOIA]
+[13:14:58:253] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doAfterReturning(WebLogAspect.java:61) - RESPONSE :{"code":10000,"msg":"SUCCESS","data":{"people":{"peopleId":116,"name":"韩6","departmentId":122,"title":null,"level":null},"department":{"departmentId":122,"departmentName":"学生1"},"username":"20408000506"}}
+[13:14:58:264] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:44) - URL :http://localhost:8081/api/user/user_router
+[13:14:58:264] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:45) - HTTP_METHOD :GET
+[13:14:58:265] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:46) - IP :127.0.0.1
+[13:14:58:265] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:48) - CLASS_METHODcom.hl.emsystem.controller.UserController.getSidebar
+[13:14:58:265] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:50) - ARGS :[eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwZW9wbGVJZCI6MTE2LCJuYW1lIjoi6Z-pNiIsImV4cCI6MTc2MTM2NTU0NywidXNlcklkIjoxMTYsInVzZXJuYW1lIjoiMjA0MDgwMDA1MDYifQ.O_RPofLvE9oi9EvH-qVQpBR-j53SZrIR9rJoCMHZOIA]
+[13:14:58:271] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doAfterReturning(WebLogAspect.java:61) - RESPONSE :{"code":10000,"msg":"SUCCESS","data":[{"nodeId":1,"nodeType":1,"nodeName":"新闻公告管理","url":"","nodeCode":100,"parentId":0,"icon":"example","status":1},{"nodeId":3,"nodeType":2,"nodeName":"发布公告","url":"form","nodeCode":102,"parentId":1,"icon":"form","status":1},{"nodeId":4,"nodeType":2,"nodeName":"简历管理","url":"","nodeCode":200,"parentId":0,"icon":"example","status":1},{"nodeId":5,"nodeType":2,"nodeName":"上传简历","url":"upresume","nodeCode":201,"parentId":4,"icon":"form","status":1},{"nodeId":6,"nodeType":2,"nodeName":"查看简历","url":"lookresume","nodeCode":202,"parentId":4,"icon":"table","status":1},{"nodeId":9,"nodeType":1,"nodeName":"友情链接","url":"https://www.hut.edu.cn","nodeCode":1000,"parentId":0,"icon":"link","status":1}]}
+[13:15:01:960] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:44) - URL :http://localhost:8081/api/user/user_info
+[13:15:01:960] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:45) - HTTP_METHOD :GET
+[13:15:01:960] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:46) - IP :127.0.0.1
+[13:15:01:960] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:48) - CLASS_METHODcom.hl.emsystem.controller.UserController.userInfo
+[13:15:01:960] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:50) - ARGS :[eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwZW9wbGVJZCI6MTE2LCJuYW1lIjoi6Z-pNiIsImV4cCI6MTc2MTM2NTU0NywidXNlcklkIjoxMTYsInVzZXJuYW1lIjoiMjA0MDgwMDA1MDYifQ.O_RPofLvE9oi9EvH-qVQpBR-j53SZrIR9rJoCMHZOIA]
+[13:15:01:969] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doAfterReturning(WebLogAspect.java:61) - RESPONSE :{"code":10000,"msg":"SUCCESS","data":{"people":{"peopleId":116,"name":"韩6","departmentId":122,"title":null,"level":null},"department":{"departmentId":122,"departmentName":"学生1"},"username":"20408000506"}}
+[13:15:01:980] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:44) - URL :http://localhost:8081/api/user/user_router
+[13:15:01:980] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:45) - HTTP_METHOD :GET
+[13:15:01:981] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:46) - IP :127.0.0.1
+[13:15:01:981] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:48) - CLASS_METHODcom.hl.emsystem.controller.UserController.getSidebar
+[13:15:01:981] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:50) - ARGS :[eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwZW9wbGVJZCI6MTE2LCJuYW1lIjoi6Z-pNiIsImV4cCI6MTc2MTM2NTU0NywidXNlcklkIjoxMTYsInVzZXJuYW1lIjoiMjA0MDgwMDA1MDYifQ.O_RPofLvE9oi9EvH-qVQpBR-j53SZrIR9rJoCMHZOIA]
+[13:15:01:988] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doAfterReturning(WebLogAspect.java:61) - RESPONSE :{"code":10000,"msg":"SUCCESS","data":[{"nodeId":1,"nodeType":1,"nodeName":"新闻公告管理","url":"","nodeCode":100,"parentId":0,"icon":"example","status":1},{"nodeId":3,"nodeType":2,"nodeName":"发布公告","url":"form","nodeCode":102,"parentId":1,"icon":"form","status":1},{"nodeId":4,"nodeType":2,"nodeName":"简历管理","url":"","nodeCode":200,"parentId":0,"icon":"example","status":1},{"nodeId":5,"nodeType":2,"nodeName":"上传简历","url":"upresume","nodeCode":201,"parentId":4,"icon":"form","status":1},{"nodeId":6,"nodeType":2,"nodeName":"查看简历","url":"lookresume","nodeCode":202,"parentId":4,"icon":"table","status":1},{"nodeId":9,"nodeType":1,"nodeName":"友情链接","url":"https://www.hut.edu.cn","nodeCode":1000,"parentId":0,"icon":"link","status":1}]}
+[13:15:20:379] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:44) - URL :http://localhost:8081/api/user/user_info
+[13:15:20:379] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:45) - HTTP_METHOD :GET
+[13:15:20:379] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:46) - IP :127.0.0.1
+[13:15:20:379] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:48) - CLASS_METHODcom.hl.emsystem.controller.UserController.userInfo
+[13:15:20:380] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:50) - ARGS :[eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwZW9wbGVJZCI6MTE2LCJuYW1lIjoi6Z-pNiIsImV4cCI6MTc2MTM2NTU0NywidXNlcklkIjoxMTYsInVzZXJuYW1lIjoiMjA0MDgwMDA1MDYifQ.O_RPofLvE9oi9EvH-qVQpBR-j53SZrIR9rJoCMHZOIA]
+[13:15:20:390] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doAfterReturning(WebLogAspect.java:61) - RESPONSE :{"code":10000,"msg":"SUCCESS","data":{"people":{"peopleId":116,"name":"韩6","departmentId":122,"title":null,"level":null},"department":{"departmentId":122,"departmentName":"学生1"},"username":"20408000506"}}
+[13:15:20:487] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:44) - URL :http://localhost:8081/api/user/user_router
+[13:15:20:488] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:45) - HTTP_METHOD :GET
+[13:15:20:488] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:46) - IP :127.0.0.1
+[13:15:20:488] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:48) - CLASS_METHODcom.hl.emsystem.controller.UserController.getSidebar
+[13:15:20:488] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:50) - ARGS :[eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwZW9wbGVJZCI6MTE2LCJuYW1lIjoi6Z-pNiIsImV4cCI6MTc2MTM2NTU0NywidXNlcklkIjoxMTYsInVzZXJuYW1lIjoiMjA0MDgwMDA1MDYifQ.O_RPofLvE9oi9EvH-qVQpBR-j53SZrIR9rJoCMHZOIA]
+[13:15:20:494] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doAfterReturning(WebLogAspect.java:61) - RESPONSE :{"code":10000,"msg":"SUCCESS","data":[{"nodeId":1,"nodeType":1,"nodeName":"新闻公告管理","url":"","nodeCode":100,"parentId":0,"icon":"example","status":1},{"nodeId":3,"nodeType":2,"nodeName":"发布公告","url":"form","nodeCode":102,"parentId":1,"icon":"form","status":1},{"nodeId":4,"nodeType":2,"nodeName":"简历管理","url":"","nodeCode":200,"parentId":0,"icon":"example","status":1},{"nodeId":5,"nodeType":2,"nodeName":"上传简历","url":"upresume","nodeCode":201,"parentId":4,"icon":"form","status":1},{"nodeId":6,"nodeType":2,"nodeName":"查看简历","url":"lookresume","nodeCode":202,"parentId":4,"icon":"table","status":1},{"nodeId":9,"nodeType":1,"nodeName":"友情链接","url":"https://www.hut.edu.cn","nodeCode":1000,"parentId":0,"icon":"link","status":1}]}
+[13:16:08:089] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:44) - URL :http://localhost:8081/api/user/user_info
+[13:16:08:089] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:45) - HTTP_METHOD :GET
+[13:16:08:089] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:46) - IP :127.0.0.1
+[13:16:08:089] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:48) - CLASS_METHODcom.hl.emsystem.controller.UserController.userInfo
+[13:16:08:089] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:50) - ARGS :[eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwZW9wbGVJZCI6MTE2LCJuYW1lIjoi6Z-pNiIsImV4cCI6MTc2MTM2NTU0NywidXNlcklkIjoxMTYsInVzZXJuYW1lIjoiMjA0MDgwMDA1MDYifQ.O_RPofLvE9oi9EvH-qVQpBR-j53SZrIR9rJoCMHZOIA]
+[13:16:08:097] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doAfterReturning(WebLogAspect.java:61) - RESPONSE :{"code":10000,"msg":"SUCCESS","data":{"people":{"peopleId":116,"name":"韩6","departmentId":122,"title":null,"level":null},"department":{"departmentId":122,"departmentName":"学生1"},"username":"20408000506"}}
+[13:16:08:112] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:44) - URL :http://localhost:8081/api/user/user_router
+[13:16:08:113] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:45) - HTTP_METHOD :GET
+[13:16:08:113] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:46) - IP :127.0.0.1
+[13:16:08:113] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:48) - CLASS_METHODcom.hl.emsystem.controller.UserController.getSidebar
+[13:16:08:113] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:50) - ARGS :[eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwZW9wbGVJZCI6MTE2LCJuYW1lIjoi6Z-pNiIsImV4cCI6MTc2MTM2NTU0NywidXNlcklkIjoxMTYsInVzZXJuYW1lIjoiMjA0MDgwMDA1MDYifQ.O_RPofLvE9oi9EvH-qVQpBR-j53SZrIR9rJoCMHZOIA]
+[13:16:08:118] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doAfterReturning(WebLogAspect.java:61) - RESPONSE :{"code":10000,"msg":"SUCCESS","data":[{"nodeId":1,"nodeType":1,"nodeName":"新闻公告管理","url":"","nodeCode":100,"parentId":0,"icon":"example","status":1},{"nodeId":3,"nodeType":2,"nodeName":"发布公告","url":"form","nodeCode":102,"parentId":1,"icon":"form","status":1},{"nodeId":4,"nodeType":2,"nodeName":"简历管理","url":"","nodeCode":200,"parentId":0,"icon":"example","status":1},{"nodeId":5,"nodeType":2,"nodeName":"上传简历","url":"upresume","nodeCode":201,"parentId":4,"icon":"form","status":1},{"nodeId":6,"nodeType":2,"nodeName":"查看简历","url":"lookresume","nodeCode":202,"parentId":4,"icon":"table","status":1},{"nodeId":9,"nodeType":1,"nodeName":"友情链接","url":"https://www.hut.edu.cn","nodeCode":1000,"parentId":0,"icon":"link","status":1}]}
+[13:16:09:990] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:44) - URL :http://localhost:8081/api/user/user_info
+[13:16:09:990] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:45) - HTTP_METHOD :GET
+[13:16:09:990] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:46) - IP :127.0.0.1
+[13:16:09:990] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:48) - CLASS_METHODcom.hl.emsystem.controller.UserController.userInfo
+[13:16:09:991] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:50) - ARGS :[eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwZW9wbGVJZCI6MTE2LCJuYW1lIjoi6Z-pNiIsImV4cCI6MTc2MTM2NTU0NywidXNlcklkIjoxMTYsInVzZXJuYW1lIjoiMjA0MDgwMDA1MDYifQ.O_RPofLvE9oi9EvH-qVQpBR-j53SZrIR9rJoCMHZOIA]
+[13:16:09:999] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doAfterReturning(WebLogAspect.java:61) - RESPONSE :{"code":10000,"msg":"SUCCESS","data":{"people":{"peopleId":116,"name":"韩6","departmentId":122,"title":null,"level":null},"department":{"departmentId":122,"departmentName":"学生1"},"username":"20408000506"}}
+[13:16:10:125] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:44) - URL :http://localhost:8081/api/user/user_router
+[13:16:10:125] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:45) - HTTP_METHOD :GET
+[13:16:10:125] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:46) - IP :127.0.0.1
+[13:16:10:125] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:48) - CLASS_METHODcom.hl.emsystem.controller.UserController.getSidebar
+[13:16:10:125] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:50) - ARGS :[eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwZW9wbGVJZCI6MTE2LCJuYW1lIjoi6Z-pNiIsImV4cCI6MTc2MTM2NTU0NywidXNlcklkIjoxMTYsInVzZXJuYW1lIjoiMjA0MDgwMDA1MDYifQ.O_RPofLvE9oi9EvH-qVQpBR-j53SZrIR9rJoCMHZOIA]
+[13:16:10:131] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doAfterReturning(WebLogAspect.java:61) - RESPONSE :{"code":10000,"msg":"SUCCESS","data":[{"nodeId":1,"nodeType":1,"nodeName":"新闻公告管理","url":"","nodeCode":100,"parentId":0,"icon":"example","status":1},{"nodeId":3,"nodeType":2,"nodeName":"发布公告","url":"form","nodeCode":102,"parentId":1,"icon":"form","status":1},{"nodeId":4,"nodeType":2,"nodeName":"简历管理","url":"","nodeCode":200,"parentId":0,"icon":"example","status":1},{"nodeId":5,"nodeType":2,"nodeName":"上传简历","url":"upresume","nodeCode":201,"parentId":4,"icon":"form","status":1},{"nodeId":6,"nodeType":2,"nodeName":"查看简历","url":"lookresume","nodeCode":202,"parentId":4,"icon":"table","status":1},{"nodeId":9,"nodeType":1,"nodeName":"友情链接","url":"https://www.hut.edu.cn","nodeCode":1000,"parentId":0,"icon":"link","status":1}]}
+[13:16:44:298] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:44) - URL :http://localhost:8081/api/user/user_info
+[13:16:44:298] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:45) - HTTP_METHOD :GET
+[13:16:44:298] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:46) - IP :127.0.0.1
+[13:16:44:298] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:48) - CLASS_METHODcom.hl.emsystem.controller.UserController.userInfo
+[13:16:44:299] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:50) - ARGS :[eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwZW9wbGVJZCI6MTE2LCJuYW1lIjoi6Z-pNiIsImV4cCI6MTc2MTM2NTU0NywidXNlcklkIjoxMTYsInVzZXJuYW1lIjoiMjA0MDgwMDA1MDYifQ.O_RPofLvE9oi9EvH-qVQpBR-j53SZrIR9rJoCMHZOIA]
+[13:16:44:309] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doAfterReturning(WebLogAspect.java:61) - RESPONSE :{"code":10000,"msg":"SUCCESS","data":{"people":{"peopleId":116,"name":"韩6","departmentId":122,"title":null,"level":null},"department":{"departmentId":122,"departmentName":"学生1"},"username":"20408000506"}}
+[13:16:44:320] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:44) - URL :http://localhost:8081/api/user/user_router
+[13:16:44:320] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:45) - HTTP_METHOD :GET
+[13:16:44:320] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:46) - IP :127.0.0.1
+[13:16:44:320] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:48) - CLASS_METHODcom.hl.emsystem.controller.UserController.getSidebar
+[13:16:44:320] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:50) - ARGS :[eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwZW9wbGVJZCI6MTE2LCJuYW1lIjoi6Z-pNiIsImV4cCI6MTc2MTM2NTU0NywidXNlcklkIjoxMTYsInVzZXJuYW1lIjoiMjA0MDgwMDA1MDYifQ.O_RPofLvE9oi9EvH-qVQpBR-j53SZrIR9rJoCMHZOIA]
+[13:16:44:326] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doAfterReturning(WebLogAspect.java:61) - RESPONSE :{"code":10000,"msg":"SUCCESS","data":[{"nodeId":1,"nodeType":1,"nodeName":"新闻公告管理","url":"","nodeCode":100,"parentId":0,"icon":"example","status":1},{"nodeId":3,"nodeType":2,"nodeName":"发布公告","url":"form","nodeCode":102,"parentId":1,"icon":"form","status":1},{"nodeId":4,"nodeType":2,"nodeName":"简历管理","url":"","nodeCode":200,"parentId":0,"icon":"example","status":1},{"nodeId":5,"nodeType":2,"nodeName":"上传简历","url":"upresume","nodeCode":201,"parentId":4,"icon":"form","status":1},{"nodeId":6,"nodeType":2,"nodeName":"查看简历","url":"lookresume","nodeCode":202,"parentId":4,"icon":"table","status":1},{"nodeId":9,"nodeType":1,"nodeName":"友情链接","url":"https://www.hut.edu.cn","nodeCode":1000,"parentId":0,"icon":"link","status":1}]}
+[13:18:53:308] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:44) - URL :http://localhost:8081/api/user/user_info
+[13:18:53:308] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:45) - HTTP_METHOD :GET
+[13:18:53:308] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:46) - IP :127.0.0.1
+[13:18:53:308] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:48) - CLASS_METHODcom.hl.emsystem.controller.UserController.userInfo
+[13:18:53:308] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:50) - ARGS :[eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwZW9wbGVJZCI6MTE2LCJuYW1lIjoi6Z-pNiIsImV4cCI6MTc2MTM2NTU0NywidXNlcklkIjoxMTYsInVzZXJuYW1lIjoiMjA0MDgwMDA1MDYifQ.O_RPofLvE9oi9EvH-qVQpBR-j53SZrIR9rJoCMHZOIA]
+[13:18:53:317] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doAfterReturning(WebLogAspect.java:61) - RESPONSE :{"code":10000,"msg":"SUCCESS","data":{"people":{"peopleId":116,"name":"韩6","departmentId":122,"title":null,"level":null},"department":{"departmentId":122,"departmentName":"学生1"},"username":"20408000506"}}
+[13:18:53:329] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:44) - URL :http://localhost:8081/api/user/user_router
+[13:18:53:329] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:45) - HTTP_METHOD :GET
+[13:18:53:329] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:46) - IP :127.0.0.1
+[13:18:53:329] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:48) - CLASS_METHODcom.hl.emsystem.controller.UserController.getSidebar
+[13:18:53:329] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:50) - ARGS :[eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwZW9wbGVJZCI6MTE2LCJuYW1lIjoi6Z-pNiIsImV4cCI6MTc2MTM2NTU0NywidXNlcklkIjoxMTYsInVzZXJuYW1lIjoiMjA0MDgwMDA1MDYifQ.O_RPofLvE9oi9EvH-qVQpBR-j53SZrIR9rJoCMHZOIA]
+[13:18:53:335] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doAfterReturning(WebLogAspect.java:61) - RESPONSE :{"code":10000,"msg":"SUCCESS","data":[{"nodeId":1,"nodeType":1,"nodeName":"新闻公告管理","url":"","nodeCode":100,"parentId":0,"icon":"example","status":1},{"nodeId":3,"nodeType":2,"nodeName":"发布公告","url":"form","nodeCode":102,"parentId":1,"icon":"form","status":1},{"nodeId":4,"nodeType":2,"nodeName":"简历管理","url":"","nodeCode":200,"parentId":0,"icon":"example","status":1},{"nodeId":5,"nodeType":2,"nodeName":"上传简历","url":"upresume","nodeCode":201,"parentId":4,"icon":"form","status":1},{"nodeId":6,"nodeType":2,"nodeName":"查看简历","url":"lookresume","nodeCode":202,"parentId":4,"icon":"table","status":1},{"nodeId":9,"nodeType":1,"nodeName":"友情链接","url":"https://www.hut.edu.cn","nodeCode":1000,"parentId":0,"icon":"link","status":1}]}
+[13:19:09:080] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:44) - URL :http://localhost:8081/api/user/user_info
+[13:19:09:081] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:45) - HTTP_METHOD :GET
+[13:19:09:081] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:46) - IP :127.0.0.1
+[13:19:09:081] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:48) - CLASS_METHODcom.hl.emsystem.controller.UserController.userInfo
+[13:19:09:081] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:50) - ARGS :[eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwZW9wbGVJZCI6MTE2LCJuYW1lIjoi6Z-pNiIsImV4cCI6MTc2MTM2NTU0NywidXNlcklkIjoxMTYsInVzZXJuYW1lIjoiMjA0MDgwMDA1MDYifQ.O_RPofLvE9oi9EvH-qVQpBR-j53SZrIR9rJoCMHZOIA]
+[13:19:09:090] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doAfterReturning(WebLogAspect.java:61) - RESPONSE :{"code":10000,"msg":"SUCCESS","data":{"people":{"peopleId":116,"name":"韩6","departmentId":122,"title":null,"level":null},"department":{"departmentId":122,"departmentName":"学生1"},"username":"20408000506"}}
+[13:19:09:194] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:44) - URL :http://localhost:8081/api/user/user_router
+[13:19:09:195] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:45) - HTTP_METHOD :GET
+[13:19:09:195] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:46) - IP :127.0.0.1
+[13:19:09:195] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:48) - CLASS_METHODcom.hl.emsystem.controller.UserController.getSidebar
+[13:19:09:195] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:50) - ARGS :[eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwZW9wbGVJZCI6MTE2LCJuYW1lIjoi6Z-pNiIsImV4cCI6MTc2MTM2NTU0NywidXNlcklkIjoxMTYsInVzZXJuYW1lIjoiMjA0MDgwMDA1MDYifQ.O_RPofLvE9oi9EvH-qVQpBR-j53SZrIR9rJoCMHZOIA]
+[13:19:09:200] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doAfterReturning(WebLogAspect.java:61) - RESPONSE :{"code":10000,"msg":"SUCCESS","data":[{"nodeId":1,"nodeType":1,"nodeName":"新闻公告管理","url":"","nodeCode":100,"parentId":0,"icon":"example","status":1},{"nodeId":3,"nodeType":2,"nodeName":"发布公告","url":"form","nodeCode":102,"parentId":1,"icon":"form","status":1},{"nodeId":4,"nodeType":2,"nodeName":"简历管理","url":"","nodeCode":200,"parentId":0,"icon":"example","status":1},{"nodeId":5,"nodeType":2,"nodeName":"上传简历","url":"upresume","nodeCode":201,"parentId":4,"icon":"form","status":1},{"nodeId":6,"nodeType":2,"nodeName":"查看简历","url":"lookresume","nodeCode":202,"parentId":4,"icon":"table","status":1},{"nodeId":9,"nodeType":1,"nodeName":"友情链接","url":"https://www.hut.edu.cn","nodeCode":1000,"parentId":0,"icon":"link","status":1}]}
+[13:19:10:911] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:44) - URL :http://localhost:8081/api/user/user_info
+[13:19:10:911] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:45) - HTTP_METHOD :GET
+[13:19:10:911] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:46) - IP :127.0.0.1
+[13:19:10:911] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:48) - CLASS_METHODcom.hl.emsystem.controller.UserController.userInfo
+[13:19:10:911] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:50) - ARGS :[eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwZW9wbGVJZCI6MTE2LCJuYW1lIjoi6Z-pNiIsImV4cCI6MTc2MTM2NTU0NywidXNlcklkIjoxMTYsInVzZXJuYW1lIjoiMjA0MDgwMDA1MDYifQ.O_RPofLvE9oi9EvH-qVQpBR-j53SZrIR9rJoCMHZOIA]
+[13:19:10:920] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doAfterReturning(WebLogAspect.java:61) - RESPONSE :{"code":10000,"msg":"SUCCESS","data":{"people":{"peopleId":116,"name":"韩6","departmentId":122,"title":null,"level":null},"department":{"departmentId":122,"departmentName":"学生1"},"username":"20408000506"}}
+[13:19:10:933] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:44) - URL :http://localhost:8081/api/user/user_router
+[13:19:10:933] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:45) - HTTP_METHOD :GET
+[13:19:10:933] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:46) - IP :127.0.0.1
+[13:19:10:934] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:48) - CLASS_METHODcom.hl.emsystem.controller.UserController.getSidebar
+[13:19:10:934] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:50) - ARGS :[eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwZW9wbGVJZCI6MTE2LCJuYW1lIjoi6Z-pNiIsImV4cCI6MTc2MTM2NTU0NywidXNlcklkIjoxMTYsInVzZXJuYW1lIjoiMjA0MDgwMDA1MDYifQ.O_RPofLvE9oi9EvH-qVQpBR-j53SZrIR9rJoCMHZOIA]
+[13:19:10:940] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doAfterReturning(WebLogAspect.java:61) - RESPONSE :{"code":10000,"msg":"SUCCESS","data":[{"nodeId":1,"nodeType":1,"nodeName":"新闻公告管理","url":"","nodeCode":100,"parentId":0,"icon":"example","status":1},{"nodeId":3,"nodeType":2,"nodeName":"发布公告","url":"form","nodeCode":102,"parentId":1,"icon":"form","status":1},{"nodeId":4,"nodeType":2,"nodeName":"简历管理","url":"","nodeCode":200,"parentId":0,"icon":"example","status":1},{"nodeId":5,"nodeType":2,"nodeName":"上传简历","url":"upresume","nodeCode":201,"parentId":4,"icon":"form","status":1},{"nodeId":6,"nodeType":2,"nodeName":"查看简历","url":"lookresume","nodeCode":202,"parentId":4,"icon":"table","status":1},{"nodeId":9,"nodeType":1,"nodeName":"友情链接","url":"https://www.hut.edu.cn","nodeCode":1000,"parentId":0,"icon":"link","status":1}]}
+[13:19:12:712] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:44) - URL :http://localhost:8081/api/user/user_info
+[13:19:12:712] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:45) - HTTP_METHOD :GET
+[13:19:12:713] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:46) - IP :127.0.0.1
+[13:19:12:713] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:48) - CLASS_METHODcom.hl.emsystem.controller.UserController.userInfo
+[13:19:12:713] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:50) - ARGS :[eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwZW9wbGVJZCI6MTE2LCJuYW1lIjoi6Z-pNiIsImV4cCI6MTc2MTM2NTU0NywidXNlcklkIjoxMTYsInVzZXJuYW1lIjoiMjA0MDgwMDA1MDYifQ.O_RPofLvE9oi9EvH-qVQpBR-j53SZrIR9rJoCMHZOIA]
+[13:19:12:722] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doAfterReturning(WebLogAspect.java:61) - RESPONSE :{"code":10000,"msg":"SUCCESS","data":{"people":{"peopleId":116,"name":"韩6","departmentId":122,"title":null,"level":null},"department":{"departmentId":122,"departmentName":"学生1"},"username":"20408000506"}}
+[13:19:12:735] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:44) - URL :http://localhost:8081/api/user/user_router
+[13:19:12:735] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:45) - HTTP_METHOD :GET
+[13:19:12:735] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:46) - IP :127.0.0.1
+[13:19:12:735] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:48) - CLASS_METHODcom.hl.emsystem.controller.UserController.getSidebar
+[13:19:12:735] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doBefore(WebLogAspect.java:50) - ARGS :[eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwZW9wbGVJZCI6MTE2LCJuYW1lIjoi6Z-pNiIsImV4cCI6MTc2MTM2NTU0NywidXNlcklkIjoxMTYsInVzZXJuYW1lIjoiMjA0MDgwMDA1MDYifQ.O_RPofLvE9oi9EvH-qVQpBR-j53SZrIR9rJoCMHZOIA]
+[13:19:12:740] [INFO] - com.hl.emsystem.Filter.WebLogAspect.doAfterReturning(WebLogAspect.java:61) - RESPONSE :{"code":10000,"msg":"SUCCESS","data":[{"nodeId":1,"nodeType":1,"nodeName":"新闻公告管理","url":"","nodeCode":100,"parentId":0,"icon":"example","status":1},{"nodeId":3,"nodeType":2,"nodeName":"发布公告","url":"form","nodeCode":102,"parentId":1,"icon":"form","status":1},{"nodeId":4,"nodeType":2,"nodeName":"简历管理","url":"","nodeCode":200,"parentId":0,"icon":"example","status":1},{"nodeId":5,"nodeType":2,"nodeName":"上传简历","url":"upresume","nodeCode":201,"parentId":4,"icon":"form","status":1},{"nodeId":6,"nodeType":2,"nodeName":"查看简历","url":"lookresume","nodeCode":202,"parentId":4,"icon":"table","status":1},{"nodeId":9,"nodeType":1,"nodeName":"友情链接","url":"https://www.hut.edu.cn","nodeCode":1000,"parentId":0,"icon":"link","status":1}]}

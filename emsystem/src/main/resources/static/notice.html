@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>就业管理系统</title>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" type="text/css" href="/element-plus/index.css">
+    <!-- 引入组件库 -->
+    <script src="/vue/vue.global.js"></script>
+    <script src="/element-plus/index.full.js"></script>
+    <script src="/axios/axios.js"></script>
+
+    <style scoped>
+
+
+
+        /*公告浏览页面*/
+        .page-recerive{
+
+            width: 80%;
+            height:650px;
+            margin-left:10%;
+            box-sizing: border-box;
+            background: #fff;
+            box-shadow: 0 0 20px;
+
+        }
+
+        /*右侧*/
+        .common_nav{
+
+            width: 165px;
+            height: 100%;
+            float: left;
+            background: #393b5d;
+
+        }
+
+        .nav_title{
+            padding: 30px 0 24px 24px;
+            font-size: 20px;
+            font-weight: 400;
+            color: #fff;
+            border: 0;
+            background: #4b4d6e;
+            outline: none;
+        }
+        .content{
+            padding-bottom: 30px;
+            margin-left: 170px;
+            padding: 10px;
+            height: 98%;
+            position: relative;
+
+        }
+        .content .title h2{
+            font-size: 16px;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        .content .result{
+            height: calc(100% - 170px);
+            margin-top: 5%;
+        }
+        .content .result .row-title{
+            font-size: 18px;
+            font-weight: bold;
+            color: #1a3c8e;
+            text-align: left;
+            padding: 0 10px;
+            line-height: 40px;
+            border-bottom: 0.5px solid #1a3c8e;
+        }
+
+        .content .result .row-body{
+            margin-left: 30px;
+            color: black;
+            font-size: 16px;
+            border-bottom: 0.5px solid #ececec;
+            align-items: center;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            background: #f3f6f9;
+            margin-bottom: 6px;
+            font-style: normal;
+        }
+
+        .content .result .row-body .box{
+            color: #fff;
+            display: inline-block;
+            background: #5487c7;
+            width: 24px;
+            height: 24px;
+            line-height: 24px;
+            text-align: center;
+            margin-right: 6px;
+        }
+
+
+        /*分页*/
+        .page-bar{
+            margin:40px auto;
+            margin-top: 150px;
+
+
+        }
+        ul,li{
+            margin: 0px;
+            padding: 0px;
+        }
+        li{
+            list-style: none
+        }
+        .page-bar li:first-child>a {
+            margin-left: 0px
+        }
+        .page-bar a{
+            border: 1px solid #ddd;
+            text-decoration: none;
+            position: relative;
+            float: left;
+            padding: 6px 12px;
+            margin-left: -1px;
+            line-height: 1.42857143;
+            color: #5D6062;
+            cursor: pointer;
+            margin-right: 20px;
+        }
+        .page-bar a:hover{
+            background-color: #eee;
+        }
+        .page-bar a.banclick{
+            cursor:not-allowed;
+        }
+        .page-bar .active a{
+            color: #fff;
+            cursor: default;
+            background-color: #1a3c8e;
+            border-color: #1a3c8e;
+        }
+        .page-bar i{
+            font-style:normal;
+            color: #1a3c8e;
+            margin: 0px 4px;
+            font-size: 12px;
+        }
+    </style>
+
+</head>
+<body>
+<div id="app">
+        <div class="page-recerive">
+
+            <div class="content" >
+                <div class="title"><h2 >通知公告浏览</h2></div>
+                <!--查询-->
+                <div data-v-47fc369c="" class="tool" style="margin-left: 25px;">
+                    <div  class="search" style="position: relative;float: left;">
+                        <input data-v-47fc369c="" type="text" v-bind:value="title" placeholder="请输入标题" @change="TitleInput" style="height: 36px;color: black;font-weight: bolder;">
+
+                    </div>
+
+                    <div  class="el-select " style="float: left;line-height: 34px;margin-left: 15px;  display: inline-block;position: relative;">
+                        <a-date-picker  @change="DateInput" v-bind:value="time" style="color: black;font-weight: bolder;"/>
+                    </div>
+                    <div style="float: left;line-height: 34px;margin-left: 25px;    display: inline-block;position: relative;">
+                        <a-button  style="background-color: #1a3c8e;border-color: #1a3c8e;" type="primary" @click="searchQuery" icon="search">查询</a-button>
+                        <a-button style="background-color: #1a3c8e; margin-left: 15px;border-color: #1a3c8e;" type="primary" @click="searchReset" icon="reload" >重置</a-button>
+                    </div>
+                </div>
+                <!--数据-->
+                <div class="result" >
+                    <table>
+                        <thead class="row-title" >
+                        <td style="width: 40%">公告标题</td>
+                        <td style="width: 20%">发布部门</td>
+                        <td style="width: 10%">发布时间</td>
+                        </thead>
+                        <tbody v-for="item in dataList">
+                        <tr class="row-body" >
+                            <td ><router-link  style="color:black" target="_blank" :to="{path:'../CtNoticeDetail',query:{id:item.id,company:item.company_dictText}}"><span class="box">♦</span>{{item.title}}</router-link></td>
+                            <td><p class="company" >{{res.data.data.people}}</p></td>
+                            <td><p class="senddate" >{{item.senddate}}</p></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!--数据分页-->
+                <div class="page-bar" style="margin:40px auto;margin-top: 50px;">
+                    <ul>
+                        <li v-if="cur>1"><a v-on:click="cur--,pageClick()">上一页</a></li>
+                        <li v-if="cur==1"><a class="banclick">上一页</a></li>
+                        <li v-for="index in indexs" v-bind:class="{ 'active': cur == index}">
+                            <a v-on:click="btnClick(index)">{{ index }}</a>
+                        </li>
+                        <li v-if="cur!=all"><a v-on:click="cur++,pageClick()">下一页</a></li>
+                        <li v-if="cur == all"><a class="banclick">下一页</a></li>
+                        <li><a>共<i>{{all}}</i>页</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+</div>
+
+<script>
+
+
+    const Main = {
+        data () {
+            return {
+                title:'',
+                time:'',
+                params:{
+                    pageNo: 1,
+                    pageSize: 10,
+                    title:"",
+                    senddate:"",
+                },
+                description: '公告查询页面',
+                dataList:"",
+                all:"",  //总页数
+                cur:"",  //当前页数
+                totalpage:"" ,//当前条数
+                url: {
+                    list: "/api/notice/selectAll"
+                },
+                dictOptions:{},
+                superFieldList:[],
+            }
+        }
+
+        ,mounted(){
+
+        //请求数据
+
+            axios.get("/api/notice/selectAll").then(res => {
+                console.log(res.data);
+                this.dataList=[];
+                for(let i=0;i<res.data.data.length;i++){
+                    this.dataList.push(res.data.data[i]);
+                }
+            })
+            // getAction(this.release_url,this.params).then((res)=>{
+            //     this.dataList=[];
+            //     for(let i=0;i<res.result.records.length;i++){
+            //         this.dataList.push(res.result.records[i])
+            //     }
+            //     this.all = res.result.pages;
+            //     this.cur = res.result.current;
+            //     this.totalpage = res.result.total;
+            //
+            // })
+        },
+
+//             searchReset(){
+//
+//                 this.params.senddate='';
+//                 this.params.title = '';
+//                 this.params.pageNo = 1;
+//                 this.params.pageSize = 10;
+//                 this.title = '';
+//                 this.time = '';
+//
+//                 // getAction(this.release_url,this.params).then((res)=>{
+//                 //     this.dataList=[];
+//                 //     for(let i=0;i<res.result.records.length;i++){
+//                 //         this.dataList.push(res.result.records[i])
+//                 //     }
+//                 //     this.all = res.result.pages;
+//                 //     this.cur = res.result.current;
+//                 //     this.totalpage = res.result.total;
+//                 //
+//                 // })
+//
+//             },
+//             //查询值
+//             TitleInput(value){
+//                 this.params.title = value.target.value;
+//                 this.title = value.target.value;
+//
+//             },
+//
+//             //查询值
+//             DateInput(date, dateString){
+//                 this.params.senddate = dateString;
+//                 this.time = dateString;
+//
+//             },
+//
+//             //分页
+//             btnClick: function(data){//页码点击事件
+//                 if(data != this.cur){
+//                     this.cur = data
+//                 }
+//                 //根据点击页数请求数据
+//                 this.params.pageNo = this.cur
+//                 this.loadData();
+//             },
+//
+//             pageClick: function(){
+//                 //根据点击页数请求数据
+//                 this.params.pageNo = this.cur
+//                 this.loadData();
+//             }
+//
+//
+//         },
+//
+//         computed: {
+// //分页
+//             indexs: function(){
+//                 var left = 1;
+//                 var right = this.all;
+//                 var ar = [];
+//                 if(this.all>= 5){
+//                     if(this.cur > 3 && this.cur < this.all-2){
+//                         left = this.cur - 2
+//                         right = this.cur + 2
+//                     }else{
+//                         if(this.cur<=3){
+//                             left = 1
+//                             right = 5
+//                         }else{
+//                             right = this.all
+//                             left = this.all -4
+//                         }
+//                     }
+//                 }
+//                 while (left <= right){
+//                     ar.push(left)
+//                     left ++
+//                 }
+//                 return ar
+//             }
+//         },
+//         created() {
+//             //调用方法
+//             this.loadData();
+//         },
+
+
+    };
+    const app = Vue.createApp(Main);
+    app.use(ElementPlus);
+    app.mount("#app");
+</script>
+
+</body>
+</html>

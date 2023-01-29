@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hl.emsystem.model.dao.PeopleMapper">
+  <resultMap id="BaseResultMap" type="com.hl.emsystem.model.pojo.People">
+    <id column="people_id" jdbcType="BIGINT" property="peopleId" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="department_id" jdbcType="BIGINT" property="departmentId" />
+    <result column="title" jdbcType="VARCHAR" property="title" />
+    <result column="level" jdbcType="INTEGER" property="level" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    people_id, `name`, department_id, title, `level`
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from adm_people
+    where people_id = #{peopleId,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from adm_people
+    where people_id = #{peopleId,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.hl.emsystem.model.pojo.People">
+    insert into adm_people (people_id, `name`, department_id, 
+      title, `level`)
+    values (#{peopleId,jdbcType=BIGINT}, #{name,jdbcType=VARCHAR}, #{departmentId,jdbcType=BIGINT}, 
+      #{title,jdbcType=VARCHAR}, #{level,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.hl.emsystem.model.pojo.People" useGeneratedKeys="true" keyProperty="peopleId">
+    insert into adm_people
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="peopleId != null">
+        people_id,
+      </if>
+      <if test="name != null">
+        `name`,
+      </if>
+      <if test="departmentId != null">
+        department_id,
+      </if>
+      <if test="title != null">
+        title,
+      </if>
+      <if test="level != null">
+        `level`,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="peopleId != null">
+        #{peopleId,jdbcType=BIGINT},
+      </if>
+      <if test="name != null">
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="departmentId != null">
+        #{departmentId,jdbcType=BIGINT},
+      </if>
+      <if test="title != null">
+        #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="level != null">
+        #{level,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.hl.emsystem.model.pojo.People">
+    update adm_people
+    <set>
+      <if test="name != null">
+        `name` = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="departmentId != null">
+        department_id = #{departmentId,jdbcType=BIGINT},
+      </if>
+      <if test="title != null">
+        title = #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="level != null">
+        `level` = #{level,jdbcType=INTEGER},
+      </if>
+    </set>
+    where people_id = #{peopleId,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.hl.emsystem.model.pojo.People">
+    update adm_people
+    set `name` = #{name,jdbcType=VARCHAR},
+      department_id = #{departmentId,jdbcType=BIGINT},
+      title = #{title,jdbcType=VARCHAR},
+      `level` = #{level,jdbcType=INTEGER}
+    where people_id = #{peopleId,jdbcType=BIGINT}
+  </update>
+</mapper>

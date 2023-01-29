@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hl.emsystem.model.dao.CompanyMapper">
+  <resultMap id="BaseResultMap" type="com.hl.emsystem.model.pojo.Company">
+    <id column="FirmName" jdbcType="VARCHAR" property="firmname" />
+    <result column="FirmAddress" jdbcType="VARCHAR" property="firmaddress" />
+    <result column="FirmType" jdbcType="CHAR" property="firmtype" />
+    <result column="EcType" jdbcType="CHAR" property="ectype" />
+    <result column="Publisher" jdbcType="VARCHAR" property="publisher" />
+    <result column="Department" jdbcType="VARCHAR" property="department" />
+    <result column="Contact" jdbcType="VARCHAR" property="contact" />
+    <result column="FirmIntroduce" jdbcType="VARCHAR" property="firmintroduce" />
+    <result column="RecruitMajor" jdbcType="VARCHAR" property="recruitmajor" />
+    <result column="RequetAcademic" jdbcType="CHAR" property="requetacademic" />
+    <result column="RequestPeople" jdbcType="INTEGER" property="requestpeople" />
+    <result column="RecruitMethod" jdbcType="CHAR" property="recruitmethod" />
+    <result column="JobFairPlace" jdbcType="INTEGER" property="jobfairplace" />
+    <result column="Publish" jdbcType="CHAR" property="publish" />
+    <result column="ExpirationDate" jdbcType="TIMESTAMP" property="expirationdate" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    FirmName, FirmAddress, FirmType, EcType, Publisher, Department, Contact, FirmIntroduce, 
+    RecruitMajor, RequetAcademic, RequestPeople, RecruitMethod, JobFairPlace, Publish, 
+    ExpirationDate
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from company
+    where FirmName = #{firmname,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from company
+    where FirmName = #{firmname,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.hl.emsystem.model.pojo.Company">
+    insert into company (FirmName, FirmAddress, FirmType, 
+      EcType, Publisher, Department, 
+      Contact, FirmIntroduce, RecruitMajor, 
+      RequetAcademic, RequestPeople, RecruitMethod, 
+      JobFairPlace, Publish, ExpirationDate
+      )
+    values (#{firmname,jdbcType=VARCHAR}, #{firmaddress,jdbcType=VARCHAR}, #{firmtype,jdbcType=CHAR}, 
+      #{ectype,jdbcType=CHAR}, #{publisher,jdbcType=VARCHAR}, #{department,jdbcType=VARCHAR}, 
+      #{contact,jdbcType=VARCHAR}, #{firmintroduce,jdbcType=VARCHAR}, #{recruitmajor,jdbcType=VARCHAR}, 
+      #{requetacademic,jdbcType=CHAR}, #{requestpeople,jdbcType=INTEGER}, #{recruitmethod,jdbcType=CHAR}, 
+      #{jobfairplace,jdbcType=INTEGER}, #{publish,jdbcType=CHAR}, #{expirationdate,jdbcType=TIMESTAMP}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.hl.emsystem.model.pojo.Company">
+    insert into company
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="firmname != null">
+        FirmName,
+      </if>
+      <if test="firmaddress != null">
+        FirmAddress,
+      </if>
+      <if test="firmtype != null">
+        FirmType,
+      </if>
+      <if test="ectype != null">
+        EcType,
+      </if>
+      <if test="publisher != null">
+        Publisher,
+      </if>
+      <if test="department != null">
+        Department,
+      </if>
+      <if test="contact != null">
+        Contact,
+      </if>
+      <if test="firmintroduce != null">
+        FirmIntroduce,
+      </if>
+      <if test="recruitmajor != null">
+        RecruitMajor,
+      </if>
+      <if test="requetacademic != null">
+        RequetAcademic,
+      </if>
+      <if test="requestpeople != null">
+        RequestPeople,
+      </if>
+      <if test="recruitmethod != null">
+        RecruitMethod,
+      </if>
+      <if test="jobfairplace != null">
+        JobFairPlace,
+      </if>
+      <if test="publish != null">
+        Publish,
+      </if>
+      <if test="expirationdate != null">
+        ExpirationDate,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="firmname != null">
+        #{firmname,jdbcType=VARCHAR},
+      </if>
+      <if test="firmaddress != null">
+        #{firmaddress,jdbcType=VARCHAR},
+      </if>
+      <if test="firmtype != null">
+        #{firmtype,jdbcType=CHAR},
+      </if>
+      <if test="ectype != null">
+        #{ectype,jdbcType=CHAR},
+      </if>
+      <if test="publisher != null">
+        #{publisher,jdbcType=VARCHAR},
+      </if>
+      <if test="department != null">
+        #{department,jdbcType=VARCHAR},
+      </if>
+      <if test="contact != null">
+        #{contact,jdbcType=VARCHAR},
+      </if>
+      <if test="firmintroduce != null">
+        #{firmintroduce,jdbcType=VARCHAR},
+      </if>
+      <if test="recruitmajor != null">
+        #{recruitmajor,jdbcType=VARCHAR},
+      </if>
+      <if test="requetacademic != null">
+        #{requetacademic,jdbcType=CHAR},
+      </if>
+      <if test="requestpeople != null">
+        #{requestpeople,jdbcType=INTEGER},
+      </if>
+      <if test="recruitmethod != null">
+        #{recruitmethod,jdbcType=CHAR},
+      </if>
+      <if test="jobfairplace != null">
+        #{jobfairplace,jdbcType=INTEGER},
+      </if>
+      <if test="publish != null">
+        #{publish,jdbcType=CHAR},
+      </if>
+      <if test="expirationdate != null">
+        #{expirationdate,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.hl.emsystem.model.pojo.Company">
+    update company
+    <set>
+      <if test="firmaddress != null">
+        FirmAddress = #{firmaddress,jdbcType=VARCHAR},
+      </if>
+      <if test="firmtype != null">
+        FirmType = #{firmtype,jdbcType=CHAR},
+      </if>
+      <if test="ectype != null">
+        EcType = #{ectype,jdbcType=CHAR},
+      </if>
+      <if test="publisher != null">
+        Publisher = #{publisher,jdbcType=VARCHAR},
+      </if>
+      <if test="department != null">
+        Department = #{department,jdbcType=VARCHAR},
+      </if>
+      <if test="contact != null">
+        Contact = #{contact,jdbcType=VARCHAR},
+      </if>
+      <if test="firmintroduce != null">
+        FirmIntroduce = #{firmintroduce,jdbcType=VARCHAR},
+      </if>
+      <if test="recruitmajor != null">
+        RecruitMajor = #{recruitmajor,jdbcType=VARCHAR},
+      </if>
+      <if test="requetacademic != null">
+        RequetAcademic = #{requetacademic,jdbcType=CHAR},
+      </if>
+      <if test="requestpeople != null">
+        RequestPeople = #{requestpeople,jdbcType=INTEGER},
+      </if>
+      <if test="recruitmethod != null">
+        RecruitMethod = #{recruitmethod,jdbcType=CHAR},
+      </if>
+      <if test="jobfairplace != null">
+        JobFairPlace = #{jobfairplace,jdbcType=INTEGER},
+      </if>
+      <if test="publish != null">
+        Publish = #{publish,jdbcType=CHAR},
+      </if>
+      <if test="expirationdate != null">
+        ExpirationDate = #{expirationdate,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where FirmName = #{firmname,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.hl.emsystem.model.pojo.Company">
+    update company
+    set FirmAddress = #{firmaddress,jdbcType=VARCHAR},
+      FirmType = #{firmtype,jdbcType=CHAR},
+      EcType = #{ectype,jdbcType=CHAR},
+      Publisher = #{publisher,jdbcType=VARCHAR},
+      Department = #{department,jdbcType=VARCHAR},
+      Contact = #{contact,jdbcType=VARCHAR},
+      FirmIntroduce = #{firmintroduce,jdbcType=VARCHAR},
+      RecruitMajor = #{recruitmajor,jdbcType=VARCHAR},
+      RequetAcademic = #{requetacademic,jdbcType=CHAR},
+      RequestPeople = #{requestpeople,jdbcType=INTEGER},
+      RecruitMethod = #{recruitmethod,jdbcType=CHAR},
+      JobFairPlace = #{jobfairplace,jdbcType=INTEGER},
+      Publish = #{publish,jdbcType=CHAR},
+      ExpirationDate = #{expirationdate,jdbcType=TIMESTAMP}
+    where FirmName = #{firmname,jdbcType=VARCHAR}
+  </update>
+</mapper>
