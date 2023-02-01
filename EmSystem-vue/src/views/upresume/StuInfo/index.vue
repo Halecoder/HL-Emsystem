@@ -3,8 +3,8 @@
     <el-row
       :gutter="15"
       class="form shadow"
-      style="margin-left: 10%;"
     >
+      <div>学生信息</div>
       <el-form
         ref="elForm"
         :model="formData"
@@ -386,22 +386,19 @@ export default {
 </script>
 
   <style lang="scss" scoped>
-    .form{
-      width: 80%;
-    //   box-shadow: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04)
-     height: 600px;
-    }
     .form {
+      height: 600px;
 	// width: 300px;
 	// height: 100px;
 	background: #F8F8F9;
 	border-radius: 10px;
-	margin: 10px;
+	// margin: 10px;
+  width: 700px;
+  margin: 0 auto !important;
 }
 
 .shadow {
 	position: relative;
-	max-width: 80%;
 	box-shadow: 0px 1px 4px rgba(0,0,0,0.3),
 				0px 0px 20px rgba(0,0,0,0.1) inset;
 }

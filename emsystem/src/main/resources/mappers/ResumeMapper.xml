@@ -14,7 +14,7 @@
     <result column="Phone" jdbcType="BIGINT" property="phone" />
     <result column="Mail" jdbcType="VARCHAR" property="mail" />
     <result column="Address" jdbcType="VARCHAR" property="address" />
-    <result column="Experience" jdbcType="VARCHAR" property="experience" />
+    <result column="Experience" jdbcType="VARCHAR" property="experience" typeHandler="com.baomidou.mybatisplus.extension.handlers.JacksonTypeHandler"/>
   </resultMap>
   <sql id="Base_Column_List">
     StuNo, StuName, ResID, GraDate, Job, `Language`, `Level`, Computer, Office, Phone, 
@@ -40,7 +40,7 @@
       #{gradate,jdbcType=TIMESTAMP}, #{job,jdbcType=VARCHAR}, #{language,jdbcType=CHAR}, 
       #{level,jdbcType=CHAR}, #{computer,jdbcType=CHAR}, #{office,jdbcType=VARCHAR}, 
       #{phone,jdbcType=BIGINT}, #{mail,jdbcType=VARCHAR}, #{address,jdbcType=VARCHAR}, 
-      #{experience,jdbcType=VARCHAR})
+      #{experience,jdbcType=VARCHAR,typeHandler=com.baomidou.mybatisplus.extension.handlers.JacksonTypeHandler})
   </insert>
   <insert id="insertSelective" parameterType="com.hl.emsystem.model.pojo.Resume">
     insert into resume
@@ -123,7 +123,7 @@
         #{address,jdbcType=VARCHAR},
       </if>
       <if test="experience != null">
-        #{experience,jdbcType=VARCHAR},
+        #{experience,jdbcType=VARCHAR,typeHandler=com.baomidou.mybatisplus.extension.handlers.JacksonTypeHandler},
       </if>
     </trim>
   </insert>
@@ -164,7 +164,7 @@
         Address = #{address,jdbcType=VARCHAR},
       </if>
       <if test="experience != null">
-        Experience = #{experience,jdbcType=VARCHAR},
+        Experience = #{experience,jdbcType=VARCHAR,typeHandler=com.baomidou.mybatisplus.extension.handlers.JacksonTypeHandler},
       </if>
     </set>
     where StuNo = #{stuno,jdbcType=CHAR}
@@ -182,7 +182,7 @@
       Phone = #{phone,jdbcType=BIGINT},
       Mail = #{mail,jdbcType=VARCHAR},
       Address = #{address,jdbcType=VARCHAR},
-      Experience = #{experience,jdbcType=VARCHAR}
+      Experience = #{experience,jdbcType=VARCHAR,typeHandler=com.baomidou.mybatisplus.extension.handlers.JacksonTypeHandler}
     where StuNo = #{stuno,jdbcType=CHAR}
   </update>
 </mapper>

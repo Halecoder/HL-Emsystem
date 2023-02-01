@@ -3,7 +3,6 @@
     <el-row
       :gutter="15"
       class="form shadow"
-      style="margin-left: 10%;"
     >
       <el-form
         ref="elForm"
@@ -13,7 +12,7 @@
         label-width="100px"
         label-position="top"
       >
-        <el-col :span="12">
+        <el-col v-show="false" :span="12">
           <el-form-item label="学号" prop="stuno">
             <el-input
               v-model="formData.stuno"
@@ -27,7 +26,7 @@
             />
           </el-form-item>
         </el-col>
-        <el-col :span="12">
+        <el-col v-show="false" :span="12">
           <el-form-item label="姓名" prop="stuname">
             <el-input
               v-model="formData.stuname"
@@ -134,21 +133,78 @@
           </el-form-item>
         </el-col>
         <el-col :span="12" class="swiper-no-swiping">
+          <el-form-item label="出生地" prop="city">
+            <el-cascader
+              v-model="formData.city"
+              filterable
+              separator=" "
+              :options="options"
+              placeholder="请输入出生地"
+              clearable
+              prefix-icon="el-icon-s-home"
+              :style="{width: '100%'}"
+              @click="handleChange"
+            />
+          </el-form-item>
+        </el-col>
+        <!-- <el-col :span="12" class="swiper-no-swiping">
           <el-form-item label="曾任职务" prop="office">
             <el-input
               v-model="formData.office"
               type="textarea"
               placeholder="请输入曾任职务"
-              :maxlength="50"
+              :maxlength="100"
               show-word-limit
               :autosize="{minRows: 1, maxRows: 10}"
               :style="{width: '100%'}"
             />
           </el-form-item>
+        </el-col> -->
+        <el-col :span="12" class="swiper-no-swiping">
+          <el-form-item label="个人介绍" prop="about">
+            <el-input
+              v-model="formData.about"
+              type="textarea"
+              placeholder="请输入个人介绍"
+              :maxlength="200"
+              :autosize="{minRows: 11, maxRows: 11}"
+              show-word-limit
+              :style="{width: '100%'}"
+            />
+          </el-form-item>
         </el-col>
-        <el-col :span="24" class="swiper-no-swiping">
-          <el-form-item label="工作经历" prop="experience">
-            <tinymce v-model="formData.experience" :height="300" />
+        <el-col :span="12" class="swiper-no-swiping">
+          <el-form-item label="个人优点" prop="knowledge" style="width:100%;">
+            <el-input
+              v-model="formData.knowledge"
+              type="textarea"
+              placeholder="用一句话介绍你的优点"
+              maxlength="20"
+              :autosize="{minRows: 1, maxRows: 2}"
+              show-word-limit
+            />
+          </el-form-item>
+        </el-col>
+        <el-col :span="12" class="swiper-no-swiping">
+          <el-form-item label="个人网站" prop="website">
+            <el-input
+              v-model="formData.website"
+              placeholder="请输入网站链接"
+              clearable
+              prefix-icon="el-icon-s-home"
+              :style="{width: '100%'}"
+            />
+          </el-form-item>
+        </el-col>
+        <el-col :span="12" class="swiper-no-swiping">
+          <el-form-item label="个人github" prop="github">
+            <el-input
+              v-model="formData.github"
+              placeholder="请输入github名称"
+              clearable
+              prefix-icon="el-icon-s-home"
+              :style="{width: '100%'}"
+            />
           </el-form-item>
         </el-col>
         <el-col :span="24">
@@ -167,6 +223,8 @@ import { getToken } from '@/utils/auth'
 import { mapGetters } from 'vuex'
 import '@/store/getters'
 import { addResume, listResume, updateResume } from '@/api/stu/resume'
+import { provinceAndCityData } from 'element-china-area-data'
+import { parseTime, convertCodeAndText } from '@/utils/ruoyi'
 
 export default {
   components: { ...mapGetters([
@@ -176,6 +234,7 @@ export default {
   props: [],
   data() {
     return {
+      options: provinceAndCityData,
       formData: {
         stuno: undefined,
         stuname: undefined,
@@ -188,7 +247,11 @@ export default {
         mail: undefined,
         address: undefined,
         office: undefined,
-        experience: ''
+        about: undefined,
+        city: undefined,
+        website: undefined,
+        github: undefined,
+        knowledge: undefined
       },
       rules: {
         stuno: [{
@@ -237,12 +300,12 @@ export default {
           trigger: 'blur'
         }],
         address: [],
-        office: [],
-        experience: [{
-          required: true,
-          message: '工作经历不能为空',
-          trigger: 'blur'
-        }]
+        office: []
+        // experience: [{
+        //   required: true,
+        //   message: '工作经历不能为空',
+        //   trigger: 'blur'
+        // }]
       },
       languageOptions: [{
         'label': '英语',
@@ -281,9 +344,29 @@ export default {
     this.formData.stuno = this.$store.getters.username
     this.getList()
   },
-  mounted() {},
+  mounted() {
+  },
   methods: {
+    // 区域码转换
+    handleChange(value) {
+      console.log(convertCodeAndText(value))
+      this.formData.birthplace = convertCodeAndText(value)
+    },
 
+    // 添加工作经历
+    addExperience() {
+      this.formData.experience.push({
+        company: '',
+        position: '',
+        timeperiod: '',
+        description: '',
+        website: ''
+      })
+    },
+    // 删除工作经历
+    removeExperience(index) {
+      this.formData.experience.splice(index, 1)
+    },
     // 查询
     getList() {
       listResume(this.formData.stuno).then(response => {
@@ -336,18 +419,17 @@ export default {
 
 </script>
 <style lang="scss" scoped>
-.form{
-  width: 80%;
-//   box-shadow: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04)
- height: 900px;
-}
+
 .form {
 // width: 300px;
 // height: 100px;
+height: 600px;
 background: #F8F8F9;
 border-radius: 10px;
-margin: 10px;
-position: relative;
+width: 700px;
+  margin: 0 auto !important;
+  overflow-y: scroll;
+
 }
 
 .shadow {
@@ -393,5 +475,19 @@ right:10px;
 left:auto;
 transform:rotate(3deg);
 }
+
+.el-icon-circle-plus-outline{
+  cursor: pointer;
+  color: #1890ff;
+
+}
+
+// 样式穿透
+::v-deep .el-textarea .el-input__count {
+    color: #909399;
+    background: transparent !important;
+    bottom: -10px;
+}
+
 </style>
 

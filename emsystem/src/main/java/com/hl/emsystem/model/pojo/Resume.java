@@ -1,12 +1,18 @@
 package com.hl.emsystem.model.pojo;
 
+import cn.hutool.json.JSONArray;
 import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.extension.handlers.JacksonTypeHandler;
 import com.fasterxml.jackson.annotation.JsonFormat;
+import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Resume {
+@NoArgsConstructor
+public class Resume implements Serializable {
     private String stuno;
 
     private String stuname;
@@ -33,7 +39,8 @@ public class Resume {
 
     private String address;
 
-    private String experience;
+    @TableField(typeHandler = JacksonTypeHandler.class)
+    private JSONArray experience;
 
     public String getStuno() {
         return stuno;
@@ -131,11 +138,11 @@ public class Resume {
         this.address = address == null ? null : address.trim();
     }
 
-    public String getExperience() {
+    public JSONArray getExperience() {
         return experience;
     }
 
-    public void setExperience(String experience) {
-        this.experience = experience == null ? null : experience.trim();
+    public void setExperience(JSONArray experience) {
+        this.experience = experience ;
     }
 }

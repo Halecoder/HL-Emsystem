@@ -32,8 +32,13 @@ import Editor from '@/components/Editor'
 // 编辑器组件
 import Tinymce from '@/components/tinymce'
 
+// 删除父组件滚动条
+import VScrollLock from 'v-scroll-lock'
+
 // import VueMeta from 'vue-meta'
 Vue.use(plugins)
+
+Vue.use(VScrollLock)
 
 // Vue.use(VueMeta)
 // 全局方法挂载

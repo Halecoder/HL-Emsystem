@@ -3,17 +3,23 @@
     <div class="steps">
       <el-steps :active="active" direction="vertical" align-center>
         <el-step title="上传信息" description="填写学生信息   " />
-        <el-step title="上传简历" description="填写简历信息" />
+        <el-step title="填写简历" description="填写简历信息" />
+        <el-step title="完善简历" description="完善简历信息" />
       </el-steps>
     </div>
+    <!-- v-scroll-lock="true" -->
     <div class="swiper swiper-no-swiping">
-      <swiper ref="mySwiper" :options="swiperOptions" style="margin-left: 20%;">
+      <swiper ref="mySwiper" v-scroll-lock="true" :options="swiperOptions">
         <swiper-slide>
           <StuInfo @showStatus="showStatus" />
         </swiper-slide>
         <swiper-slide>
           <Resume />
         </swiper-slide>
+        <swiper-slide>
+          <Other />
+        </swiper-slide>
+
         <div v-show="isShow" slot="button-prev" class="swiper-button-prev" @click="pre" />
         <div v-show="isShow" slot="button-next" class="swiper-button-next" @click="next" />
         <div slot="pagination" class="swiper-pagination" />
@@ -30,13 +36,15 @@ import 'swiper/css/swiper.css'
 // 组件注册 注意别加{}
 import StuInfo from './StuInfo'
 import Resume from './Resume'
+import Other from './Other'
 
 export default {
   components: {
     swiper,
     swiperSlide,
     'StuInfo': StuInfo,
-    Resume
+    Resume,
+    Other
   },
   props: [],
   data() {
@@ -88,9 +96,17 @@ export default {
 
 .swiper-slide {
     text-align: center;
+    // height: 80%;
+    margin-top: 30px;
 }
+.swiper-pagination{
+  margin-top: 30px;
+  position: relative;
+}
+
 .swiper{
-    width: 80%;
+    // width: 80%;
+    margin: auto;
 }
 .steps{
   float: left;
@@ -99,6 +115,22 @@ export default {
     margin-top: 100px;
     position: absolute;
     margin-left: 50px;
+    position: fixed;
+    // margin: auto;
+}
+.swiper-button-prev{
+  top: 0px;
+  left: -30%;
+    right: 30%;
+    bottom: 0px;
+    margin: auto;
+}
+.swiper-button-next{
+  top: 0px;
+  left: 30%;
+    right: -30%;
+    bottom: 0px;
+    margin: auto;
 }
 
   </style>
