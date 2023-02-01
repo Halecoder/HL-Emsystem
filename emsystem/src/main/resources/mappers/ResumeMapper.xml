@@ -5,7 +5,7 @@
     <id column="StuNo" jdbcType="CHAR" property="stuno" />
     <result column="StuName" jdbcType="VARCHAR" property="stuname" />
     <result column="ResID" jdbcType="BIGINT" property="resid" />
-    <result column="GraDate" jdbcType="TIMESTAMP" property="gradate" />
+    <result column="GraDate" jdbcType="DATE" property="gradate" />
     <result column="Job" jdbcType="VARCHAR" property="job" />
     <result column="Language" jdbcType="CHAR" property="language" />
     <result column="Level" jdbcType="CHAR" property="level" />
@@ -14,15 +14,33 @@
     <result column="Phone" jdbcType="BIGINT" property="phone" />
     <result column="Mail" jdbcType="VARCHAR" property="mail" />
     <result column="Address" jdbcType="VARCHAR" property="address" />
-    <result column="Experience" jdbcType="VARCHAR" property="experience" typeHandler="com.baomidou.mybatisplus.extension.handlers.JacksonTypeHandler"/>
+    <result column="city" jdbcType="VARCHAR" property="city" />
+    <result column="about" jdbcType="VARCHAR" property="about" />
+    <result column="website" jdbcType="VARCHAR" property="website" />
+    <result column="github" jdbcType="VARCHAR" property="github" />
+    <result column="knowledge" jdbcType="VARCHAR" property="knowledge" />
+    <result column="image" jdbcType="VARCHAR" property="image" />
+    <result column="lang" jdbcType="VARCHAR" property="lang" />
+  </resultMap>
+  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs"  type="com.hl.emsystem.model.pojo.ResumeWithBLOBs">
+    <result column="Experience" jdbcType="LONGVARCHAR" property="experience" typeHandler="com.baomidou.mybatisplus.extension.handlers.JacksonTypeHandler"/>
+    <result column="education" jdbcType="LONGVARCHAR" property="education" typeHandler="com.baomidou.mybatisplus.extension.handlers.JacksonTypeHandler"/>
+    <result column="projects" jdbcType="LONGVARCHAR" property="projects" typeHandler="com.baomidou.mybatisplus.extension.handlers.JacksonTypeHandler"/>
+    <result column="skills" jdbcType="LONGVARCHAR" property="skills" typeHandler="com.baomidou.mybatisplus.extension.handlers.JacksonTypeHandler"/>
+    <result column="contributions" jdbcType="LONGVARCHAR" property="contributions" typeHandler="com.baomidou.mybatisplus.extension.handlers.JacksonTypeHandler"/>
   </resultMap>
   <sql id="Base_Column_List">
-    StuNo, StuName, ResID, GraDate, Job, `Language`, `Level`, Computer, Office, Phone, 
-    Mail, Address, Experience
+    StuNo, StuName, ResID, GraDate, Job, `Language`, `Level`, Computer, Office, Phone,
+    Mail, Address, city, about, website, github, knowledge, image, lang
   </sql>
-  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
-    select 
+  <sql id="Blob_Column_List">
+    Experience, education, projects, skills, contributions
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="ResultMapWithBLOBs">
+    select
     <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
     from resume
     where StuNo = #{stuno,jdbcType=CHAR}
   </select>
@@ -30,19 +48,25 @@
     delete from resume
     where StuNo = #{stuno,jdbcType=CHAR}
   </delete>
-  <insert id="insert" parameterType="com.hl.emsystem.model.pojo.Resume">
-    insert into resume (StuNo, StuName, ResID, 
-      GraDate, Job, `Language`, 
-      `Level`, Computer, Office, 
-      Phone, Mail, Address, 
-      Experience)
-    values (#{stuno,jdbcType=CHAR}, #{stuname,jdbcType=VARCHAR}, #{resid,jdbcType=BIGINT}, 
-      #{gradate,jdbcType=TIMESTAMP}, #{job,jdbcType=VARCHAR}, #{language,jdbcType=CHAR}, 
-      #{level,jdbcType=CHAR}, #{computer,jdbcType=CHAR}, #{office,jdbcType=VARCHAR}, 
-      #{phone,jdbcType=BIGINT}, #{mail,jdbcType=VARCHAR}, #{address,jdbcType=VARCHAR}, 
-      #{experience,jdbcType=VARCHAR,typeHandler=com.baomidou.mybatisplus.extension.handlers.JacksonTypeHandler})
+  <insert id="insert" parameterType="com.hl.emsystem.model.pojo.ResumeWithBLOBs">
+    insert into resume (StuNo, StuName, ResID,
+      GraDate, Job, `Language`, `Level`,
+      Computer, Office, Phone,
+      Mail, Address, city,
+      about, website, github,
+      knowledge, image, lang,
+      Experience, education, projects,
+      skills, contributions)
+    values (#{stuno,jdbcType=CHAR}, #{stuname,jdbcType=VARCHAR}, #{resid,jdbcType=BIGINT},
+      #{gradate,jdbcType=DATE}, #{job,jdbcType=VARCHAR}, #{language,jdbcType=CHAR}, #{level,jdbcType=CHAR},
+      #{computer,jdbcType=CHAR}, #{office,jdbcType=VARCHAR}, #{phone,jdbcType=BIGINT},
+      #{mail,jdbcType=VARCHAR}, #{address,jdbcType=VARCHAR}, #{city,jdbcType=VARCHAR},
+      #{about,jdbcType=VARCHAR}, #{website,jdbcType=VARCHAR}, #{github,jdbcType=VARCHAR},
+      #{knowledge,jdbcType=VARCHAR}, #{image,jdbcType=VARCHAR}, #{lang,jdbcType=VARCHAR},
+      #{experience,jdbcType=LONGVARCHAR,typeHandler=com.baomidou.mybatisplus.extension.handlers.JacksonTypeHandler}, #{education,jdbcType=LONGVARCHAR,typeHandler=com.baomidou.mybatisplus.extension.handlers.JacksonTypeHandler}, #{projects,jdbcType=LONGVARCHAR,typeHandler=com.baomidou.mybatisplus.extension.handlers.JacksonTypeHandler},
+      #{skills,jdbcType=LONGVARCHAR,typeHandler=com.baomidou.mybatisplus.extension.handlers.JacksonTypeHandler}, #{contributions,jdbcType=LONGVARCHAR,typeHandler=com.baomidou.mybatisplus.extension.handlers.JacksonTypeHandler})
   </insert>
-  <insert id="insertSelective" parameterType="com.hl.emsystem.model.pojo.Resume">
+  <insert id="insertSelective" parameterType="com.hl.emsystem.model.pojo.ResumeWithBLOBs">
     insert into resume
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="stuno != null">
@@ -81,8 +105,41 @@
       <if test="address != null">
         Address,
       </if>
+      <if test="city != null">
+        city,
+      </if>
+      <if test="about != null">
+        about,
+      </if>
+      <if test="website != null">
+        website,
+      </if>
+      <if test="github != null">
+        github,
+      </if>
+      <if test="knowledge != null">
+        knowledge,
+      </if>
+      <if test="image != null">
+        image,
+      </if>
+      <if test="lang != null">
+        lang,
+      </if>
       <if test="experience != null">
         Experience,
+      </if>
+      <if test="education != null">
+        education,
+      </if>
+      <if test="projects != null">
+        projects,
+      </if>
+      <if test="skills != null">
+        skills,
+      </if>
+      <if test="contributions != null">
+        contributions,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
@@ -96,7 +153,7 @@
         #{resid,jdbcType=BIGINT},
       </if>
       <if test="gradate != null">
-        #{gradate,jdbcType=TIMESTAMP},
+        #{gradate,jdbcType=DATE},
       </if>
       <if test="job != null">
         #{job,jdbcType=VARCHAR},
@@ -122,12 +179,45 @@
       <if test="address != null">
         #{address,jdbcType=VARCHAR},
       </if>
+      <if test="city != null">
+        #{city,jdbcType=VARCHAR},
+      </if>
+      <if test="about != null">
+        #{about,jdbcType=VARCHAR},
+      </if>
+      <if test="website != null">
+        #{website,jdbcType=VARCHAR},
+      </if>
+      <if test="github != null">
+        #{github,jdbcType=VARCHAR},
+      </if>
+      <if test="knowledge != null">
+        #{knowledge,jdbcType=VARCHAR},
+      </if>
+      <if test="image != null">
+        #{image,jdbcType=VARCHAR},
+      </if>
+      <if test="lang != null">
+        #{lang,jdbcType=VARCHAR},
+      </if>
       <if test="experience != null">
-        #{experience,jdbcType=VARCHAR,typeHandler=com.baomidou.mybatisplus.extension.handlers.JacksonTypeHandler},
+        #{experience,jdbcType=LONGVARCHAR,typeHandler=com.baomidou.mybatisplus.extension.handlers.JacksonTypeHandler},
+      </if>
+      <if test="education != null">
+        #{education,jdbcType=LONGVARCHAR,typeHandler=com.baomidou.mybatisplus.extension.handlers.JacksonTypeHandler},
+      </if>
+      <if test="projects != null">
+        #{projects,jdbcType=LONGVARCHAR,typeHandler=com.baomidou.mybatisplus.extension.handlers.JacksonTypeHandler},
+      </if>
+      <if test="skills != null">
+        #{skills,jdbcType=LONGVARCHAR,typeHandler=com.baomidou.mybatisplus.extension.handlers.JacksonTypeHandler},
+      </if>
+      <if test="contributions != null">
+        #{contributions,jdbcType=LONGVARCHAR,typeHandler=com.baomidou.mybatisplus.extension.handlers.JacksonTypeHandler},
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.hl.emsystem.model.pojo.Resume">
+  <update id="updateByPrimaryKeySelective" parameterType="com.hl.emsystem.model.pojo.ResumeWithBLOBs">
     update resume
     <set>
       <if test="stuname != null">
@@ -137,7 +227,7 @@
         ResID = #{resid,jdbcType=BIGINT},
       </if>
       <if test="gradate != null">
-        GraDate = #{gradate,jdbcType=TIMESTAMP},
+        GraDate = #{gradate,jdbcType=DATE},
       </if>
       <if test="job != null">
         Job = #{job,jdbcType=VARCHAR},
@@ -163,17 +253,50 @@
       <if test="address != null">
         Address = #{address,jdbcType=VARCHAR},
       </if>
+      <if test="city != null">
+        city = #{city,jdbcType=VARCHAR},
+      </if>
+      <if test="about != null">
+        about = #{about,jdbcType=VARCHAR},
+      </if>
+      <if test="website != null">
+        website = #{website,jdbcType=VARCHAR},
+      </if>
+      <if test="github != null">
+        github = #{github,jdbcType=VARCHAR},
+      </if>
+      <if test="knowledge != null">
+        knowledge = #{knowledge,jdbcType=VARCHAR},
+      </if>
+      <if test="image != null">
+        image = #{image,jdbcType=VARCHAR},
+      </if>
+      <if test="lang != null">
+        lang = #{lang,jdbcType=VARCHAR},
+      </if>
       <if test="experience != null">
-        Experience = #{experience,jdbcType=VARCHAR,typeHandler=com.baomidou.mybatisplus.extension.handlers.JacksonTypeHandler},
+        Experience = #{experience,jdbcType=LONGVARCHAR,typeHandler=com.baomidou.mybatisplus.extension.handlers.JacksonTypeHandler},
+      </if>
+      <if test="education != null">
+        education = #{education,jdbcType=LONGVARCHAR,typeHandler=com.baomidou.mybatisplus.extension.handlers.JacksonTypeHandler},
+      </if>
+      <if test="projects != null">
+        projects = #{projects,jdbcType=LONGVARCHAR,typeHandler=com.baomidou.mybatisplus.extension.handlers.JacksonTypeHandler},
+      </if>
+      <if test="skills != null">
+        skills = #{skills,jdbcType=LONGVARCHAR,typeHandler=com.baomidou.mybatisplus.extension.handlers.JacksonTypeHandler},
+      </if>
+      <if test="contributions != null">
+        contributions = #{contributions,jdbcType=LONGVARCHAR,typeHandler=com.baomidou.mybatisplus.extension.handlers.JacksonTypeHandler},
       </if>
     </set>
     where StuNo = #{stuno,jdbcType=CHAR}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.hl.emsystem.model.pojo.Resume">
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.hl.emsystem.model.pojo.ResumeWithBLOBs">
     update resume
     set StuName = #{stuname,jdbcType=VARCHAR},
       ResID = #{resid,jdbcType=BIGINT},
-      GraDate = #{gradate,jdbcType=TIMESTAMP},
+      GraDate = #{gradate,jdbcType=DATE},
       Job = #{job,jdbcType=VARCHAR},
       `Language` = #{language,jdbcType=CHAR},
       `Level` = #{level,jdbcType=CHAR},
@@ -182,7 +305,40 @@
       Phone = #{phone,jdbcType=BIGINT},
       Mail = #{mail,jdbcType=VARCHAR},
       Address = #{address,jdbcType=VARCHAR},
-      Experience = #{experience,jdbcType=VARCHAR,typeHandler=com.baomidou.mybatisplus.extension.handlers.JacksonTypeHandler}
+      city = #{city,jdbcType=VARCHAR},
+      about = #{about,jdbcType=VARCHAR},
+      website = #{website,jdbcType=VARCHAR},
+      github = #{github,jdbcType=VARCHAR},
+      knowledge = #{knowledge,jdbcType=VARCHAR},
+      image = #{image,jdbcType=VARCHAR},
+      lang = #{lang,jdbcType=VARCHAR},
+      Experience = #{experience,jdbcType=LONGVARCHAR,typeHandler=com.baomidou.mybatisplus.extension.handlers.JacksonTypeHandler},
+      education = #{education,jdbcType=LONGVARCHAR,typeHandler=com.baomidou.mybatisplus.extension.handlers.JacksonTypeHandler},
+      projects = #{projects,jdbcType=LONGVARCHAR,typeHandler=com.baomidou.mybatisplus.extension.handlers.JacksonTypeHandler},
+      skills = #{skills,jdbcType=LONGVARCHAR,typeHandler=com.baomidou.mybatisplus.extension.handlers.JacksonTypeHandler},
+      contributions = #{contributions,jdbcType=LONGVARCHAR,typeHandler=com.baomidou.mybatisplus.extension.handlers.JacksonTypeHandler}
+    where StuNo = #{stuno,jdbcType=CHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.hl.emsystem.model.pojo.Resume">
+    update resume
+    set StuName = #{stuname,jdbcType=VARCHAR},
+      ResID = #{resid,jdbcType=BIGINT},
+      GraDate = #{gradate,jdbcType=DATE},
+      Job = #{job,jdbcType=VARCHAR},
+      `Language` = #{language,jdbcType=CHAR},
+      `Level` = #{level,jdbcType=CHAR},
+      Computer = #{computer,jdbcType=CHAR},
+      Office = #{office,jdbcType=VARCHAR},
+      Phone = #{phone,jdbcType=BIGINT},
+      Mail = #{mail,jdbcType=VARCHAR},
+      Address = #{address,jdbcType=VARCHAR},
+      city = #{city,jdbcType=VARCHAR},
+      about = #{about,jdbcType=VARCHAR},
+      website = #{website,jdbcType=VARCHAR},
+      github = #{github,jdbcType=VARCHAR},
+      knowledge = #{knowledge,jdbcType=VARCHAR},
+      image = #{image,jdbcType=VARCHAR},
+      lang = #{lang,jdbcType=VARCHAR}
     where StuNo = #{stuno,jdbcType=CHAR}
   </update>
 </mapper>

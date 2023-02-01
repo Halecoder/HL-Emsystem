@@ -1,19 +1,22 @@
 package com.hl.emsystem.model.dao;
 
 import com.hl.emsystem.model.pojo.Resume;
+import com.hl.emsystem.model.pojo.ResumeWithBLOBs;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface ResumeMapper {
+public interface ResumeMapper extends BaseMapperPlus<ResumeMapper, ResumeWithBLOBs, ResumeWithBLOBs> {
     int deleteByPrimaryKey(String stuno);
 
-    int insert(Resume record);
+    int insert(ResumeWithBLOBs record);
 
-    int insertSelective(Resume record);
+    int insertSelective(ResumeWithBLOBs record);
 
-    Resume selectByPrimaryKey(String stuno);
+    ResumeWithBLOBs selectByPrimaryKey(String stuno);
 
-    int updateByPrimaryKeySelective(Resume record);
+    int updateByPrimaryKeySelective(ResumeWithBLOBs record);
+
+    int updateByPrimaryKeyWithBLOBs(ResumeWithBLOBs record);
 
     int updateByPrimaryKey(Resume record);
 }

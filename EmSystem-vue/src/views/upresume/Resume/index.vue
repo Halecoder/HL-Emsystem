@@ -350,23 +350,9 @@ export default {
     // 区域码转换
     handleChange(value) {
       console.log(convertCodeAndText(value))
-      this.formData.birthplace = convertCodeAndText(value)
+      this.formData.city = convertCodeAndText(value)
     },
 
-    // 添加工作经历
-    addExperience() {
-      this.formData.experience.push({
-        company: '',
-        position: '',
-        timeperiod: '',
-        description: '',
-        website: ''
-      })
-    },
-    // 删除工作经历
-    removeExperience(index) {
-      this.formData.experience.splice(index, 1)
-    },
     // 查询
     getList() {
       listResume(this.formData.stuno).then(response => {
@@ -375,6 +361,7 @@ export default {
           this.resetForm()
         } else {
           this.formData = response.data
+          this.formData.city = convertCodeAndText(this.formData.city)
         }
         this.loading = false
         this.$emit('showStatus', response.data)
@@ -396,6 +383,7 @@ export default {
 
     // 提交表单
     submitForm() {
+      this.handleChange(this.formData.city)
       this.$refs['elForm'].validate(valid => {
         if (valid) {
           if (this.formData.resid == null) {

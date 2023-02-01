@@ -2,7 +2,7 @@ package com.hl.emsystem.controller.stu;
 
 import com.hl.emsystem.common.ApiRestResponse;
 import com.hl.emsystem.model.pojo.GraStudent;
-import com.hl.emsystem.model.pojo.Resume;
+import com.hl.emsystem.model.pojo.ResumeWithBLOBs;
 import com.hl.emsystem.service.StuService;
 import com.hl.emsystem.service.UserService;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -66,7 +66,7 @@ public class StuController {
      * @return
      */
     @PostMapping("/stu/upResume")
-    public ApiRestResponse addResume(@RequestBody Resume resume){
+    public ApiRestResponse addResume(@RequestBody ResumeWithBLOBs resume){
         stuService.upResInfo(resume);
         return ApiRestResponse.success();
     }
@@ -85,7 +85,7 @@ public class StuController {
     }
 
     @PutMapping("/stu/updateResume")
-    public ApiRestResponse updateResume(@RequestBody Resume resInfo){
+    public ApiRestResponse updateResume(@RequestBody ResumeWithBLOBs resInfo){
         stuService.updateResInfo(resInfo);
         return ApiRestResponse.success();
     }

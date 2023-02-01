@@ -4,6 +4,7 @@ import com.hl.emsystem.model.dao.GraStudentMapper;
 import com.hl.emsystem.model.dao.ResumeMapper;
 import com.hl.emsystem.model.pojo.GraStudent;
 import com.hl.emsystem.model.pojo.Resume;
+import com.hl.emsystem.model.pojo.ResumeWithBLOBs;
 import com.hl.emsystem.service.StuService;
 import com.hl.emsystem.utils.SnowFlakeUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,7 +38,7 @@ public class StuServiceImpl implements StuService {
     }
 
     @Override
-    public void upResInfo(Resume resume) {
+    public void upResInfo(ResumeWithBLOBs resume) {
         SnowFlakeUtils sfId = new SnowFlakeUtils();
         resume.setResid(sfId.nextId(resume));
         resumeMapper.insertSelective(resume);
@@ -49,7 +50,7 @@ public class StuServiceImpl implements StuService {
     }
 
     @Override
-    public void updateResInfo(Resume resInfo) {
+    public void updateResInfo(ResumeWithBLOBs resInfo) {
         resumeMapper.updateByPrimaryKeySelective(resInfo);
     }
 }

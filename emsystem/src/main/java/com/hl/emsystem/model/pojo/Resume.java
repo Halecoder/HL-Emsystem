@@ -1,18 +1,12 @@
 package com.hl.emsystem.model.pojo;
 
-import cn.hutool.json.JSONArray;
 import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.extension.handlers.JacksonTypeHandler;
 import com.fasterxml.jackson.annotation.JsonFormat;
-import lombok.NoArgsConstructor;
 
-import java.io.Serializable;
 import java.util.Date;
 
-@NoArgsConstructor
-public class Resume implements Serializable {
+public class Resume {
     private String stuno;
 
     private String stuname;
@@ -39,8 +33,19 @@ public class Resume implements Serializable {
 
     private String address;
 
-    @TableField(typeHandler = JacksonTypeHandler.class)
-    private JSONArray experience;
+    private String city;
+
+    private String about;
+
+    private String website;
+
+    private String github;
+
+    private String knowledge;
+
+    private String image;
+
+    private String lang;
 
     public String getStuno() {
         return stuno;
@@ -138,11 +143,59 @@ public class Resume implements Serializable {
         this.address = address == null ? null : address.trim();
     }
 
-    public JSONArray getExperience() {
-        return experience;
+    public String getCity() {
+        return city;
     }
 
-    public void setExperience(JSONArray experience) {
-        this.experience = experience ;
+    public void setCity(String city) {
+        this.city = city == null ? null : city.trim();
+    }
+
+    public String getAbout() {
+        return about;
+    }
+
+    public void setAbout(String about) {
+        this.about = about == null ? null : about.trim();
+    }
+
+    public String getWebsite() {
+        return website;
+    }
+
+    public void setWebsite(String website) {
+        this.website = website == null ? null : website.trim();
+    }
+
+    public String getGithub() {
+        return github;
+    }
+
+    public void setGithub(String github) {
+        this.github = github == null ? null : github.trim();
+    }
+
+    public String getKnowledge() {
+        return knowledge;
+    }
+
+    public void setKnowledge(String knowledge) {
+        this.knowledge = knowledge == null ? null : knowledge.trim();
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image == null ? null : image.trim();
+    }
+
+    public String getLang() {
+        return lang;
+    }
+
+    public void setLang(String lang) {
+        this.lang = lang == null ? null : lang.trim();
     }
 }
