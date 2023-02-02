@@ -1,14 +1,21 @@
 package com.hl.emsystem.controller.stu;
 
+import cn.hutool.core.bean.BeanUtil;
+import cn.hutool.core.bean.copier.CopyOptions;
 import com.hl.emsystem.common.ApiRestResponse;
 import com.hl.emsystem.model.pojo.GraStudent;
+import com.hl.emsystem.model.pojo.Resume;
 import com.hl.emsystem.model.pojo.ResumeWithBLOBs;
+import com.hl.emsystem.model.vo.Json.MyJsonResume;
 import com.hl.emsystem.service.StuService;
 import com.hl.emsystem.service.UserService;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * 学生信息管理
@@ -84,10 +91,45 @@ public class StuController {
         return ApiRestResponse.success( stuService.getResInfo(stuno));
     }
 
+    /**
+     * 更新简历信息
+     * @param resInfo
+     * @return
+     */
     @PutMapping("/stu/updateResume")
     public ApiRestResponse updateResume(@RequestBody ResumeWithBLOBs resInfo){
         stuService.updateResInfo(resInfo);
         return ApiRestResponse.success();
+    }
+
+
+    /**
+     * 获取自定义简历的Json数据格式
+     * @param stuno
+     * @return
+     */
+    @GetMapping("/stu/getMyJsonResume/{stuno}")
+    public ApiRestResponse getMyJsonResume(@PathVariable(value = "stuno") String stuno){
+//        获取Resume表里所有数据
+        Resume resume =  stuService.getResInfo(stuno);
+        GraStudent graStudent = stuService.getInfo(stuno);
+
+        MyJsonResume myJsonResume = new MyJsonResume();
+        BeanUtil.copyProperties(resume,myJsonResume, CopyOptions.create().setIgnoreNullValue(true).setIgnoreError(true));
+        Map<String,Object> Contact = new HashMap<>();
+        Contact.put("email",resume.getMail());
+        Contact.put("phone",resume.getPhone());
+        Contact.put("street",resume.getAddress());
+        Contact.put("city",resume.getCity());
+        Contact.put("website",resume.getWebsite());
+        Contact.put("email",resume.getGithub());
+
+        Map<String,Object> birth = new HashMap<>();
+        birth.put("year",graStudent.getBirthdate());
+        birth.put("location",resume.getCity());
+        myJsonResume.setBirth(birth);
+        myJsonResume.setContact(Contact);
+        return ApiRestResponse.success(myJsonResume);
     }
 
 

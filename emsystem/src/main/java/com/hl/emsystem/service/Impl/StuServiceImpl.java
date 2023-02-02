@@ -3,7 +3,6 @@ package com.hl.emsystem.service.Impl;
 import com.hl.emsystem.model.dao.GraStudentMapper;
 import com.hl.emsystem.model.dao.ResumeMapper;
 import com.hl.emsystem.model.pojo.GraStudent;
-import com.hl.emsystem.model.pojo.Resume;
 import com.hl.emsystem.model.pojo.ResumeWithBLOBs;
 import com.hl.emsystem.service.StuService;
 import com.hl.emsystem.utils.SnowFlakeUtils;
@@ -45,7 +44,7 @@ public class StuServiceImpl implements StuService {
     }
 
     @Override
-    public Resume getResInfo(String stuno) {
+    public ResumeWithBLOBs getResInfo(String stuno) {
         return resumeMapper.selectByPrimaryKey(stuno);
     }
 

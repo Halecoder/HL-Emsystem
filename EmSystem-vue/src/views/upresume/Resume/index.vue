@@ -300,7 +300,12 @@ export default {
           trigger: 'blur'
         }],
         address: [],
-        office: []
+        office: [],
+        city: [{
+          required: true,
+          message: '请输入出生地',
+          trigger: 'blur'
+        }]
         // experience: [{
         //   required: true,
         //   message: '工作经历不能为空',

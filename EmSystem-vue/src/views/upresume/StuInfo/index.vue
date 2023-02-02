@@ -226,7 +226,11 @@ export default {
           trigger: 'blur'
         }],
         sex: [],
-        birthdate: [],
+        birthplace: [{
+          required: true,
+          message: '请输入生源地',
+          trigger: 'blur'
+        }],
         nation: [],
         politic: [],
         major: [],
@@ -236,8 +240,7 @@ export default {
           required: true,
           message: '学历不能为空',
           trigger: 'change'
-        }],
-        birthplace: []
+        }]
       },
       sexOptions: [{
         'label': '男',

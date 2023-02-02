@@ -27,3 +27,12 @@ export function updateResume(data) {
     data: data
   })
 }
+
+// 获取简历json信息-MyJsonResume
+
+export function getResume(data) {
+  return request({
+    url: '/stu/getMyJsonResume/' + data,
+    method: 'get'
+  })
+}

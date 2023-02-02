@@ -3,6 +3,8 @@ import Router from 'vue-router'
 
 Vue.use(Router)
 
+import Resume from '@/views/lookresume'
+
 /* Layout */
 import Layout from '@/layout'
 
@@ -48,6 +50,12 @@ export const constantRouterMap = [
         meta: { title: '分配用户', activeMenu: '/system/role' }
       }
     ]
+  },
+
+  {
+    path: '/lookresume/:resumeid',
+    name: 'resume',
+    component: Resume
   },
 
   {

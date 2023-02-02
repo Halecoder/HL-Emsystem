@@ -45,7 +45,7 @@
               </el-tooltip>
               <h2>教育经历</h2>
               <el-tooltip v-if="index>0" content="删除教育经历" placement="right">
-                <i class="el-icon-remove-outline" @click="removeEducation" />
+                <i class="el-icon-remove-outline" @click="removeEducation(index)" />
               </el-tooltip>
             </span>
             <el-select v-model="formData.education[index].degree" clearable placeholder="学位信息" style="width:60%;">
@@ -90,7 +90,7 @@
               </el-tooltip>
               <h2>项目经历</h2>
               <el-tooltip v-if="index>0" content="删除项目经历" placement="right">
-                <i class="el-icon-remove-outline" @click="removeProject" />
+                <i class="el-icon-remove-outline" @click="removeProject(index)" />
               </el-tooltip>
             </span>
             <el-input
@@ -135,7 +135,7 @@
               </el-tooltip>
               <h2>工作经历</h2>
               <el-tooltip v-if="index>0" content="删除工作经历" placement="right">
-                <i class="el-icon-remove-outline" @click="removeExperience" />
+                <i class="el-icon-remove-outline" @click="removeExperience(index)" />
               </el-tooltip>
             </span>
             <el-input
@@ -184,7 +184,7 @@
               </el-tooltip>
               <h2>技术栈</h2>
               <el-tooltip v-if="index>0" content="删除工作经历" placement="right">
-                <i class="el-icon-remove-outline" @click="removeSkill" />
+                <i class="el-icon-remove-outline" @click="removeSkill(index)" />
               </el-tooltip>
             </span>
             <el-input
@@ -207,7 +207,7 @@
               </el-tooltip>
               <h2>开源贡献</h2>
               <el-tooltip v-if="index>0" content="删除开源贡献" placement="right">
-                <i class="el-icon-remove-outline" @click="removeContribution" />
+                <i class="el-icon-remove-outline" @click="removeContribution(index)" />
               </el-tooltip>
             </span>
             <el-input

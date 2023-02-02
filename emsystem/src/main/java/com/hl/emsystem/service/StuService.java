@@ -1,7 +1,6 @@
 package com.hl.emsystem.service;
 
 import com.hl.emsystem.model.pojo.GraStudent;
-import com.hl.emsystem.model.pojo.Resume;
 import com.hl.emsystem.model.pojo.ResumeWithBLOBs;
 
 public interface StuService {
@@ -13,7 +12,7 @@ public interface StuService {
 
     void upResInfo(ResumeWithBLOBs resume);
 
-    Resume getResInfo(String stuno);
+    ResumeWithBLOBs getResInfo(String stuno);
 
     void updateResInfo(ResumeWithBLOBs resInfo);
 }

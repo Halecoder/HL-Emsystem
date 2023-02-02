@@ -1,5 +1,6 @@
 package com.hl.emsystem.utils;
 
+import cn.hutool.core.bean.BeanUtil;
 import cn.hutool.core.collection.CollUtil;
 import cn.hutool.core.lang.SimpleCache;
 import cn.hutool.core.map.MapUtil;
@@ -12,6 +13,7 @@ import org.springframework.cglib.beans.BeanCopier;
 import org.springframework.cglib.beans.BeanMap;
 import org.springframework.cglib.core.Converter;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -96,6 +98,35 @@ public class BeanCopyUtils {
             return null;
         }
         return BeanMap.create(bean);
+    }
+
+
+
+    /**
+     * 将List<Bean>转换为List<Map<String, Object>>
+     *
+     * @param sourceList
+     * @return
+     */
+    public static <T>  List<Map<String, Object>> beansToList(List<T> sourceList){
+        List<Map<String, Object>>  destList =new ArrayList<>();
+        for(Object source: sourceList){
+            Map<String, Object> map = BeanUtil.beanToMap(source);
+            destList.add(map);
+        }
+        return destList;
+    }
+
+
+    public static <T> Map<String, Object> copyToMap(List<T> beans, Map<String,Object> map) {
+        for(T bean:beans) {
+            if (ObjectUtil.isNull(bean)) {
+                return null;
+            }
+
+            BeanUtil.beanToMap(bean,map,false,false);
+        }
+        return map;
     }
 
     /**

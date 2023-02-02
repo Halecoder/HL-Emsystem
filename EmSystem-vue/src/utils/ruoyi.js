@@ -125,6 +125,18 @@ export function sprintf(str) {
   return flag ? str : ''
 }
 
+export function getFileNames() {
+  // 参数：1.路径；2.是否遍历子目录；3.正则表达式
+  var files = require.context('@/views/lookresume/resumes', true, /\.vue$/).keys()
+  const newFiles = []
+  files.forEach(file => {
+    var temp
+    temp = file.slice(2, -4)
+    newFiles.push(temp)
+  })
+  return newFiles
+}
+
 // 转换字符串，undefined,null等转化为""
 export function parseStrEmpty(str) {
   if (!str || str === 'undefined' || str === 'null') {

@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import { Navbar, Sidebar, AppMain, TagsView } from './components'
+import { Navbar, Sidebar, AppMain, TagsView, settings } from './components'
 import ResizeMixin from './mixin/ResizeHandler'
 import variables from '@/assets/styles/variables.scss'
 
@@ -28,7 +28,8 @@ export default {
     Navbar,
     Sidebar,
     AppMain,
-    TagsView
+    TagsView,
+    settings
   },
   mixins: [ResizeMixin],
   computed: {
