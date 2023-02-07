@@ -1,6 +1,7 @@
 
 import { constantRouterMap } from '@/router/index'
 import { parse_menu } from '@/router/menu_tree'
+
 const permission = {
   state: {
     routers: constantRouterMap,

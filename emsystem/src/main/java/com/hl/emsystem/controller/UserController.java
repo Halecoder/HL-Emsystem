@@ -68,13 +68,13 @@ public class UserController {
     @ResponseBody
     public ApiRestResponse login(@RequestBody Map<String,String> map,HttpServletRequest request) throws ServletException, IOException {
 
-        String verifyCode = (String) request.getSession().getAttribute("kaptchaVerifyCode");
-        String verificationCode = (String) map.get("verificationCode");
-    String username = (String) map.get("username");
+//        String verifyCode = (String) request.getSession().getAttribute("kaptchaVerifyCode");
+//        String verificationCode = (String) map.get("verificationCode");
+        String username = (String) map.get("username");
         String password = (String) map.get("password");
-        if (verificationCode == null || verifyCode == null || !verificationCode.equalsIgnoreCase(verifyCode)) {
-            return ApiRestResponse.error(EmSystemExceptionEnum.VERIFICATION_CODE_ERROR);
-        }
+//        if (verificationCode == null || verifyCode == null || !verificationCode.equalsIgnoreCase(verifyCode)) {
+//            return ApiRestResponse.error(EmSystemExceptionEnum.VERIFICATION_CODE_ERROR);
+//        }
         if (password.length() < 8) {
             return ApiRestResponse.error(EmSystemExceptionEnum.PASSWORD_TOO_SHORT);
         }

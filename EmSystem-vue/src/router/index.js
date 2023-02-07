@@ -3,8 +3,6 @@ import Router from 'vue-router'
 
 Vue.use(Router)
 
-import Resume from '@/views/lookresume'
-
 /* Layout */
 import Layout from '@/layout'
 
@@ -31,7 +29,10 @@ import Layout from '@/layout'
  * constantRoutes
  * a base page that does not have permission requirements
  * all roles can be accessed
- */
+*/
+
+import resume from '@/views/lookresume/resumeUrl'
+
 export const constantRouterMap = [
   {
     path: '/login',
@@ -51,11 +52,12 @@ export const constantRouterMap = [
       }
     ]
   },
-
+  // 动态绑定简历名字:resumeid  通过$route.param.resumeid获取
   {
-    path: '/lookresume/:resumeid',
-    name: 'resume',
-    component: Resume
+    path: '/resumes/:resumeid',
+    component: resume,
+    name: 'resumeName'
+
   },
 
   {

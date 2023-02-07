@@ -15,4 +15,5 @@ public interface StuService {
     ResumeWithBLOBs getResInfo(String stuno);
 
     void updateResInfo(ResumeWithBLOBs resInfo);
+
 }

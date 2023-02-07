@@ -19,4 +19,7 @@ public class Constant {
     public static final String USER_ID = "userId";
     public static final String PEOPLE_ID = "peopleId";
     public static final String NAME = "name" ;
+
+//    登陆网页
+    public static final String URL = "http://localhost:9528";
 }

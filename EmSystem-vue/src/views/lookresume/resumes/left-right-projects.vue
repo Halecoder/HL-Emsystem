@@ -184,6 +184,7 @@ export default Vue.component(name, getVueOptions(name))
     .experience .experience-block span {
         width: 100%;
         color: #616161;
+
     }
     .experience .experience-block span.company {
         font-weight: bold;
@@ -196,6 +197,7 @@ export default Vue.component(name, getVueOptions(name))
     }
     .education-block span {
         color: #616161;
+        padding-right: 20px;
     }
     .education-block span.degree {
         font-weight: bold;
@@ -208,6 +210,9 @@ export default Vue.component(name, getVueOptions(name))
         flex-direction: column;
         width: 25%;
         float: left;
+        word-break: break-word;
+    white-space: pre-line;
+    margin-right: 20px;
     }
     .project-block span {
         color: #616161;

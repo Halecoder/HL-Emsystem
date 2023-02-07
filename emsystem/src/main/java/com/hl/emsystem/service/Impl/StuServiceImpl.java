@@ -52,5 +52,6 @@ public class StuServiceImpl implements StuService {
     public void updateResInfo(ResumeWithBLOBs resInfo) {
         resumeMapper.updateByPrimaryKeySelective(resInfo);
     }
+
 }
 

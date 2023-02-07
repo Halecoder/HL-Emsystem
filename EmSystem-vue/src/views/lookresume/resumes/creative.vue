@@ -302,6 +302,8 @@ export default Vue.component(name, getVueOptions(name))
 
   height: 100%;
   width: 65%;
+  word-wrap:break-word;
+   word-break:normal;
 }
 
 a {

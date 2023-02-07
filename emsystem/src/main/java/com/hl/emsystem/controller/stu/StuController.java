@@ -9,6 +9,7 @@ import com.hl.emsystem.model.pojo.ResumeWithBLOBs;
 import com.hl.emsystem.model.vo.Json.MyJsonResume;
 import com.hl.emsystem.service.StuService;
 import com.hl.emsystem.service.UserService;
+import com.hl.emsystem.utils.DownloadResume;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
@@ -130,6 +131,30 @@ public class StuController {
         myJsonResume.setBirth(birth);
         myJsonResume.setContact(Contact);
         return ApiRestResponse.success(myJsonResume);
+    }
+
+
+    /**
+     * 批量生成图片
+     * @param resumeNames
+     * @throws Exception
+     */
+    @PostMapping("/stu/download/resumeImages")
+    public void downloadResumeImages (@RequestBody  String[] resumeNames ) throws Exception {
+
+        DownloadResume downloadResume = new DownloadResume();
+        downloadResume.DownloadImages(resumeNames);
+    }
+
+    /**
+     * 下载pdf
+     * @param resumeName
+     * @throws Exception
+     */
+    @PostMapping("/stu/download/resumePdf/{Name}")
+    public void  downloadResumePdf(@PathVariable(value = "Name")	String resumeName)throws Exception{
+        DownloadResume downloadResume = new DownloadResume();
+        downloadResume.DownloadPdf(resumeName);
     }
 
 

@@ -5,6 +5,8 @@ import {
   terms
 } from '@/terms'
 
+import parseTime from '@/utils/ruoyi'
+
 // Called by templates to decrease redundancy
 function getVueOptions(name) {
   const opt = {

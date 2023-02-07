@@ -3,12 +3,12 @@
     <el-form ref="loginForm" label-width="80px" :rules="rules" :model="form" class="login-box">
       <h3 class="login-title">就业管理系统</h3>
       <el-form-item label="账号" prop="username">
-        <el-input v-model="form.username" type="text" placeholder="请输入账号" />
+        <el-input id="username" v-model="form.username" type="text" placeholder="请输入账号" />
       </el-form-item>
       <el-form-item label="密码" prop="password">
-        <el-input v-model="form.password" type="password" placeholder="请输入密码" />
+        <el-input id="password" v-model="form.password" type="password" placeholder="请输入密码" />
       </el-form-item>
-      <el-form-item label="验证码" prop="verificationCode">
+      <!-- <el-form-item label="验证码" prop="verificationCode">
         <el-input
           v-model="form.verificationCode"
           type="text"
@@ -17,9 +17,9 @@
           auto-complete="false"
         />
         <img id="imgVerifyCode" src="/api/verify_code" @click="reloadVerifyCode">
-      </el-form-item>
+      </el-form-item> -->
       <el-form-item>
-        <el-button type="primary" style="width:200px" @click="onSubmit('loginForm')">登录</el-button>
+        <el-button id="loginButton" type="primary" style="width:200px" @click="onSubmit('loginForm')">登录</el-button>
       </el-form-item>
 
     </el-form>
@@ -60,8 +60,8 @@ export default {
     }
     return {
       form: {
-        username: 'admin',
-        password: '12345678',
+        username: '',
+        password: '',
         verificationCode: ''
       },
       rules: {

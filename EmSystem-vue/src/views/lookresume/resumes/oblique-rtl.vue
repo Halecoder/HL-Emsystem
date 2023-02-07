@@ -1,82 +1,81 @@
 <template>
-<div id="resume3" class="resume">
-  <div class="resume-header">
-    <div class="triangle"></div>
-    <div class="person-header">
-      <div class="person-wrapper">
-        <div class="person">
-          <div class="name">{{person.name.first}} {{person.name.middle}} {{person.name.last}}</div>
-          <div class="position">{{person.position}}</div>
-        </div>
-        <div class="img">
-        </div>
-      </div>
-
-    </div>
-  </div>
-  <div class="resume-content">
-    <div class="experience">
-      <h3>{{ lang.experience }}</h3>
-      <div class="experience-block" v-for="experience in person.experience" :key="experience.company">
-        <div class="row">
-          <span class="job-title"> {{experience.position}} </span>
-          <i class="material-icons">details</i>
-          <span class="company"> {{experience.company}} </span>
+  <div id="resume3" class="resume">
+    <div class="resume-header">
+      <div class="triangle" />
+      <div class="person-header">
+        <div class="person-wrapper">
+          <div class="person">
+            <div class="name">{{ person.name.first }} {{ person.name.middle }} {{ person.name.last }}</div>
+            <div class="position">{{ person.position }}</div>
+          </div>
+          <div class="img" />
         </div>
 
-        <div class="row">
-          <span class="time-period"> {{experience.timeperiod}}</span>
-          <span class="job-description">, {{experience.description}} </span>
-        </div>
       </div>
     </div>
-    <div class="education">
-      <h3>{{ lang.education }}</h3>
-      <div class="education-block" v-for="education in person.education" :key="education.degree">
-        <div class="row">
-          <span class="degree">{{education.degree}}</span>
-        </div>
-        <div class="row">
-          <span class="degree-description">{{education.description}}</span>
-        </div>
-      </div>
-    </div>
-    <div class="skill-section">
-      <h3>{{ lang.skills }}</h3>
-      <div class="skills" v-for="skill in person.skills" :key="skill.name">
-        <div class="skill-block">
-          <i class="material-icons">details</i>
-          <span class="skill">{{skill.name}}</span>
+    <div class="resume-content">
+      <div class="experience">
+        <h3>{{ lang.experience }}</h3>
+        <div v-for="experience in person.experience" :key="experience.company" class="experience-block">
+          <div class="row">
+            <span class="job-title"> {{ experience.position }} </span>
+            <i class="material-icons">details</i>
+            <span class="company"> {{ experience.company }} </span>
+          </div>
+
+          <div class="row">
+            <span class="time-period"> {{ experience.timeperiod }}</span>
+            <span class="job-description">, {{ experience.description }} </span>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="skills-other">
-      <span>{{person.knowledge}} </span>
-    </div>
-    <div class="contact">
-      <h3>{{ lang.contact }}</h3>
-      <a :href="'mailto:'+person.contact.email"> {{person.contact.email}}</a>
-      <span>;&nbsp;</span>
-      <a :href="'tel:'+person.contact.phone">{{person.contact.phone}}</a>
-      <span>;&nbsp;</span>
-      <span>{{person.contact.street}}, {{person.contact.city}}</span>
-      <span>;&nbsp;</span>
-      <a v-if="person.contact.website" :href="person.contact.website">
-              {{person.contact.website}}</a>
-      <span v-if="person.contact.website">;&nbsp;</span>
-      <a v-if="person.contact.github" :href="'https://github.com/'+person.contact.github">
-                https://github.com/{{person.contact.github}}</a>
+      <div class="education">
+        <h3>{{ lang.education }}</h3>
+        <div v-for="education in person.education" :key="education.degree" class="education-block">
+          <div class="row">
+            <span class="degree">{{ education.degree }}</span>
+          </div>
+          <div class="row">
+            <span class="degree-description">{{ education.description }}</span>
+          </div>
+        </div>
+      </div>
+      <div class="skill-section">
+        <h3>{{ lang.skills }}</h3>
+        <div v-for="skill in person.skills" :key="skill.name" class="skills">
+          <div class="skill-block">
+            <i class="material-icons">details</i>
+            <span class="skill">{{ skill.name }}</span>
+          </div>
+        </div>
+      </div>
+      <div class="skills-other">
+        <span>{{ person.knowledge }} </span>
+      </div>
+      <div class="contact">
+        <h3>{{ lang.contact }}</h3>
+        <a :href="'mailto:'+person.contact.email"> {{ person.contact.email }}</a>
+        <span>;&nbsp;</span>
+        <a :href="'tel:'+person.contact.phone">{{ person.contact.phone }}</a>
+        <span>;&nbsp;</span>
+        <span>{{ person.contact.street }}, {{ person.contact.city }}</span>
+        <span>;&nbsp;</span>
+        <a v-if="person.contact.website" :href="person.contact.website">
+          {{ person.contact.website }}</a>
+        <span v-if="person.contact.website">;&nbsp;</span>
+        <a v-if="person.contact.github" :href="'https://github.com/'+person.contact.github">
+          https://github.com/{{ person.contact.github }}</a>
+      </div>
     </div>
   </div>
-</div>
 </template>
 
 <script>
-import Vue from 'vue';
-import { getVueOptions } from './options';
+import Vue from 'vue'
+import { getVueOptions } from './options'
 
-const name = 'oblique-rtl';
-export default Vue.component(name, getVueOptions(name));
+const name = 'oblique-rtl'
+export default Vue.component(name, getVueOptions(name))
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="less" scoped>
@@ -84,6 +83,7 @@ export default Vue.component(name, getVueOptions(name));
     font-family: 'Open Sans Condensed', sans-serif;
     padding-bottom: 50px;
     direction: rtl;
+    margin-top: -100px;
     a,
     a:focus,
     a:hover {
@@ -103,13 +103,15 @@ export default Vue.component(name, getVueOptions(name));
         border-color: #006064 transparent transparent transparent;
         position: absolute;
         right: -600px;
-        top: 0;
+        top: -160px;
     }
     .resume-header .person-header {
         position: absolute;
         z-index: 20;
         left: 15%;
         top: 200px;
+        margin-top: -99px;
+
         .person-wrapper {
             overflow: hidden;
             position: relative;

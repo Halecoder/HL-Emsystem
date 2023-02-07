@@ -244,7 +244,7 @@ a {
 }
 
 .banner {
-  width: calc(100% - @base-padding * 2);
+  width: calc(100%);
   height: @banner-height;
   padding: @base-padding;
   background-color: @banner-color;

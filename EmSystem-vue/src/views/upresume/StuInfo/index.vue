@@ -4,6 +4,7 @@
       :gutter="15"
       class="form shadow"
     >
+
       <div>学生信息</div>
       <el-form
         ref="elForm"
@@ -179,6 +180,7 @@
           <el-form-item size="large">
             <el-button type="primary" @click="submitForm">提交</el-button>
             <el-button @click="resetForm">重置</el-button>
+
           </el-form-item>
         </el-col>
       </el-form>

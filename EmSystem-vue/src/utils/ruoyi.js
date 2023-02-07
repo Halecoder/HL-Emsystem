@@ -127,7 +127,7 @@ export function sprintf(str) {
 
 export function getFileNames() {
   // 参数：1.路径；2.是否遍历子目录；3.正则表达式
-  var files = require.context('@/views/lookresume/resumes', true, /\.vue$/).keys()
+  var files = require.context('@/views/lookresume/resumes', false, /\.vue$/).keys()
   const newFiles = []
   files.forEach(file => {
     var temp

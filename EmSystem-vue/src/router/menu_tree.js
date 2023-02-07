@@ -1,4 +1,6 @@
 import Layout from '@/layout'
+// 获取resume所有文件名
+import { getFileNames } from '@/utils/ruoyi'
 
 // data 就是后台传过来的菜单数据，这个数据直接是一个集合就好了，不需要构建菜单树
 export function parse_menu(data) {
@@ -87,4 +89,24 @@ function getChild(menuId, allList) {
     }
   })
   return chileArr
+}
+
+import resume from '@/views/lookresume/resumeUrl'
+
+// 生成新简历路由
+export function generateResumeRoutes() {
+  const resumesRoutes = []
+  getFileNames().forEach((resumeName, index) => {
+    let resumeRoute
+    if (resumeName !== null) {
+      resumeRoute = {
+        path: '/resumes/:resumeid',
+        component: resume,
+        name: 'resumeName'
+
+      }
+      resumesRoutes.push(resumeRoute)
+    }
+  })
+  return resumesRoutes
 }

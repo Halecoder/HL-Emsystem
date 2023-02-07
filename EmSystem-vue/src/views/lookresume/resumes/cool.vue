@@ -239,8 +239,8 @@ export default Vue.component(name, getVueOptions(name))
 
 .picture {
   position: absolute;
-  top: @banner-height - @picture-offset;
-  left: @left-column-width + @base-padding * 2 - @picture-size / 2;
+  top: @banner-height - @picture-offset * 2;
+  left: @left-column-width + @base-padding * 1 - @picture-size / 2;
   height: @picture-size;
   width: @picture-size;
   border-radius: 50%;
@@ -250,7 +250,7 @@ export default Vue.component(name, getVueOptions(name))
 }
 
 .banner {
-  width: calc(100% - @base-padding * 2);
+  width: calc(100%);
   height: @banner-height;
   padding: @base-padding;
   background-color: @banner-color;

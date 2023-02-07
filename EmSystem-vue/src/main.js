@@ -35,6 +35,13 @@ import Tinymce from '@/components/tinymce'
 // 删除父组件滚动条
 import VScrollLock from 'v-scroll-lock'
 
+// var ExportPdf = require('./views/lookresume/scripts/export')
+
+// 引入自定义右键菜单
+import Contextmenu from 'vue-contextmenujs'
+
+Vue.use(Contextmenu)
+
 // import VueMeta from 'vue-meta'
 Vue.use(plugins)
 
@@ -44,6 +51,7 @@ Vue.use(VScrollLock)
 // 全局方法挂载
 Vue.prototype.handleTree = handleTree
 Vue.prototype.resetForm = resetForm
+// Vue.prototype.ExportPdf = ExportPdf
 Vue.component('Pagination', Pagination)
 Vue.component('RightToolbar', RightToolbar)
 Vue.prototype.download = download
@@ -60,6 +68,10 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
+  components: {
+    App
+  },
+  template: '<App/>',
   store,
   render: h => h(App)
 })

@@ -36,3 +36,22 @@ export function getResume(data) {
     method: 'get'
   })
 }
+
+// 批量生成图片
+
+export function toImages(data) {
+  return request({
+    url: '/stu/download/resumeImages',
+    method: 'post',
+    data: data
+  })
+}
+
+// 下载pdf
+
+export function toPdf(data) {
+  return request({
+    url: '/stu/download/resumePdf/' + data,
+    method: 'post'
+  })
+}

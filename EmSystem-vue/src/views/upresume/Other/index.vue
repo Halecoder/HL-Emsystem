@@ -244,6 +244,8 @@ import { mapGetters } from 'vuex'
 import '@/store/getters'
 import { addResume, listResume, updateResume } from '@/api/stu/resume'
 
+// 简历生成图片
+
 export default {
   components: { ...mapGetters([
     'username',

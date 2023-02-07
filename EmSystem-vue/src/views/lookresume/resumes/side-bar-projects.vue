@@ -1,108 +1,108 @@
 <template>
   <div id="resume2" class="resume">
-      <div class="top-row">
-          <span class="person-name">  {{person.name.first}}  {{person.name.last}}    </span>
-          <span class="person-position">  {{person.position}}    </span>
+    <div class="top-row">
+      <span class="person-name">  {{ person.name.first }}  {{ person.name.last }}    </span>
+      <span class="person-position">  {{ person.position }}    </span>
+    </div>
+    <div class="left-col">
+      <div class="person-image">
+        <div class="image-centerer">
+          <div class="img" />
+        </div>
       </div>
-      <div class="left-col">
-          <div class="person-image">
-              <div class="image-centerer">
-                  <div class="img"></div>
-              </div>
-          </div>
-          <div class="contact">
-              <h3>{{ lang.contact }}</h3>
-              <div class="contact-row">
-                  <a :href="'mailto:'+person.contact.email">{{person.contact.email}}</a>
-              </div>
-              <div class="contact-row dots">
-                  <i class="fa fa-circle" aria-hidden="true"></i>
-                  <i class="fa fa-circle" aria-hidden="true"></i>
-                  <i class="fa fa-circle" aria-hidden="true"></i>
-              </div>
-              <div class="contact-row">
-                  <a href="'tel:'+person.contact.phone">{{person.contact.phone}}</a>
-              </div>
-              <div class="contact-row dots">
-                  <i class="fa fa-circle" aria-hidden="true"></i>
-                  <i class="fa fa-circle" aria-hidden="true"></i>
-                  <i class="fa fa-circle" aria-hidden="true"></i>
-              </div>
-              <div class="contact-row">
-                  {{person.contact.street}} <br> {{person.contact.city}}
-              </div>
-              <div class="contact-row dots">
-                  <i class="fa fa-circle" aria-hidden="true"></i>
-                  <i class="fa fa-circle" aria-hidden="true"></i>
-                  <i class="fa fa-circle" aria-hidden="true"></i>
-              </div>
-              <div class="contact-row">
-                  <a :href="'https://github.com/'+person.contact.github">https://github.com/{{person.contact.github}}</a>
-              </div>
-          </div>
-          <div class="skills-block">
-              <h3> {{ lang.skills }}</h3>
-              <div class="skills">
-                      <div class="skill" v-for="skill in person.skills">
-                          <span class="skill-name">{{skill.name}}</span>
-                      </div>
-              </div>
-              <span class="skills-other"> {{person.skillDescription}} </span>
-          </div>
+      <div class="contact">
+        <h3>{{ lang.contact }}</h3>
+        <div class="contact-row">
+          <a :href="'mailto:'+person.contact.email">{{ person.contact.email }}</a>
+        </div>
+        <div class="contact-row dots">
+          <i class="fa fa-circle" aria-hidden="true" />
+          <i class="fa fa-circle" aria-hidden="true" />
+          <i class="fa fa-circle" aria-hidden="true" />
+        </div>
+        <div class="contact-row">
+          <a href="'tel:'+person.contact.phone">{{ person.contact.phone }}</a>
+        </div>
+        <div class="contact-row dots">
+          <i class="fa fa-circle" aria-hidden="true" />
+          <i class="fa fa-circle" aria-hidden="true" />
+          <i class="fa fa-circle" aria-hidden="true" />
+        </div>
+        <div class="contact-row">
+          {{ person.contact.street }} <br> {{ person.contact.city }}
+        </div>
+        <div class="contact-row dots">
+          <i class="fa fa-circle" aria-hidden="true" />
+          <i class="fa fa-circle" aria-hidden="true" />
+          <i class="fa fa-circle" aria-hidden="true" />
+        </div>
+        <div class="contact-row">
+          <a :href="'https://github.com/'+person.contact.github">https://github.com/{{ person.contact.github }}</a>
+        </div>
       </div>
-      <div class="right-col">
-          <div class="experience">
-              <h3>{{ lang.experience }}</h3>
-                  <div class="experience-block" v-for="experience in person.experience">
-                      <div class="row">
-                          <span class="company"> {{experience.company}} -</span>
-                          <span class="job-title"> {{experience.position}} </span>
-                      </div>
-                      <div class="row">
-                          <span class="time-period"> {{experience.timeperiod}}</span>
-                      </div>
-                      <div class="row">
-                          <span class="job-description"> {{experience.description}} </span>
-                      </div>
-                  </div>
+      <div class="skills-block">
+        <h3> {{ lang.skills }}</h3>
+        <div class="skills">
+          <div v-for="skill in person.skills" class="skill">
+            <span class="skill-name">{{ skill.name }}</span>
           </div>
-          <div class="projects">
-              <h3>{{ lang.projects }}</h3>
-                  <div class="project-block" v-for="project in person.projects">
-                      <div class="row">
-                          <span class="name"> {{project.name}} </span>
-                      <div class="row">
-                          <span class="time-period"> {{project.timeperiod}}</span>
-                      </div>
-                      <div class="row">
-                          <span class="description"> {{project.description}} </span>
-                      </div>
-                  </div>
+        </div>
+        <span class="skills-other"> {{ person.skillDescription }} </span>
+      </div>
+    </div>
+    <div class="right-col">
+      <div class="experience">
+        <h3>{{ lang.experience }}</h3>
+        <div v-for="experience in person.experience" class="experience-block">
+          <div class="row">
+            <span class="company"> {{ experience.company }} -</span>
+            <span class="job-title"> {{ experience.position }} </span>
           </div>
-          <div class="education">
-              <h3>{{ lang.education }}</h3>
-                  <div class="education-block" v-for="education in person.education">
-                      <div class="row">
-                          <span class="degree">{{education.degree}}</span>
-                      </div>
-                      <div class="row">
-                          <span class="degree-description">{{education.description}}</span>
-                      </div>
-                  </div>
+          <div class="row">
+            <span class="time-period"> {{ experience.timeperiod }}</span>
           </div>
+          <div class="row">
+            <span class="job-description"> {{ experience.description }} </span>
+          </div>
+        </div>
+      </div>
+      <div class="projects">
+        <h3>{{ lang.projects }}</h3>
+        <div v-for="project in person.projects" class="project-block">
+          <div class="row">
+            <span class="name"> {{ project.name }} </span>
+            <div class="row">
+              <span class="time-period"> {{ project.timeperiod }}</span>
+            </div>
+            <div class="row">
+              <span class="description"> {{ project.description }} </span>
+            </div>
+          </div>
+        </div>
+        <div class="education">
+          <h3>{{ lang.education }}</h3>
+          <div v-for="education in person.education" class="education-block">
+            <div class="row">
+              <span class="degree">{{ education.degree }}</span>
+            </div>
+            <div class="row">
+              <span class="degree-description">{{ education.description }}</span>
+            </div>
+          </div>
+        </div>
 
       </div>
-  </div>
+    </div>
 
   </div>
 </template>
 
 <script>
-import Vue from 'vue';
-import { getVueOptions } from './options';
+import Vue from 'vue'
+import { getVueOptions } from './options'
 
-const name = 'side-bar-projects';
-export default Vue.component(name, getVueOptions(name));
+const name = 'side-bar-projects'
+export default Vue.component(name, getVueOptions(name))
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -205,10 +205,13 @@ export default Vue.component(name, getVueOptions(name));
         margin-top:50px;
         .project-block {
             margin-bottom:10px;
+            word-break: break-word;
+            white-space: pre-line;
             .degree {
             font-size:12px;
             text-transform:uppercase;
             margin-bottom:3px;
+
             }
         }
     }
