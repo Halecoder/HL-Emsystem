@@ -43,4 +43,6 @@ public interface UserService {
     int deleteAllUserInfo(Long[] userIds);
 
     List<User> exportAllUser(User user);
+
+
 }

@@ -7,7 +7,6 @@ import com.hl.emsystem.model.pojo.ResumeWithBLOBs;
 import com.hl.emsystem.model.vo.Json.MyJsonResume;
 import com.hl.emsystem.service.StuService;
 import com.hl.emsystem.utils.BeanCopyUtils;
-import com.hl.emsystem.utils.DownloadResume;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -64,10 +63,4 @@ class StuControllerTest {
 
     }
 
-    @Test
-    @DisplayName("测试生成pdf")
-    void downloadPdf() throws Exception{
-        DownloadResume downloadResume = new DownloadResume();
-        downloadResume.DownloadPdf("cool");
-    }
 }

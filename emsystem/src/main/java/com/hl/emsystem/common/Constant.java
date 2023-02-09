@@ -22,4 +22,5 @@ public class Constant {
 
 //    登陆网页
     public static final String URL = "http://localhost:9528";
+    public static final String FILE_PATH = "D:\\Web\\APP\\HL\\EmSystem-vue\\src\\views\\lookresume";
 }

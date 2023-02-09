@@ -4,7 +4,6 @@ import cn.hutool.core.util.ArrayUtil;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
-import com.hl.emsystem.controller.admin.AdminController;
 import com.hl.emsystem.exception.EmSystemException;
 import com.hl.emsystem.exception.EmSystemExceptionEnum;
 import com.hl.emsystem.model.dao.*;
@@ -34,8 +33,6 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     SysRoleUserMapper sysRoleUserMapper;
-
-    AdminController adminController;
 
     @Override
     public User login(String username, String password) throws EmSystemException {
@@ -225,6 +222,9 @@ public class UserServiceImpl implements UserService {
     public List<User> exportAllUser(User user) {
         return userMapper.selectAllUser();
     }
+
+
+
 
 }
 

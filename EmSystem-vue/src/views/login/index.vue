@@ -8,7 +8,7 @@
       <el-form-item label="密码" prop="password">
         <el-input id="password" v-model="form.password" type="password" placeholder="请输入密码" />
       </el-form-item>
-      <!-- <el-form-item label="验证码" prop="verificationCode">
+      <el-form-item label="验证码" prop="verificationCode">
         <el-input
           v-model="form.verificationCode"
           type="text"
@@ -17,7 +17,7 @@
           auto-complete="false"
         />
         <img id="imgVerifyCode" src="/api/verify_code" @click="reloadVerifyCode">
-      </el-form-item> -->
+      </el-form-item>
       <el-form-item>
         <el-button id="loginButton" type="primary" style="width:200px" @click="onSubmit('loginForm')">登录</el-button>
       </el-form-item>

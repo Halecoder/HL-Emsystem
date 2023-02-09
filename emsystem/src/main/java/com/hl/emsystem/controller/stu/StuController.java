@@ -10,11 +10,14 @@ import com.hl.emsystem.model.vo.Json.MyJsonResume;
 import com.hl.emsystem.service.StuService;
 import com.hl.emsystem.service.UserService;
 import com.hl.emsystem.utils.DownloadResume;
+import com.ruiyun.jvppeteer.core.browser.Browser;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -140,10 +143,12 @@ public class StuController {
      * @throws Exception
      */
     @PostMapping("/stu/download/resumeImages")
-    public void downloadResumeImages (@RequestBody  String[] resumeNames ) throws Exception {
-
+    public void downloadResumeImages (@RequestBody  String[] resumeNames, HttpServletRequest request) throws Exception {
         DownloadResume downloadResume = new DownloadResume();
-        downloadResume.DownloadImages(resumeNames);
+        //        首先token登陆
+        Browser browser = downloadResume.autoLogin(request);
+        String fileName = downloadResume.getStuName(request);
+        downloadResume.DownloadImages(resumeNames,browser,fileName);
     }
 
     /**
@@ -152,10 +157,19 @@ public class StuController {
      * @throws Exception
      */
     @PostMapping("/stu/download/resumePdf/{Name}")
-    public void  downloadResumePdf(@PathVariable(value = "Name")	String resumeName)throws Exception{
+    public void  downloadResumePdf(@PathVariable(value = "Name")	String resumeName, HttpServletRequest request, HttpServletResponse response)throws Exception{
+
         DownloadResume downloadResume = new DownloadResume();
-        downloadResume.DownloadPdf(resumeName);
+        //        首先token登陆
+        Browser browser = downloadResume.autoLogin(request);
+        String fileName = downloadResume.getStuName(request);
+        downloadResume.DownloadPdf(resumeName,browser,fileName);
+
+//        本地文件读取为输出流转给前端
+        downloadResume.pdfExportStream(resumeName,fileName,response);
+
     }
+
 
 
 

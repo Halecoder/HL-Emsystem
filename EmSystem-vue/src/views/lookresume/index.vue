@@ -1,7 +1,7 @@
 <template>
   <div class="resumes">
 
-    <div class="example-3d">
+    <div class="example-3d" @contextmenu.prevent="onContextmenu">
       <swiper
         ref="mySwiper"
         class="swiper"
@@ -15,7 +15,6 @@
               :data-index="`${resume.resumeName}`"
               @mouseenter="onMouseEnter"
               @mouseleave="onMouseLeave"
-              @contextmenu.prevent="onContextmenu"
             >
           </router-link>
         </swiper-slide>
@@ -38,6 +37,8 @@ import { getFileNames } from '@/utils/ruoyi'
 import { toImages, toPdf } from '@/api/stu/resume'
 
 import $ from 'jquery'
+
+import { mapGetters } from 'vuex'
 
 var Name
 
@@ -83,14 +84,18 @@ export default {
     mySwiper() {
       // mySwiper 是要绑定到标签中的ref属性
       return this.$refs.mySwiper.swiper
-    }
+    },
+    ...mapGetters([
+      'username'
+    ])
 
   },
   watch: {},
   created() {
+    var username = this.$store.getters.username
     this.$data.resumeNames = getFileNames()
     this.resumeNames.forEach(resume => {
-      this.resumes.push({ resume: require(`./images/${resume}.png`), resumeName: `${resume}` })
+      this.resumes.push({ resume: require(`./images/${username}/${resume}.png`), resumeName: `${resume}` })
     })
   },
   mounted() {},
@@ -169,6 +174,7 @@ export default {
 
 img{
   width:450px;
+  height: 100%;
 }
 
 .example-3d {
