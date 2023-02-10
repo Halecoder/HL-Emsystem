@@ -95,7 +95,7 @@ public class DownloadResume {
         for (String resumeName : resumeNames) {
 
             try {
-                page2.goTo(Constant.URL + "/#/resumes/" + resumeName, false);
+                page2.goTo(Constant.URL + "/#/"+ fileName + "/resumes/" + resumeName);
 
                 page2.waitForSelector(".resume");
                 page2.content();
@@ -128,7 +128,7 @@ public class DownloadResume {
         File file =  FileUtils.touch(Constant.FILE_PATH +"\\pdf\\"+ fileName+ "\\"+ resumeName + ".pdf");
         String path =  FileUtils.getAbsolutePath(file);
         Page page = browser.newPage();
-        page.goTo(Constant.URL + "/#/resumes/" + resumeName);
+        page.goTo(Constant.URL + "/#/"+ fileName + "/resumes/" + resumeName);
         page.waitForSelector(".resume");
 //        等待数据渲染完成
         page.content();
@@ -157,15 +157,21 @@ public class DownloadResume {
     }
 
     /**
-     * 前端下载pdf文件
+     * 前端下载pdf或者图片文件
      * @param resumeName
      * @param fileName
      * @param response
      * @throws IOException
      */
-    public void pdfExportStream(String resumeName,String fileName,HttpServletResponse response) throws IOException {
+    public void fileExportStream(String resumeName,String fileName,HttpServletResponse response, String Type) throws IOException {
         BufferedInputStream bufferedInputStream = null;
-        String path = Constant.FILE_PATH +"\\pdf\\"+ fileName+ "\\"+ resumeName + ".pdf";
+        String path = null;
+        if(Type.equals("pdf") ){
+             path = Constant.FILE_PATH +"\\pdf\\"+ fileName+ "\\"+ resumeName + ".pdf";
+        }
+        if(Type.equals("png")){
+             path = Constant.FILE_PATH +"\\images\\"+ fileName+ "\\"+ resumeName + ".png";
+        }
         File file = FileUtil.file(path);
         if(FileUtils.exist(path)){
             bufferedInputStream = FileUtil.getInputStream(file);

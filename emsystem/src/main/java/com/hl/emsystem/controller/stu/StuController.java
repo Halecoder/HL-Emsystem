@@ -152,21 +152,23 @@ public class StuController {
     }
 
     /**
-     * 下载pdf
+     * 下载pdf或者图片
      * @param resumeName
      * @throws Exception
      */
-    @PostMapping("/stu/download/resumePdf/{Name}")
-    public void  downloadResumePdf(@PathVariable(value = "Name")	String resumeName, HttpServletRequest request, HttpServletResponse response)throws Exception{
+    @PostMapping("/stu/download/resume/{Name}")
+    public void  downloadResumePdf(@PathVariable(value = "Name")	String resumeName, @RequestParam String Type, HttpServletRequest request, HttpServletResponse response)throws Exception{
 
         DownloadResume downloadResume = new DownloadResume();
-        //        首先token登陆
-        Browser browser = downloadResume.autoLogin(request);
         String fileName = downloadResume.getStuName(request);
-        downloadResume.DownloadPdf(resumeName,browser,fileName);
+        if(Type.equals("pdf")) {
+            //        首先token登陆
+            Browser browser = downloadResume.autoLogin(request);
+            downloadResume.DownloadPdf(resumeName,browser,fileName);
+        }
 
 //        本地文件读取为输出流转给前端
-        downloadResume.pdfExportStream(resumeName,fileName,response);
+        downloadResume.fileExportStream(resumeName,fileName,response,Type);
 
     }
 

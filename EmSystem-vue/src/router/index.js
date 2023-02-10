@@ -54,7 +54,7 @@ export const constantRouterMap = [
   },
   // 动态绑定简历名字:resumeid  通过$route.param.resumeid获取
   {
-    path: '/resumes/:resumeid',
+    path: '/:username/resumes/:resumeid',
     component: resume,
     name: 'resumeName'
 

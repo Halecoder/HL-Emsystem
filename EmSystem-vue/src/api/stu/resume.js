@@ -47,11 +47,3 @@ export function toImages(data) {
   })
 }
 
-// 下载pdf
-
-export function toPdf(data) {
-  return request({
-    url: '/stu/download/resumePdf/' + data,
-    method: 'post'
-  })
-}

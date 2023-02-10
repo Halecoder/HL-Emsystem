@@ -8,7 +8,7 @@
         :options="swiperOption"
       >
         <swiper-slide v-for="(resume,index ) in resumes" :key="index">
-          <router-link :to="`/resumes/${resume.resumeName}`">
+          <router-link :to="`/${username}/resumes/${resume.resumeName}`">
             <img
               :src="resume.resume"
               alt=""
@@ -34,7 +34,7 @@ import 'swiper/css/swiper.css'
 
 import { getFileNames } from '@/utils/ruoyi'
 
-import { toImages, toPdf } from '@/api/stu/resume'
+import { toImages, downloadResumeByType } from '@/api/stu/resume'
 
 import $ from 'jquery'
 
@@ -53,6 +53,7 @@ export default {
   props: [],
   data() {
     return {
+      username: '',
       resumeNames: [],
       resumes: [],
       swiperOption: {
@@ -76,7 +77,11 @@ export default {
           delay: 3000,
           disableOnInteraction: false // 当用户滑动图片后继续自动轮播
         }
+      },
+      downloadParams: {
+        Type: '' // 下载类型
       }
+
     }
   },
   computed: {
@@ -92,10 +97,10 @@ export default {
   },
   watch: {},
   created() {
-    var username = this.$store.getters.username
+    this.username = this.$store.getters.username
     this.$data.resumeNames = getFileNames()
     this.resumeNames.forEach(resume => {
-      this.resumes.push({ resume: require(`./images/${username}/${resume}.png`), resumeName: `${resume}` })
+      this.resumes.push({ resume: require(`./images/${this.username}/${resume}.png`), resumeName: `${resume}` })
     })
   },
   mounted() {},
@@ -122,22 +127,26 @@ export default {
       }).catch(() => {})
     },
 
-    downloadResume() {
-      // toPdf(Name).then(response => {
-      // }).finally(() => {
-      //   this.loading = false
-      // }).catch(() => {})
+    downloadResumeByPdf() {
+      this.downloadParams.Type = 'pdf'
+      this.download('/stu/download/resume/' + `${Name}`, {
+        ...this.downloadParams
+      }, `${this.username}_${Name}.pdf`)
+    },
 
-      this.download('/stu/download/resumePdf/' + `${Name}`, {
-        ...Name
-      }, `user_${Name}.pdf`)
+    downloadResumeByPng() {
+      this.downloadParams.Type = 'png'
+      this.download('/stu/download/resume/' + `${Name}`, {
+        ...this.downloadParams
+      }, `${this.username}_${Name}.png`)
     },
     // 自定义右键菜单
     onContextmenu(event) {
       this.$contextmenu({
         items: [
-          { label: '重新加载(R)', divided: true, icon: 'el-icon-refresh', onClick: this.updateResumes },
-          { label: '下载PDF(D)...', icon: 'el-icon-download', onClick: this.downloadResume }
+          { label: '刷新(R)', divided: true, icon: 'el-icon-refresh', onClick: this.updateResumes },
+          { label: '下载PDF(D)...', icon: 'el-icon-download', onClick: this.downloadResumeByPdf },
+          { label: '另存为图片(S)...', icon: 'el-icon-s-promotion', onClick: this.downloadResumeByPng }
         ],
         event, // 鼠标事件信息
         customClass: 'custom-class', // 自定义菜单 class

@@ -9,7 +9,6 @@ import com.github.pagehelper.PageInfo;
 import com.google.code.kaptcha.Producer;
 import com.hl.emsystem.common.ApiRestResponse;
 import com.hl.emsystem.common.Constant;
-import com.hl.emsystem.common.UserContext;
 import com.hl.emsystem.exception.EmSystemExceptionEnum;
 import com.hl.emsystem.model.pojo.*;
 import com.hl.emsystem.model.vo.UserExcelVo;
@@ -173,8 +172,6 @@ public class UserController {
     @PostMapping("/user/logout")
     @ResponseBody
     public ApiRestResponse logout() {
-        // ThreadLocal值清除，防止内存泄漏
-        UserContext.remove();
         return ApiRestResponse.success();
     }
 
